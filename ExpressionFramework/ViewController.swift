@@ -48,19 +48,18 @@ extension Expression: SpecProtocol {
             node.style.height = ASDimensionMake(height)
         }
         
+        node.backgroundColor = .white
+        
         if let width = width {
             node.style.width = ASDimensionMake(width)
         }
         
-
         if let spec = spec {
             node.automaticallyManagesSubnodes = true
             node.layoutSpecBlock = { _, _ in
                 return spec
             }
         }
-        node.backgroundColor = .orange
-        
         return node
     }
 }
@@ -89,7 +88,7 @@ extension SpecProtocol {
             return ASStackLayoutSpec.with(spec)
         case "textNode":
             return ASTextNode.init(spec)
-        case "imageNode":
+        case "networkImageNode":
             return ASNetworkImageNode.init(spec)
         case "displayNode":
             return ASDisplayNode()
@@ -235,7 +234,7 @@ class ViewController: ASViewController<ASCollectionNode> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = UIColor(red:239/255.0, green:239/255.0, blue:244/255.0, alpha: 1)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refresh))
     }
 
@@ -246,7 +245,7 @@ class ViewController: ASViewController<ASCollectionNode> {
     
     @objc func refresh() {
 
-        URLSession.expression.dataTask(with: "http://macbook-pro.local:8000/1.json".url!) { data, response, error in
+        URLSession.expression.dataTask(with: "https://s3.eu-west-2.amazonaws.com/expression-framework-templates/1.json".url!) { data, response, error in
             self.expression = Expression(object: try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as AnyObject)
         }.resume()
     }
@@ -257,6 +256,8 @@ extension ViewController {
     
     convenience init () {
         let node = ASCollectionNode(collectionViewLayout: UICollectionViewFlowLayout())
+        node.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
+
         self.init(node: node)
         node.delegate = self
         node.dataSource = self
@@ -271,11 +272,14 @@ extension ViewController:ASCollectionDataSource {
     }
 
     func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 200
     }
     
-    func collectionNode(_ collectionNode: ASCollectionNode, nodeForItemAt indexPath: IndexPath) -> ASCellNode {
-        return expression?.cellNode ?? ASCellNode()
+    
+    func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
+        return {
+            return self.expression?.cellNode ?? ASCellNode()
+        }
     }
 
 }

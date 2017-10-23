@@ -7,6 +7,13 @@
         "children": [
             {
                 "spec": {
+                    "type": "displayNode"
+                },
+                "height": 1,
+                "backgroundColor": "E7E7E9"
+            },
+            {
+                "spec": {
                     "type": "textNode",
                     "attributedText": {
                         "text": "Advertiser Name",
@@ -54,7 +61,7 @@
                     "children": [
                         {
                             "spec": {
-                                "type": "imageNode",
+                                "type": "networkImageNode",
                                 "imageUrl": "http://www.birminghammail.co.uk/incoming/article13757781.ece/ALTERNATES/s615b/MPQ_BEM_250917flickr001JPG.jpg"
                             },
                             "height": 250.0,
@@ -99,7 +106,7 @@
                                     "text": "Find out more",
                                     "color": "ffffff",
                                     "size": 12,
-                                    "weight": 0.4
+                                    "weight": 0.8
                                 }
                             },
                             "backgroundColor": "22AF69",
@@ -119,7 +126,7 @@
                     "spec": {
                         "type": "displayNode"
                     },
-                    "backgroundColor": "E7E7E9",
+                    "backgroundColor": "ffffff",
                     "shadow": {
                         "radius":10.0,
                         "opacity":0.2,
@@ -137,13 +144,14 @@
                     "left": 15.0,
                     "right": 15.0
                 }
+            },
+            {
+                "spec": {
+                    "type": "displayNode"
+                },
+                "height": 1,
+                "backgroundColor": "E7E7E9"
             }
         ]
-    },
-    "insets": {
-        "top": 14.0,
-        "bottom": 55.0,
-        "left": 16.0,
-        "right": 16.0
     }
 }

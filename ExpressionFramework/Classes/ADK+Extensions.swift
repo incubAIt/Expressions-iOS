@@ -97,6 +97,11 @@ extension ASTextNode {
                         textColor:textColor)
             self.attributedText = NSAttributedString(attributedText)
         }
+        
+        if let insets = dictionary["insets"] as? [String:CGFloat] {
+            self.textContainerInset = UIEdgeInsets.init(dictionary: insets)
+        }
+        self.clipsToBounds = true
     }
 }
 
@@ -107,6 +112,7 @@ extension ASNetworkImageNode {
         if let url = dictionary["imageUrl"] as? String {
             self.setURL(url.url, resetToDefault: true)
         }
+
     }
 }
 
@@ -116,5 +122,6 @@ extension ButtonNode {
         if let attributedText = dictionary["attributedText"] as? [String:AnyObject] {
             self.setAttributedTitle(NSAttributedString(attributedText), for: [])
         }
+    
     }
 }

@@ -48,7 +48,7 @@ extension Expression: SpecProtocol {
             node.style.height = ASDimensionMake(height)
         }
         
-        node.backgroundColor = .white
+        node.backgroundColor = .clear
         
         if let width = width {
             node.style.width = ASDimensionMake(width)
@@ -245,7 +245,7 @@ class ViewController: ASViewController<ASCollectionNode> {
     
     @objc func refresh() {
 
-        URLSession.expression.dataTask(with: "https://s3.eu-west-2.amazonaws.com/expression-framework-templates/1.json".url!) { data, response, error in
+        URLSession.expression.dataTask(with: "http://macbook-pro.local:8000/2.json".url!) { data, response, error in
             self.expression = Expression(object: try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as AnyObject)
         }.resume()
     }
@@ -257,7 +257,6 @@ extension ViewController {
     convenience init () {
         let node = ASCollectionNode(collectionViewLayout: UICollectionViewFlowLayout())
         node.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
-
         self.init(node: node)
         node.delegate = self
         node.dataSource = self

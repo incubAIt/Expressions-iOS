@@ -1,0 +1,119 @@
+{
+    "cornerRadius": 5.0,
+    "spec": {
+        "type": "stack",
+        "orientation": "vertical",
+        "children": [
+            {
+                "spec": {
+                    "type": "networkImageNode",
+                    "imageUrl": "http://www.birminghammail.co.uk/incoming/article13757781.ece/ALTERNATES/s615b/MPQ_BEM_250917flickr001JPG.jpg"
+                },
+                "overlay": {
+                    "spec": {
+                        "type": "textNode",
+                        "attributedText": {
+                            "text": "1:15",
+                            "color": "000000",
+                            "size": 13,
+                            "weight": 0.3
+                        },
+                        "insets": {
+                            "top": 2,
+                            "bottom": 2,
+                            "right": 10,
+                            "left": 10
+                        }
+                    },
+                    "cornerRadius":10,
+                    "backgroundColor": "F0F0F8",
+                    "insets": {
+                        "top": -1,
+                        "bottom": 12.0,
+                        "right": -1,
+                        "left": 15.0
+                    }
+                },
+                "height": 225.0
+            },
+            {
+                "spec": {
+                    "type": "textNode",
+                    "attributedText": {
+                        "text": "North Yorkshire Police",
+                        "color": "E6151F",
+                        "size": 12,
+                        "weight": 0.3
+                    }
+                },
+                "insets": {
+                    "top": 10,
+                    "bottom": 7.0,
+                    "right": 15.0,
+                    "left": 15.0
+                }
+            },
+            {
+                "spec": {
+                    "type": "textNode",
+                    "attributedText": {
+                        "text": "Explosion leaves house completely flattened on suburban street",
+                        "color": "0E0E0E",
+                        "size": 28,
+                        "weight": 0.2
+                    }
+                },
+                "insets": {
+                    "bottom": 12.0,
+                    "right": 15.0,
+                    "left": 15.0
+                }
+            },
+            {
+                "spec": {
+                    "type": "stack",
+                    "orientation": "horizontal",
+                    "children": [
+                        {
+                            "spec": {
+                                "type": "textNode",
+                                "attributedText": {
+                                    "text": "36 mins",
+                                    "color": "8E8F93",
+                                    "size": 12,
+                                    "weight": 0.4
+                                }
+                            }
+                        }
+                    ]
+                },
+                "insets":{
+                    "left":14,
+                    "bottom":14
+                }
+            }
+        ]
+    },
+    "background": {
+        "spec": {
+            "type": "displayNode"
+        },
+        "backgroundColor": "ffffff",
+        "shadow": {
+            "radius": 10.0,
+            "opacity": 0.2,
+            "offset": {
+                "x": 0.0,
+                "y": 2.0
+            },
+            "color": "000000"
+        },
+        "cornerRadius": 13.0
+    },
+    "insets": {
+        "top": 15,
+        "bottom": 16.0,
+        "left": 17.0,
+        "right": 17.0
+    }
+}

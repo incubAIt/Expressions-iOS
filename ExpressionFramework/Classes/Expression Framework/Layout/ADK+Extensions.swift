@@ -116,12 +116,34 @@ extension ASNetworkImageNode {
     }
 }
 
-extension ButtonNode {
-    convenience init( _ dictionary:[String:AnyObject]) {
-        self.init()
-        if let attributedText = dictionary["attributedText"] as? [String:AnyObject] {
-            self.setAttributedTitle(NSAttributedString(attributedText), for: [])
-        }
+extension ASStackLayoutSpec {
     
+    static func with(_ dictionary:[String:AnyObject], internalActionHandler: ((_ actionId: String) -> Void)?) -> ASStackLayoutSpec? {
+        
+        guard let orientation = dictionary["orientation"]  as? String else {
+            return nil
+        }
+        
+        var spec:ASStackLayoutSpec!
+        
+        switch orientation {
+        case "vertical":
+            spec = vertical()
+            break
+        case "horizontal":
+            spec = horizontal()
+            break
+        default:
+            return nil
+        }
+        
+        if let children = dictionary["children"] as? [[String:AnyObject]] {
+            
+            children.map { Spec.init(object: $0 as AnyObject, internalActionHandler: internalActionHandler) }.flatMap { $0.spec }.forEach {
+                spec.children?.append($0)
+            }
+        }
+        
+        return spec
     }
 }

@@ -24,6 +24,7 @@
 		54A50A3E1FB1E7740076957D /* URLSession+ExpressionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A3D1FB1E7740076957D /* URLSession+ExpressionConfig.swift */; };
 		54A50A421FB1E7D70076957D /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A411FB1E7D70076957D /* Spec.swift */; };
 		54A50A441FB1E7FD0076957D /* ExpressionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A431FB1E7FD0076957D /* ExpressionConfig.swift */; };
+		54A50A4B1FB322590076957D /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A4A1FB322590076957D /* ImageDownloader.swift */; };
 		CDD9409EEC3DA4CF00AD645A /* Pods_ExpressionFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438F86268210D8DA13C3EC86 /* Pods_ExpressionFramework.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		54A50A3D1FB1E7740076957D /* URLSession+ExpressionConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+ExpressionConfig.swift"; sourceTree = "<group>"; };
 		54A50A411FB1E7D70076957D /* Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
 		54A50A431FB1E7FD0076957D /* ExpressionConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionConfig.swift; sourceTree = "<group>"; };
+		54A50A4A1FB322590076957D /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		573D0FEA24398A6383BAFEAE /* Pods-ExpressionFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpressionFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExpressionFramework/Pods-ExpressionFramework.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				54A50A3D1FB1E7740076957D /* URLSession+ExpressionConfig.swift */,
+				54A50A4A1FB322590076957D /* ImageDownloader.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			files = (
 				54A50A321FB1D2AA0076957D /* HighlightableProtocol.swift in Sources */,
 				54A50A331FB1D2AA0076957D /* String+Extensions.swift in Sources */,
+				54A50A4B1FB322590076957D /* ImageDownloader.swift in Sources */,
 				54A50A311FB1D2AA0076957D /* Color+Extensions.swift in Sources */,
 				54A50A3C1FB1E7000076957D /* BackgroundDecoratedProtocol.swift in Sources */,
 				54A50A3E1FB1E7740076957D /* URLSession+ExpressionConfig.swift in Sources */,

@@ -108,9 +108,12 @@
                                     "color": "ffffff",
                                     "size": 12,
                                     "weight": 0.8
-                                }
+                                },
+				"states": {
+					"highlightez": "http://inyourarea.co.uk.s3.amazonaws.com/thumbnail.png",
+"normal": "https://www.udemy.com/staticx/udemy/images/v6/apple-touch-icon-57x57-precomposed.png"
+				}
                             },
-                            "backgroundColor": "22AF69",
                             "cornerRadius": 5.0,
                             "width": 130.0,
                             "height": 39.0,

@@ -9,51 +9,6 @@
 import UIKit
 import AsyncDisplayKit
 
-class CellNode:ASCellNode { // TODO why does this exist?
-    
-    
-}
-
-class APIRequest { // TODO move into its own file
-    
-    static func getListings(completion: @escaping (Result<[Listing], Void>) -> Void) {
-        URLSession.expression.dataTask(with: ExpressionConfig.url.url!) { data, response, error in
-            guard
-                let arrayOfListingDictionaries = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [[String: AnyObject]]
-                else {
-                    DispatchQueue.main.async {
-                        completion(.error(()))
-                    }
-                    return
-            }
-            let listings: [Listing] = arrayOfListingDictionaries.flatMap{ Listing(jsonDictionary: $0) }
-            
-            DispatchQueue.main.async {
-                completion(.success(listings))
-            }
-        }.resume()
-    }
-}
-
-class Listing {
-    
-    var id:String = "unknown"
-    var expression: Expression? = nil // TODO it isnt great architecture to store visual behaviour within the data
-    
-    convenience init?(jsonDictionary: [String: AnyObject]) {
-        guard let identifier = jsonDictionary["id"] as? String else {
-            return nil
-        }
-        self.init()
-        if let presentationDictionary = jsonDictionary["presentation"] {
-            self.expression = Expression(contextId: identifier, object: presentationDictionary)
-        }
-        
-        self.id = identifier
-    }
-}
-
-
 class ViewController: ASViewController<ASCollectionNode> {
     
     var listings:[Listing] = []

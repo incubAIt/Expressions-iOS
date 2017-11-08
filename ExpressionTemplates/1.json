@@ -1,5 +1,5 @@
 {
-    "backgroundColor": "ff0000",
+"backgroundColor": "ff0000",
     "cornerRadius": 5.0,
     "spec": {
         "type": "stack",
@@ -102,6 +102,7 @@
                         {
                             "spec": {
                                 "type": "buttonNode",
+                                "actionId": "report",
                                 "attributedText": {
                                     "text": "Find out more",
                                     "color": "ffffff",

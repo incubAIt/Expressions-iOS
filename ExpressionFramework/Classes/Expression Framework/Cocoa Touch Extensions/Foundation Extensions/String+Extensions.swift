@@ -15,7 +15,7 @@ extension String {
         return URL(string:self)
     }
     
-    var trimed:String {
+    var trimed:String { // TODO trimmed usually suggests removing only the leading and trailing spaces
         
         return self.replacingOccurrences(of: " ", with: "")
     }

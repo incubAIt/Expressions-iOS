@@ -14,10 +14,10 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0-beta.12):
     - PINCache (= 3.0.1-beta.5)
     - PINRemoteImage/Core
-  - Texture (2.5):
-    - Texture/PINRemoteImage (= 2.5)
-  - Texture/Core (2.5)
-  - Texture/PINRemoteImage (2.5):
+  - Texture (2.5.1):
+    - Texture/PINRemoteImage (= 2.5.1)
+  - Texture/Core (2.5.1)
+  - Texture/PINRemoteImage (2.5.1):
     - PINRemoteImage/iOS (= 3.0.0-beta.12)
     - PINRemoteImage/PINCache
     - Texture/Core
@@ -29,7 +29,7 @@ SPEC CHECKSUMS:
   PINCache: 98e7b1ef782824ad231ade51987c218b758c30d8
   PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
   PINRemoteImage: 0cefe720c2612960bd360710efbd6c73a1991d5f
-  Texture: 12eb0807c117aaa21ef86f7f52dc61cc13e59739
+  Texture: c3f06e344aa091667b7a56002e525cde674d021a
 
 PODFILE CHECKSUM: 4c36436581453dd4cb098a93be082d37a3d73a74
 

@@ -57,7 +57,7 @@ extension Expression: SpecProtocol {
         
         if let spec = spec {
             node.automaticallyManagesSubnodes = true
-            node.layoutSpecBlock = { [unowned self] _, _ in
+            node.layoutSpecBlock = { _, _ in
                 return spec
             }
         }

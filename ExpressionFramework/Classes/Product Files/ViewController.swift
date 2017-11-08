@@ -9,20 +9,54 @@
 import UIKit
 import AsyncDisplayKit
 
-class CellNode:ASCellNode {
+class CellNode:ASCellNode { // TODO why does this exist?
     
     
 }
 
+class APIRequest { // TODO move into its own file
+    
+    static func getListings(completion: @escaping (Result<[Listing], Void>) -> Void) {
+        URLSession.expression.dataTask(with: ExpressionConfig.url.url!) { data, response, error in
+            guard
+                let arrayOfListingDictionaries = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [[String: AnyObject]]
+                else {
+                    DispatchQueue.main.async {
+                        completion(.error(()))
+                    }
+                    return
+            }
+            let listings: [Listing] = arrayOfListingDictionaries.flatMap{ Listing(jsonDictionary: $0) }
+            
+            DispatchQueue.main.async {
+                completion(.success(listings))
+            }
+        }.resume()
+    }
+}
+
+class Listing {
+    
+    var id:String = "unknown"
+    var expression: Expression? = nil // TODO it isnt great architecture to store visual behaviour within the data
+    
+    convenience init?(jsonDictionary: [String: AnyObject]) {
+        guard let identifier = jsonDictionary["id"] as? String else {
+            return nil
+        }
+        self.init()
+        if let presentationDictionary = jsonDictionary["presentation"] {
+            self.expression = Expression(contextId: identifier, object: presentationDictionary)
+        }
+        
+        self.id = identifier
+    }
+}
+
+
 class ViewController: ASViewController<ASCollectionNode> {
     
-    var expression:Expression? {
-        didSet{
-            DispatchQueue.main.async {
-                self.node.reloadData()
-            }
-        }
-    }
+    var listings:[Listing] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +71,17 @@ class ViewController: ASViewController<ASCollectionNode> {
     
     @objc func refresh() {
 
-        URLSession.expression.dataTask(with: ExpressionConfig.url.url!) { [weak self] data, response, error in
-            let jsonDict = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as AnyObject
-            self?.expression = Expression(contextId: "234567890", object: jsonDict, actionHandler: self?.cellRequestsAction)
-        }.resume()
+        APIRequest.getListings() { [weak self] result in
+            switch result {
+            case .success(let listings):
+                self?.listings = listings
+                self?.node.reloadData()
+            case .error: break
+            }
+        }
     }
     
-    private func cellRequestsAction(withActionId actionId: String, contextId: String, actionInfo: [AnyHashable: Any]) {
+    private func cellActionHandler(withActionId actionId: String, contextId: String, actionInfo: [AnyHashable: Any]) {
         
         switch actionId {
         case "share": break // inspect action Info for more details
@@ -73,13 +111,18 @@ extension ViewController:ASCollectionDataSource {
     }
 
     func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int {
-        return 200
+        return listings.count
     }
     
-    
     func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
-        return {
-            return self.expression?.cellNode ?? ASCellNode()
+        return { [weak self] in
+            
+            guard let listings = self?.listings else {
+                return ASCellNode()
+            }
+            let listing = listings[indexPath.row]
+            listing.expression?.actionHandler = self?.cellActionHandler
+            return listing.expression?.cellNode ?? ASCellNode()
         }
     }
 }

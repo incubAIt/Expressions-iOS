@@ -36,8 +36,9 @@ extension SpecProtocol {
             return ASDisplayNode()
         case "buttonNode":
             let buttonNode = ButtonNode.init(spec)
+            let internalActionHandler = self.internalActionHandler
             buttonNode.touchUpAction = { actionId in
-                self.internalActionHandler?(actionId)   // TODO memory leak?
+                internalActionHandler?(actionId)
             }
             return buttonNode
         default:

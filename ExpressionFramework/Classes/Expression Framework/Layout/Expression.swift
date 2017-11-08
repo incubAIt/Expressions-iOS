@@ -26,9 +26,10 @@ struct Expression:BackgroundDecoratedProtocol {
 extension Expression: SpecProtocol {
     
     var internalActionHandler: ((String) -> Void)? { get {
-        
+        let actionHandler = self.actionHandler
+        let contextId = self.contextId
             return { actionId in
-                self.actionHandler?(actionId, self.contextId, [:])
+                actionHandler?(actionId, contextId, [:])
             }
         }
     }
@@ -40,7 +41,6 @@ extension Expression: SpecProtocol {
     var width:CGFloat? {
         return object["width"] as? CGFloat
     }
-    
     
     var cellNode:ASCellNode {
         let node = ASCellNode()
@@ -57,7 +57,7 @@ extension Expression: SpecProtocol {
         
         if let spec = spec {
             node.automaticallyManagesSubnodes = true
-            node.layoutSpecBlock = { _, _ in
+            node.layoutSpecBlock = { [unowned self] _, _ in
                 return spec
             }
         }

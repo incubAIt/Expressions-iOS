@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+public typealias InsetDimension = CGFloat
 extension UIEdgeInsets {
     
     init(dictionary:[String:InsetDimension]) {

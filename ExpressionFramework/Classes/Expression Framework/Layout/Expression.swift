@@ -14,12 +14,11 @@ typealias ActionHandler = ((_ actionId: String, _ contextId: String, _ actionInf
 struct Expression:BackgroundDecoratedProtocol {
     var contextId: String
     var object:AnyObject
-    var actionHandler: ActionHandler
+    var actionHandler: ActionHandler? = nil // This should only be set within the presentation layer
     
-    init(contextId: String, object:AnyObject, actionHandler: ActionHandler) {
+    init(contextId: String, object:AnyObject) {
         self.contextId = contextId
         self.object = object
-        self.actionHandler = actionHandler
     }
 }
 
@@ -29,7 +28,10 @@ extension Expression: SpecProtocol {
         let actionHandler = self.actionHandler
         let contextId = self.contextId
             return { actionId in
-                actionHandler?(actionId, contextId, [:])
+                guard let handler = actionHandler else {
+                    return
+                }
+                handler?(actionId, contextId, [:])
             }
         }
     }

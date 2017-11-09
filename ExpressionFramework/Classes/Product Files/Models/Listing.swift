@@ -20,7 +20,7 @@ class Listing: ExpressionRepresentable {
         
         self.init()
         
-        if let presentationDictionary = jsonDictionary["presentation"] {
+        if let presentationDictionary = jsonDictionary["expression"] {
             self.expression = Expression(contextId: identifier, object: presentationDictionary)
         }
         

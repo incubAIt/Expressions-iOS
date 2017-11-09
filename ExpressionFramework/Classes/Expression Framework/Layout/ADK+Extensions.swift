@@ -81,27 +81,69 @@ extension ASTextNode {
     
     convenience init( _ dictionary:[String:AnyObject]) {
         self.init()
-        var textColor = UIColor.black
         
-
-
-        if let attributedText = dictionary["attributedText"] as? [String:AnyObject], let text = attributedText["text"] as? String{
-            
-            if let color = attributedText["color"] as? String {
-                textColor = UIColor(hex: color) ?? .black
-            }
-            
-            self.attributedText = text.attributedString(withFont:
-                .systemFont(ofSize: attributedText["size"] as? CGFloat ?? 0,
-                            weight: (attributedText["weight"] as? CGFloat).map { UIFont.Weight(rawValue: $0) } ?? .regular),
-                        textColor:textColor)
-            self.attributedText = NSAttributedString(attributedText)
-        }
+        self.attributedText = attributedText(forExpressionDictionary: dictionary)
         
         if let insets = dictionary["insets"] as? [String:CGFloat] {
             self.textContainerInset = UIEdgeInsets.init(dictionary: insets)
         }
         self.clipsToBounds = true
+    }
+    
+    private func attributedText(forExpressionDictionary expressionDictionary: [String:AnyObject]) -> NSAttributedString? {
+        
+        guard let attributedTextSegments = expressionDictionary["attributedText"] as? [[String:AnyObject]] else {
+            return nil
+        }
+            
+        let tempAttributedText = NSMutableAttributedString()
+        for segment in attributedTextSegments {
+            
+            let text: String? = {
+                
+                if let deviceInputType = segment["deviceInputType"] as? String {
+                    return self.calculateText(forDeviceInputType: deviceInputType, expressionAttributes: segment)
+                }
+                return segment["text"] as? String
+            }()
+            
+            if let text = text {
+                tempAttributedText.append(attributedText(for: text, expressionAttributes: segment))
+            }
+        }
+        return tempAttributedText
+    }
+    
+    private func attributedText(for text: String, expressionAttributes: [String:AnyObject]) -> NSAttributedString {
+        
+        let textColor: UIColor = {
+            guard
+                let color = expressionAttributes["color"] as? String,
+                let textColor = UIColor(hex: color)
+                else {
+                return UIColor.black
+            }
+            return textColor
+        }()
+        
+        return text.attributedString(withFont:
+                .systemFont(ofSize: expressionAttributes["size"] as? CGFloat ?? 0,
+                            weight: (expressionAttributes["weight"] as? CGFloat).map { UIFont.Weight(rawValue: $0) } ?? .regular),
+                                                        textColor:textColor)
+    }
+    
+    private func calculateText(forDeviceInputType deviceInputType: String, expressionAttributes: [String:AnyObject]) -> String? {
+        
+        let value = expressionAttributes["value"]
+        switch deviceInputType {
+        case "date-ago":
+            if let secondsAgo = value as? Int {
+                return secondsAgo.timeAgoString
+            }
+            
+        default: break
+        }
+        return nil
     }
 }
 

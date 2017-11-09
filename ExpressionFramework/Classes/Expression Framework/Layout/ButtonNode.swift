@@ -42,9 +42,7 @@ extension ButtonNode {
         
         let states: [UIControlState] = [.normal, .highlighted, .disabled, .selected]
         states.forEach({
-            guard
-                let urlString = dictionary[$0.jsonPropertyKey] as? String,
-                let url = URL(string: urlString) else {
+            guard let url = (dictionary[$0.propertyKey] as? String)?.url else {
                     return
             }
             setImageURL(url, for: $0)
@@ -53,7 +51,7 @@ extension ButtonNode {
 }
 
 private extension UIControlState {
-    var jsonPropertyKey: String {
+    var propertyKey: String {
         switch self {
         case .normal: return "normal"
         case .highlighted: return "highlighted"

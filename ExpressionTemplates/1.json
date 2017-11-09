@@ -1,7 +1,7 @@
 [
   {
     "id": "23456uiol87Gmnbvcdrtyu",
-    "presentation": {
+    "expression": {
       "background": {
         "spec": {
           "type": "displayNode"
@@ -67,17 +67,17 @@
                             },
                             {
                               "deviceInputType": "date-ago",
-                              "value": 1499922323000,
+                              "value": 595959595959,
                               "color": "979797",
                               "size": 9,
                               "weight": 0.8
                             },
-{
-                              "text": " ago",
+                            {
+                              "text": " AGO",
                               "color": "979797",
                               "size": 9,
                               "weight": 0.8
-                            },
+                            }
                           ]
                         }
                       }
@@ -130,7 +130,7 @@
   },
   {
     "id": "23456uiol87Gmnbvcdrtyu",
-    "presentation": {
+    "expression": {
       "backgroundColor": "ff0000",
       "cornerRadius": 5,
       "spec": {

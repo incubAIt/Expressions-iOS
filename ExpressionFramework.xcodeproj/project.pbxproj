@@ -10,7 +10,6 @@
 		366268591F978A2800CCC359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 366268581F978A2800CCC359 /* Assets.xcassets */; };
 		3662685C1F978A2800CCC359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3662685A1F978A2800CCC359 /* LaunchScreen.storyboard */; };
 		54A50A2D1FB1D2AA0076957D /* ADK+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A241FB1D2AA0076957D /* ADK+Extensions.swift */; };
-		54A50A2E1FB1D2AA0076957D /* Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A251FB1D2AA0076957D /* Aliases.swift */; };
 		54A50A2F1FB1D2AA0076957D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A261FB1D2AA0076957D /* AppDelegate.swift */; };
 		54A50A301FB1D2AA0076957D /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A271FB1D2AA0076957D /* ButtonNode.swift */; };
 		54A50A311FB1D2AA0076957D /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A281FB1D2AA0076957D /* Color+Extensions.swift */; };
@@ -24,6 +23,10 @@
 		54A50A3E1FB1E7740076957D /* URLSession+ExpressionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A3D1FB1E7740076957D /* URLSession+ExpressionConfig.swift */; };
 		54A50A421FB1E7D70076957D /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A411FB1E7D70076957D /* Spec.swift */; };
 		54A50A441FB1E7FD0076957D /* ExpressionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A431FB1E7FD0076957D /* ExpressionConfig.swift */; };
+		54A50A4B1FB322590076957D /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A4A1FB322590076957D /* ImageDownloader.swift */; };
+		54A50A4D1FB368CF0076957D /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A4C1FB368CF0076957D /* APIRequest.swift */; };
+		54A50A4F1FB3690A0076957D /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A4E1FB3690A0076957D /* Listing.swift */; };
+		54A50A511FB369C90076957D /* ExpressionRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A501FB369C90076957D /* ExpressionRepresentable.swift */; };
 		CDD9409EEC3DA4CF00AD645A /* Pods_ExpressionFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438F86268210D8DA13C3EC86 /* Pods_ExpressionFramework.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +38,6 @@
 		438F86268210D8DA13C3EC86 /* Pods_ExpressionFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpressionFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		441FB8019B7A5E0352BD2DF3 /* Pods-ExpressionFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpressionFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExpressionFramework/Pods-ExpressionFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		54A50A241FB1D2AA0076957D /* ADK+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ADK+Extensions.swift"; sourceTree = "<group>"; };
-		54A50A251FB1D2AA0076957D /* Aliases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Aliases.swift; sourceTree = "<group>"; };
 		54A50A261FB1D2AA0076957D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54A50A271FB1D2AA0076957D /* ButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
 		54A50A281FB1D2AA0076957D /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		54A50A3D1FB1E7740076957D /* URLSession+ExpressionConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+ExpressionConfig.swift"; sourceTree = "<group>"; };
 		54A50A411FB1E7D70076957D /* Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
 		54A50A431FB1E7FD0076957D /* ExpressionConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionConfig.swift; sourceTree = "<group>"; };
+		54A50A4A1FB322590076957D /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		54A50A4C1FB368CF0076957D /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		54A50A4E1FB3690A0076957D /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		54A50A501FB369C90076957D /* ExpressionRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionRepresentable.swift; sourceTree = "<group>"; };
 		573D0FEA24398A6383BAFEAE /* Pods-ExpressionFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpressionFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExpressionFramework/Pods-ExpressionFramework.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				54A50A3D1FB1E7740076957D /* URLSession+ExpressionConfig.swift */,
+				54A50A4C1FB368CF0076957D /* APIRequest.swift */,
+				54A50A4A1FB322590076957D /* ImageDownloader.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -133,8 +141,7 @@
 		54A50A451FB1E8650076957D /* Expression Framework */ = {
 			isa = PBXGroup;
 			children = (
-				54A50A431FB1E7FD0076957D /* ExpressionConfig.swift */,
-				54A50A251FB1D2AA0076957D /* Aliases.swift */,
+				54A50A521FB369DD0076957D /* Exposed Interfaces */,
 				54A50A401FB1E78E0076957D /* Networking */,
 				54A50A381FB1E6050076957D /* Layout */,
 				54A50A491FB1E98B0076957D /* Cocoa Touch Extensions */,
@@ -146,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				3662685D1F978A2800CCC359 /* ExpressionFrameworkInfo.plist */,
+				54A50A531FB36AA70076957D /* Models */,
 				366268581F978A2800CCC359 /* Assets.xcassets */,
 				3662685A1F978A2800CCC359 /* LaunchScreen.storyboard */,
 				54A50A261FB1D2AA0076957D /* AppDelegate.swift */,
@@ -178,6 +186,23 @@
 				54A50A481FB1E9780076957D /* Foundation Extensions */,
 			);
 			path = "Cocoa Touch Extensions";
+			sourceTree = "<group>";
+		};
+		54A50A521FB369DD0076957D /* Exposed Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				54A50A431FB1E7FD0076957D /* ExpressionConfig.swift */,
+				54A50A501FB369C90076957D /* ExpressionRepresentable.swift */,
+			);
+			path = "Exposed Interfaces";
+			sourceTree = "<group>";
+		};
+		54A50A531FB36AA70076957D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				54A50A4E1FB3690A0076957D /* Listing.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CFED1515D794667C6111475B /* Frameworks */ = {
@@ -324,6 +349,8 @@
 			files = (
 				54A50A321FB1D2AA0076957D /* HighlightableProtocol.swift in Sources */,
 				54A50A331FB1D2AA0076957D /* String+Extensions.swift in Sources */,
+				54A50A4B1FB322590076957D /* ImageDownloader.swift in Sources */,
+				54A50A511FB369C90076957D /* ExpressionRepresentable.swift in Sources */,
 				54A50A311FB1D2AA0076957D /* Color+Extensions.swift in Sources */,
 				54A50A3C1FB1E7000076957D /* BackgroundDecoratedProtocol.swift in Sources */,
 				54A50A3E1FB1E7740076957D /* URLSession+ExpressionConfig.swift in Sources */,
@@ -331,10 +358,11 @@
 				54A50A2F1FB1D2AA0076957D /* AppDelegate.swift in Sources */,
 				54A50A341FB1D2AA0076957D /* UIEdgeInsets+Extensions.swift in Sources */,
 				54A50A3A1FB1E6AB0076957D /* SpecProtocol.swift in Sources */,
+				54A50A4F1FB3690A0076957D /* Listing.swift in Sources */,
 				54A50A441FB1E7FD0076957D /* ExpressionConfig.swift in Sources */,
 				54A50A301FB1D2AA0076957D /* ButtonNode.swift in Sources */,
-				54A50A2E1FB1D2AA0076957D /* Aliases.swift in Sources */,
 				54A50A2D1FB1D2AA0076957D /* ADK+Extensions.swift in Sources */,
+				54A50A4D1FB368CF0076957D /* APIRequest.swift in Sources */,
 				54A50A421FB1E7D70076957D /* Spec.swift in Sources */,
 				54A50A371FB1E5FE0076957D /* Expression.swift in Sources */,
 			);

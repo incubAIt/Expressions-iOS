@@ -31,6 +31,35 @@ extension ButtonNode {
             self.setAttributedTitle(NSAttributedString(attributedText), for: [])
         }
         actionId = dictionary["actionId"] as? String ?? ""
+        
+        self.imageNode.contentMode = .scaleAspectFit
+        if let stateDictionary = dictionary["states"] as? [String: AnyObject] {
+            downloadImageAssets(fromStateDictionary: stateDictionary)
+        }
+    }
+    
+    private func downloadImageAssets(fromStateDictionary dictionary: [String: AnyObject]) {
+        
+        let states: [UIControlState] = [.normal, .highlighted, .disabled, .selected]
+        states.forEach({
+            guard let url = (dictionary[$0.propertyKey] as? String)?.url else {
+                    return
+            }
+            setImageURL(url, for: $0)
+        })
+    }
+}
+
+private extension UIControlState {
+    var propertyKey: String {
+        switch self {
+        case .normal: return "normal"
+        case .highlighted: return "highlighted"
+        case .disabled: return "disabled"
+        case .selected: return "selected"
+        default:
+            return ""
+        }
     }
 }
 
@@ -70,5 +99,19 @@ class ButtonNode: ASButtonNode, Highlightable {
         didSet{
             self.animate(isSelected, true)
         }
+    }
+    
+    func setImageURL(_ url: URL, for controlState: UIControlState) {
+        
+        // TODO have a method to cancel a download.
+        ImageDownloader.shared.download(from: url) { [weak self] result in
+            
+            switch result {
+            case .success (let image):
+                self?.setImage(image, for: controlState)
+            case .error: break
+            }
+        }
+        
     }
 }

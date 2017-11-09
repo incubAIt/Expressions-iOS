@@ -15,7 +15,12 @@ extension String {
         return URL(string:self)
     }
     
-    var trimed:String { // TODO trimmed usually suggests removing only the leading and trailing spaces
+    var trimmed:String {
+        
+        return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+    }
+    
+    var removingWhiteSpace:String {
         
         return self.replacingOccurrences(of: " ", with: "")
     }

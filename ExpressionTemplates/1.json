@@ -1,158 +1,269 @@
-{
-"backgroundColor": "ff0000",
-    "cornerRadius": 5.0,
-    "spec": {
+[
+  {
+    "id": "23456uiol87Gmnbvcdrtyu",
+    "expression": {
+            "background": {
+              "spec": {
+                "type": "displayNode"
+              },
+              "backgroundColor": "ffffff",
+              "shadow": {
+                "radius": 10,
+                "opacity": 0.2,
+                "offset": {
+                  "x": 0,
+                  "y": 2
+                },
+                "color": "000000"
+              },
+              "cornerRadius": 2
+            },
+      "spec": {
         "type": "stack",
         "orientation": "vertical",
         "children": [
-            {
-                "spec": {
-                    "type": "displayNode"
+          {
+            "spec": {
+              "type": "stack",
+              "orientation": "horizontal",
+              "spacing": 10,
+              "children": [
+                {
+                  "spec": {
+                    "type": "networkImageNode",
+                    "imageUrl": "http://matts-mbp.ad1.tm-gnet.com:8000/avatar.png"
+                  },
+                  "height": 36,
+                  "width": 36
                 },
-                "height": 1,
-                "backgroundColor": "E7E7E9"
-            },
-            {
-                "spec": {
-                    "type": "textNode",
-                    "attributedText": {
-                        "text": "Advertiser Name",
-                        "size": 12.0,
-                        "weight": 0.4
-                    }
-                },
-                "insets": {
-                    "top": 15.0,
-                    "bottom": 2.0,
-                    "left": 15.0
-                }
-            },
-            {
-                "spec": {
-                    "type": "textNode",
-                    "attributedText": {
-                        "text": "Sponsored",
-                        "color": "979797",
-                        "size": 9
-                    }
-                },
-                "insets": {
-                    "bottom": 10.0,
-                    "right": 15.0,
-                    "left": 15.0
-                }
-            },
-            {
-                "spec": {
-                    "type": "displayNode"
-                },
-                "height": 1,
-                "backgroundColor": "E7E7E9",
-                "insets": {
-                    "bottom": 15.0,
-                    "right": 15.0,
-                    "left": 15.0
-                }
-            },
-            {
-                "spec": {
+                {
+                  "spec": {
                     "type": "stack",
                     "orientation": "vertical",
+                    "spacing": 2,
                     "children": [
-                        {
-                            "spec": {
-                                "type": "networkImageNode",
-                                "imageUrl": "http://www.birminghammail.co.uk/incoming/article13757781.ece/ALTERNATES/s615b/MPQ_BEM_250917flickr001JPG.jpg"
-                            },
-                            "height": 250.0,
-                            "backgroundColor": "ffffff"
-                        },
-                        {
-                            "spec": {
-                                "type": "textNode",
-                                "attributedText": {
-                                    "text": "Baby Swimming in Chessington",
-                                    "color": "2F2833",
-                                    "size": 17,
-                                    "weight": 0.4
-                                }
-                            },
-                            "insets": {
-                                "top": 15.0,
-                                "bottom": 8.0,
-                                "right": 15.0,
-                                "left": 15.0
-                            }
-                        },
-                        {
-                            "spec": {
-                                "type": "textNode",
-                                "attributedText": {
-                                    "text": "Swimkidz offer structured, progressive and fun swimming lessons for babies from birth. We will swim at Chessington World of Adventures hotel.  Join us today. New baby begginer and toddler classes starting November 7th ",
-                                    "color": "2F2833",
-                                    "size": 14
-                                }
-                            },
-                            "insets": {
-                                "bottom": 15.0,
-                                "right": 15.0,
-                                "left": 15.0
-                            }
-                        },
-                        {
-                            "spec": {
-                                "type": "buttonNode",
-                                "actionId": "report",
-                                "attributedText": {
-                                    "text": "Find out more",
-                                    "color": "ffffff",
-                                    "size": 12,
-                                    "weight": 0.8
-                                }
-                            },
-                            "backgroundColor": "22AF69",
-                            "cornerRadius": 5.0,
-                            "width": 130.0,
-                            "height": 39.0,
-                            "insets": {
-                                "right": -1,
-                                "bottom": 16.0,
-                                "top": 15,
-                                "left": 16.0
-                            }
+                      {
+                        "spec": {
+                          "type": "textNode",
+                          "attributedText": {
+                            "text": "Matt Harding",
+                            "color": "2F2833",
+                            "size": 12,
+                            "weight": 1
+                          }
                         }
+                      },
+                      {
+                        "spec": {
+                          "type": "textNode",
+                          "attributedText": {
+                            "text": "x mins ago",
+                            "color": "979797",
+                            "size": 9,
+                            "weight": 0.8
+                          }
+                        }
+                      }
                     ]
-                },
-                "background": {
-                    "spec": {
-                        "type": "displayNode"
-                    },
-                    "backgroundColor": "ffffff",
-                    "shadow": {
-                        "radius":10.0,
-                        "opacity":0.2,
-                        "offset":{
-                            "x":0.0,
-                            "y":2.0
-                        },
-                        "color":"000000"
-                    },
-                    "cornerRadius":2.0
-                },
-                "insets": {
-                    "top": 15,
-                    "bottom": 16.0,
-                    "left": 15.0,
-                    "right": 15.0
+                  }
                 }
+              ]
             },
-            {
-                "spec": {
-                    "type": "displayNode"
-                },
-                "height": 1,
-                "backgroundColor": "E7E7E9"
+            "insets": {
+              "top": 10,
+              "bottom": 10,
+              "right": 15,
+              "left": 15
             }
+          },
+          {
+            "spec": {
+              "type": "displayNode"
+            },
+            "height": 1,
+            "backgroundColor": "E7E7E9",
+            "insets": {
+              "top": 0,
+              "bottom": 0,
+              "left": 15,
+              "right": 15
+            }
+          },
+          {
+            "spec": {
+              "type": "textNode",
+              "attributedText": {
+                "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not…More",
+                "color": "2F2833",
+                "size": 14
+              }
+            },
+            "insets": {
+              "top": 15,
+              "bottom": 15,
+              "right": 15,
+              "left": 15
+            }
+          }
         ]
+      }
     }
-}
+  },
+  {
+    "id": "23456uiol87Gmnbvcdrtyu",
+    "expression": {
+      "backgroundColor": "ff0000",
+      "cornerRadius": 5,
+      "spec": {
+        "type": "stack",
+        "orientation": "vertical",
+        "children": [
+          {
+            "spec": {
+              "type": "displayNode"
+            },
+            "height": 1,
+            "backgroundColor": "E7E7E9"
+          },
+          {
+            "spec": {
+              "type": "textNode",
+              "attributedText": {
+                "text": "Advertiser Name",
+                "size": 12,
+                "weight": 0.4
+              }
+            },
+            "insets": {
+              "top": 15,
+              "bottom": 2,
+              "left": 15
+            }
+          },
+          {
+            "spec": {
+              "type": "textNode",
+              "attributedText": {
+                "text": "Sponsored",
+                "color": "979797",
+                "size": 9
+              }
+            },
+            "insets": {
+              "bottom": 10,
+              "right": 15,
+              "left": 15
+            }
+          },
+          {
+            "spec": {
+              "type": "displayNode"
+            },
+            "height": 1,
+            "backgroundColor": "E7E7E9",
+            "insets": {
+              "bottom": 15,
+              "right": 15,
+              "left": 15
+            }
+          },
+          {
+            "spec": {
+              "type": "stack",
+              "orientation": "vertical",
+              "children": [
+                {
+                  "spec": {
+                    "type": "networkImageNode",
+                    "imageUrl": "http://www.birminghammail.co.uk/incoming/article13757781.ece/ALTERNATES/s615b/MPQ_BEM_250917flickr001JPG.jpg"
+                  },
+                  "height": 250,
+                  "backgroundColor": "ffffff"
+                },
+                {
+                  "spec": {
+                    "type": "textNode",
+                    "attributedText": {
+                      "text": "Baby Swimming in Chessington",
+                      "color": "2F2833",
+                      "size": 17,
+                      "weight": 0.4
+                    }
+                  },
+                  "insets": {
+                    "top": 15,
+                    "bottom": 8,
+                    "right": 15,
+                    "left": 15
+                  }
+                },
+                {
+                  "spec": {
+                    "type": "textNode",
+                    "attributedText": {
+                      "text": "Swimkidz offer structured, progressive and fun swimming lessons for babies from birth. We will swim at Chessington World of Adventures hotel.  Join us today. New baby begginer and toddler classes starting November 7th ",
+                      "color": "2F2833",
+                      "size": 14
+                    }
+                  },
+                  "insets": {
+                    "bottom": 15,
+                    "right": 15,
+                    "left": 15
+                  }
+                },
+                {
+                  "spec": {
+                    "type": "buttonNode",
+                    "actionId": "report",
+                    "attributedText": {
+                      "text": "Find out more",
+                      "color": "000000",
+                      "size": 12,
+                      "weight": 0.8
+                    },
+                    "states": {
+                      "highlighted": "http://inyourarea.co.uk.s3.amazonaws.com/thumbnail.png",
+                      "normal": "https://www.udemy.com/staticx/udemy/images/v6/apple-touch-icon-57x57-precomposed.png"
+                    }
+                  },
+                  "cornerRadius": 5,
+                  "width": 130,
+                  "height": 39,
+                  "insets": {
+                    "right": -1,
+                    "bottom": 16,
+                    "top": 15,
+                    "left": 16
+                  }
+                }
+              ]
+            },
+            "background": {
+              "spec": {
+                "type": "displayNode"
+              },
+              "backgroundColor": "ffffff",
+              "shadow": {
+                "radius": 10,
+                "opacity": 0.2,
+                "offset": {
+                  "x": 0,
+                  "y": 2
+                },
+                "color": "000000"
+              },
+              "cornerRadius": 2
+            },
+            "insets": {
+              "top": 15,
+              "bottom": 16,
+              "left": 15,
+              "right": 15
+            }
+          }
+        ]
+      }
+    }
+  }
+]

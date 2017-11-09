@@ -9,8 +9,8 @@
 import Foundation
 
 extension Date {
-    
-    private static let timeAgoFormatter:DateFormatter = {
+
+    private static let dateStampFormatter:DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: Bundle.main.preferredLocalizations[0])
         dateFormatter.dateStyle = .medium
@@ -22,23 +22,18 @@ extension Date {
         let formatter = DateComponentsFormatter()
         formatter.unitsStyle = .full
         formatter.maximumUnitCount = 1
-        formatter.calendar = calendar
+        formatter.calendar = Calendar.current
         return formatter
     }()
     
-    private static let calendar:Calendar = {
-        var calendar = Calendar.current
-        calendar.locale = Locale(identifier:Date.locale)
-
-        return calendar
-    }()
+    var timeStamp: String {
+        return Date.dateStampFormatter.string(from: self)
+    }
     
-    
-    private static let locale = Bundle.main.preferredLocalizations.first ?? "GBP"   // TODO tidy this up a bit as it looks a little odd
-    
-    var timeAgoDescription:String {
+    var timeAgoDescription:String? {
         
-        let interval = Date.calendar.dateComponents([.year, .month, .weekOfYear, .day, .hour, .minute], from: self, to: Date())
+        let dateNow = Date()
+        let interval = Calendar.current.dateComponents([.year, .month, .weekOfYear, .day, .hour, .minute, .second], from: self, to: dateNow)
 
         let formatter = Date.dateCompononentsFormatter
         
@@ -52,21 +47,25 @@ extension Date {
             formatter.allowedUnits = [.day]
         } else if let hour = interval.hour, hour > 0 {
             formatter.allowedUnits = [.hour]
-        } else if let minute = interval.hour, minute > 0 {
+        } else if let minute = interval.minute, minute > 0 {
             formatter.allowedUnits = [.minute]
-        } else {
-            return Date.timeAgoFormatter.string(from: self)
+        } else if let second = interval.second, second > 0 {
+            formatter.allowedUnits = [.second]
+        }else {
+            return timeStamp
         }
-        if let string = formatter.string(from: self, to: Date()) {
-            return string + " AGO"
-        }
-        return ""
+        
+        return formatter.string(from: self, to: dateNow)
     }
 }
 
 extension Int {
 
-    var timeAgoString:String {
+    var timeAgoString:String? {
         return Date(timeIntervalSince1970: Double(self)/1000).timeAgoDescription
+    }
+    
+    var timeStamp:String {
+        return Date(timeIntervalSince1970: Double(self)/1000).timeStamp
     }
 }

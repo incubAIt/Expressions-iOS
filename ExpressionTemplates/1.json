@@ -67,11 +67,17 @@
                             },
                             {
                               "deviceInputType": "date-ago",
-                              "value": 1800,
+                              "value": 1499922323000,
                               "color": "979797",
                               "size": 9,
                               "weight": 0.8
-                            }
+                            },
+{
+                              "text": " ago",
+                              "color": "979797",
+                              "size": 9,
+                              "weight": 0.8
+                            },
                           ]
                         }
                       }

@@ -141,6 +141,10 @@ extension ASTextNode {
                 return secondsAgo.timeAgoString
             }
             
+        case "date":
+            if let secondsAgo = value as? Int {
+                return secondsAgo.timeStamp
+            }
         default: break
         }
         return nil

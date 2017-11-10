@@ -101,10 +101,14 @@ extension ASTextNode {
             
             let text: String? = {
                 
-                if let deviceInputType = segment["deviceInputType"] as? String {
-                    return self.calculateText(forDeviceInputType: deviceInputType, expressionAttributes: segment)
+                if let text = segment["text"] as? String {
+                    return text
                 }
-                return segment["text"] as? String
+                if let dictionary = segment["text"] as? [String: AnyObject] {
+                    return self.calculateText(forAttributes: dictionary)
+                }
+                
+                return nil
             }()
             
             if let text = text {
@@ -132,16 +136,31 @@ extension ASTextNode {
                                                         textColor:textColor)
     }
     
-    private func calculateText(forDeviceInputType deviceInputType: String, expressionAttributes: [String:AnyObject]) -> String? {
+    private func calculateText(forAttributes attributes: [String: AnyObject]) -> String? {
         
-        let value = expressionAttributes["value"]
-        switch deviceInputType {
-        case "date-ago":
+        guard let type = attributes["type"] as? String else {
+            return nil
+        }
+        switch type {
+        case "date": return calculateDateText(forAttributes: attributes)
+        default:
+            return nil
+        }
+    }
+    
+    private func calculateDateText(forAttributes attributes: [String:AnyObject]) -> String? {
+        
+        guard let format = attributes["format"] as? String else {
+            return nil
+        }
+        let value = attributes["value"]
+        switch format {
+        case "timeAgo":
             if let secondsAgo = value as? Int {
                 return secondsAgo.timeAgoString
             }
             
-        case "date":
+        case "timeStamp":
             if let secondsAgo = value as? Int {
                 return secondsAgo.timeStamp
             }

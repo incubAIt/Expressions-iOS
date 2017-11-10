@@ -81,27 +81,92 @@ extension ASTextNode {
     
     convenience init( _ dictionary:[String:AnyObject]) {
         self.init()
-        var textColor = UIColor.black
         
-
-
-        if let attributedText = dictionary["attributedText"] as? [String:AnyObject], let text = attributedText["text"] as? String{
-            
-            if let color = attributedText["color"] as? String {
-                textColor = UIColor(hex: color) ?? .black
-            }
-            
-            self.attributedText = text.attributedString(withFont:
-                .systemFont(ofSize: attributedText["size"] as? CGFloat ?? 0,
-                            weight: (attributedText["weight"] as? CGFloat).map { UIFont.Weight(rawValue: $0) } ?? .regular),
-                        textColor:textColor)
-            self.attributedText = NSAttributedString(attributedText)
-        }
+        self.attributedText = attributedText(forExpressionDictionary: dictionary)
         
         if let insets = dictionary["insets"] as? [String:CGFloat] {
             self.textContainerInset = UIEdgeInsets.init(dictionary: insets)
         }
         self.clipsToBounds = true
+    }
+    
+    private func attributedText(forExpressionDictionary expressionDictionary: [String:AnyObject]) -> NSAttributedString? {
+        
+        guard let attributedTextSegments = expressionDictionary["attributedText"] as? [[String:AnyObject]] else {
+            return nil
+        }
+            
+        let tempAttributedText = NSMutableAttributedString()
+        for segment in attributedTextSegments {
+            
+            let text: String? = {
+                
+                if let text = segment["text"] as? String {
+                    return text
+                }
+                if let dictionary = segment["text"] as? [String: AnyObject] {
+                    return self.calculateText(forAttributes: dictionary)
+                }
+                
+                return nil
+            }()
+            
+            if let text = text {
+                tempAttributedText.append(attributedText(for: text, expressionAttributes: segment))
+            }
+        }
+        return tempAttributedText
+    }
+    
+    private func attributedText(for text: String, expressionAttributes: [String:AnyObject]) -> NSAttributedString {
+        
+        let textColor: UIColor = {
+            guard
+                let color = expressionAttributes["color"] as? String,
+                let textColor = UIColor(hex: color)
+                else {
+                return UIColor.black
+            }
+            return textColor
+        }()
+        
+        return text.attributedString(withFont:
+                .systemFont(ofSize: expressionAttributes["size"] as? CGFloat ?? 0,
+                            weight: (expressionAttributes["weight"] as? CGFloat).map { UIFont.Weight(rawValue: $0) } ?? .regular),
+                                                        textColor:textColor)
+    }
+    
+    private func calculateText(forAttributes attributes: [String: AnyObject]) -> String? {
+        
+        guard let type = attributes["type"] as? String else {
+            return nil
+        }
+        switch type {
+        case "date": return calculateDateText(forAttributes: attributes)
+        default:
+            return nil
+        }
+    }
+    
+    private func calculateDateText(forAttributes attributes: [String:AnyObject]) -> String? {
+        
+        guard let format = attributes["format"] as? String else {
+            return nil
+        }
+        let value = attributes["value"]
+        switch format {
+        case "timeAgo":
+            if let secondsAgo = value as? Int {
+                return secondsAgo.timeAgoString
+            }
+            
+        case "timeStamp":
+            if let secondsAgo = value as? Int {
+                return secondsAgo.timeStamp
+            }
+        default: break
+        }
+        return nil
     }
 }
 

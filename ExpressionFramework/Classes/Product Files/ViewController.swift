@@ -19,7 +19,6 @@ class ViewController: ASViewController<ASCollectionNode> {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refresh))
     }
 
-    
     override func viewDidAppear(_ animated: Bool) {
         self.refresh()
     }

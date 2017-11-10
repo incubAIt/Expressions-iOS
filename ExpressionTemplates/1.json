@@ -2,22 +2,22 @@
   {
     "id": "23456uiol87Gmnbvcdrtyu",
     "expression": {
-            "background": {
-              "spec": {
-                "type": "displayNode"
-              },
-              "backgroundColor": "ffffff",
-              "shadow": {
-                "radius": 10,
-                "opacity": 0.2,
-                "offset": {
-                  "x": 0,
-                  "y": 2
-                },
-                "color": "000000"
-              },
-              "cornerRadius": 2
-            },
+      "background": {
+        "spec": {
+          "type": "displayNode"
+        },
+        "backgroundColor": "ffffff",
+        "shadow": {
+          "radius": 10,
+          "opacity": 0.2,
+          "offset": {
+            "x": 0,
+            "y": 2
+          },
+          "color": "000000"
+        },
+        "cornerRadius": 2
+      },
       "spec": {
         "type": "stack",
         "orientation": "vertical",
@@ -27,41 +27,71 @@
               "type": "stack",
               "orientation": "horizontal",
               "spacing": 10,
+              "align": "end",
               "children": [
                 {
                   "spec": {
-                    "type": "networkImageNode",
-                    "imageUrl": "http://matts-mbp.ad1.tm-gnet.com:8000/avatar.png"
-                  },
-                  "height": 36,
-                  "width": 36
-                },
-                {
-                  "spec": {
                     "type": "stack",
-                    "orientation": "vertical",
-                    "spacing": 2,
+                    "orientation": "horizontal",
+                    "spacing": 10,
                     "children": [
                       {
                         "spec": {
-                          "type": "textNode",
-                          "attributedText": {
-                            "text": "Matt Harding",
-                            "color": "2F2833",
-                            "size": 12,
-                            "weight": 1
-                          }
-                        }
+                          "type": "networkImageNode",
+                          "imageUrl": "http://matts-mbp.ad1.tm-gnet.com:8000/avatar.png"
+                        },
+                        "height": 36,
+                        "width": 36
                       },
                       {
                         "spec": {
-                          "type": "textNode",
-                          "attributedText": {
-                            "text": "x mins ago",
-                            "color": "979797",
-                            "size": 9,
-                            "weight": 0.8
-                          }
+                          "type": "stack",
+                          "orientation": "vertical",
+                          "spacing": 2,
+                          "children": [
+                            {
+                              "spec": {
+                                "type": "textNode",
+                                "attributedText": [
+                                  {
+                                    "text": "Matt Harding",
+                                    "color": "2F2833",
+                                    "size": 12,
+                                    "weight": 1
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "spec": {
+                                "type": "textNode",
+                                "attributedText": [
+                                  {
+                                    "text": "AREA UPDATE - ",
+                                    "color": "979797",
+                                    "size": 9,
+                                    "weight": 0.8
+                                  },
+                                  {
+                                    "text": {
+"type": "date",
+"format": "timeAgo",
+                                    "value": 595959595959
+},
+                                    "color": "979797",
+                                    "size": 9,
+                                    "weight": 0.8
+                                  },
+                                  {
+                                    "text": " AGO",
+                                    "color": "979797",
+                                    "size": 9,
+                                    "weight": 0.8
+                                  }
+                                ]
+                              }
+                            }
+                          ]
                         }
                       }
                     ]
@@ -92,11 +122,13 @@
           {
             "spec": {
               "type": "textNode",
-              "attributedText": {
-                "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not…More",
-                "color": "2F2833",
-                "size": 14
-              }
+              "attributedText": [
+                {
+                  "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not…More",
+                  "color": "2F2833",
+                  "size": 14
+                }
+              ]
             },
             "insets": {
               "top": 15,
@@ -105,6 +137,223 @@
               "left": 15
             }
           }
+        ]
+      }
+    }
+  },
+  {
+    "id": "23456uiol87Gmnbvcdrtyu",
+    "expression": {
+      "background": {
+        "spec": {
+          "type": "displayNode"
+        },
+        "backgroundColor": "ffffff",
+        "shadow": {
+          "radius": 10,
+          "opacity": 0.2,
+          "offset": {
+            "x": 0,
+            "y": 2
+          },
+          "color": "000000"
+        },
+        "cornerRadius": 2
+      },
+      "spec": {
+        "type": "stack",
+        "orientation": "vertical",
+        "children": [
+          {
+            "spec": {
+              "type": "stack",
+              "orientation": "horizontal",
+              "align": "spacebetween",
+              "spacing": 10,
+              "children": [
+                {
+                  "spec": {
+                    "type": "stack",
+                    "orientation": "horizontal",
+                    "spacing": 10,
+                    "children": [
+                      {
+                        "spec": {
+                          "type": "networkImageNode",
+                          "imageUrl": "http://matts-mbp.ad1.tm-gnet.com:8000/newsIcon.png"
+                        },
+                        "height": 36,
+                        "width": 36,
+                        "cornerRadius": 18,
+                        "backgroundColor": "15B169"
+                      },
+                      {
+                        "spec": {
+                          "type": "stack",
+                          "orientation": "vertical",
+                          "spacing": 2,
+                          "align": "center",
+                          "children": [
+                            {
+                              "spec": {
+                                "type": "textNode",
+                                "attributedText": [
+                                  {
+                                    "text": "Local News",
+                                    "color": "2F2833",
+                                    "size": 12,
+                                    "weight": 1
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "spec": {
+                                "type": "textNode",
+                                "attributedText": [
+                                  {
+                                    "text": "WHARF.CO.UK - ",
+                                    "color": "979797",
+                                    "size": 9,
+                                    "weight": 0.8
+                                  },
+                                  {
+                                    "text": {
+"type": "date",
+                                      "format": "timeAgo",
+                                      "value": 595959595959
+                                    },
+                                    "color": "979797",
+                                    "size": 9,
+                                    "weight": 0.8
+                                  },
+                                  {
+                                    "text": " AGO",
+                                    "color": "979797",
+                                    "size": 9,
+                                    "weight": 0.8
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "spec": {
+                    "type": "stack",
+                    "orientation": "horizontal",
+                    "spacing": 10,
+                    "children": [
+                      {
+                        "spec": {
+                          "type": "buttonNode",
+                          "actionId": "favourite",
+                          "states": {
+                            "normal": "http://matts-mbp.ad1.tm-gnet.com:8000/favIcon.png"
+                          }
+                        },
+                        "width": 36,
+                        "height": 36
+                      },
+                      {
+                        "spec": {
+                          "type": "buttonNode",
+                          "actionId": "options",
+                          "states": {
+                            "normal": "http://matts-mbp.ad1.tm-gnet.com:8000/menu3Dots.png"
+                          }
+                        },
+                        "width": 36,
+                        "height": 36
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "insets": {
+              "top": 10,
+              "bottom": 10,
+              "right": 15,
+              "left": 15
+            }
+          },
+          {
+            "spec": {
+              "type": "displayNode"
+            },
+            "height": 1,
+            "backgroundColor": "E7E7E9",
+            "insets": {
+              "top": 0,
+              "bottom": 0,
+              "left": 15,
+              "right": 15
+            }
+          },
+                            {
+                              "spec": {
+                                "type": "textNode",
+                                "attributedText": [
+                                  {
+                                    "text": "Stormtroopers march through Canary Wharf station to promote Rogue One",
+                                    "color": "2F2833",
+                                    "size": 17,
+                                    "weight": 1
+                                  }
+                                ]
+                              },
+            "insets": {
+              "top": 15,
+              "bottom": 15,
+              "right": 15,
+              "left": 15
+            }
+                            },
+                            {
+                  "spec": {
+                    "type": "networkImageNode",
+                    "imageUrl": "http://www.birminghammail.co.uk/incoming/article13757781.ece/ALTERNATES/s615b/MPQ_BEM_250917flickr001JPG.jpg"
+                  },
+                  "height": 250,
+                  "backgroundColor": "ffffff"
+                },
+                {
+                              "spec": {
+                                "type": "textNode",
+                                "attributedText": [
+                                  {
+                                    "text": "Stormtroopers were seen marching through ",
+                                    "color": "2F2833",
+                                    "size": 14,
+                                    "weight": 0.4
+                                  },
+                                  {
+                                    "text": "Canary Wharf",
+                                    "color": "2F2833",
+                                    "backgroundColor": "CEF4E3",
+                                    "size": 14,
+                                    "weight": 0.4
+                                  },
+                                  {
+                                    "text": " station as they enforced the will of.",
+                                    "color": "2F2833",
+                                    "size": 14,
+                                    "weight": 0.4
+                                  }
+                                ]
+                              },
+            "insets": {
+              "top": 15,
+              "bottom": 15,
+              "right": 15,
+              "left": 15
+            }
+                            }
         ]
       }
     }
@@ -128,11 +377,13 @@
           {
             "spec": {
               "type": "textNode",
-              "attributedText": {
-                "text": "Advertiser Name",
-                "size": 12,
-                "weight": 0.4
-              }
+              "attributedText": [
+                {
+                  "text": "Advertiser Name",
+                  "size": 12,
+                  "weight": 0.4
+                }
+              ]
             },
             "insets": {
               "top": 15,
@@ -143,11 +394,13 @@
           {
             "spec": {
               "type": "textNode",
-              "attributedText": {
-                "text": "Sponsored",
-                "color": "979797",
-                "size": 9
-              }
+              "attributedText": [
+                {
+                  "text": "Sponsored",
+                  "color": "979797",
+                  "size": 9
+                }
+              ]
             },
             "insets": {
               "bottom": 10,
@@ -183,12 +436,14 @@
                 {
                   "spec": {
                     "type": "textNode",
-                    "attributedText": {
-                      "text": "Baby Swimming in Chessington",
-                      "color": "2F2833",
-                      "size": 17,
-                      "weight": 0.4
-                    }
+                    "attributedText": [
+                      {
+                        "text": "Baby Swimming in Chessington",
+                        "color": "2F2833",
+                        "size": 17,
+                        "weight": 0.4
+                      }
+                    ]
                   },
                   "insets": {
                     "top": 15,
@@ -200,11 +455,13 @@
                 {
                   "spec": {
                     "type": "textNode",
-                    "attributedText": {
-                      "text": "Swimkidz offer structured, progressive and fun swimming lessons for babies from birth. We will swim at Chessington World of Adventures hotel.  Join us today. New baby begginer and toddler classes starting November 7th ",
-                      "color": "2F2833",
-                      "size": 14
-                    }
+                    "attributedText": [
+                      {
+                        "text": "Swimkidz offer structured, progressive and fun swimming lessons for babies from birth. We will swim at Chessington World of Adventures hotel.  Join us today. New baby begginer and toddler classes starting November 7th ",
+                        "color": "2F2833",
+                        "size": 14
+                      }
+                    ]
                   },
                   "insets": {
                     "bottom": 15,
@@ -216,12 +473,14 @@
                   "spec": {
                     "type": "buttonNode",
                     "actionId": "report",
-                    "attributedText": {
-                      "text": "Find out more",
-                      "color": "000000",
-                      "size": 12,
-                      "weight": 0.8
-                    },
+                    "attributedText": [
+                      {
+                        "text": "Find out more",
+                        "color": "000000",
+                        "size": 12,
+                        "weight": 0.8
+                      }
+                    ],
                     "states": {
                       "highlighted": "http://inyourarea.co.uk.s3.amazonaws.com/thumbnail.png",
                       "normal": "https://www.udemy.com/staticx/udemy/images/v6/apple-touch-icon-57x57-precomposed.png"

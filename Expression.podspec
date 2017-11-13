@@ -25,8 +25,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
 
   s.source       = { :git => "https://bitbucket.org/tm-ep/expressions-ios.git", :tag => "#{s.version}" }
-  s.source_files  = 'ExpressionFramework/Classes/*'
+  s.source_files  = 'Classes/*'
   s.requires_arc = true
   s.dependency "Texture"
-
 end

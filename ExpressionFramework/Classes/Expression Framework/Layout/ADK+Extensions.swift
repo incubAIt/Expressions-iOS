@@ -203,10 +203,10 @@ extension ASStackLayoutSpec {
         }
         
         spec.spacing = dictionary["spacing"]  as? CGFloat ?? 0
-//        spec.alignContent = .spaceBetween
+
         if let children = dictionary["children"] as? [[String:AnyObject]] {
             
-            children.map { Spec.init(object: $0 as AnyObject, internalActionHandler: internalActionHandler) }.flatMap { $0.spec }.forEach {
+            children.map { Spec.init(object: $0, internalActionHandler: internalActionHandler) }.flatMap { $0.spec }.forEach {
                 spec.children?.append($0)
             }
         }

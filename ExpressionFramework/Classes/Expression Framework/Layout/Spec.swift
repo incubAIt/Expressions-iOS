@@ -10,7 +10,7 @@ import Foundation
 
 struct Spec:SpecProtocol {
     
-    var object:AnyObject
+    var object:[AnyHashable: AnyObject]
     
     var internalActionHandler: ((String) -> Void)?
 }

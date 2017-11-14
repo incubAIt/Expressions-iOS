@@ -10,5 +10,5 @@ import Foundation
 
 protocol BackgroundDecoratedProtocol {
     
-    var object:AnyObject {get}
+    var object:[AnyHashable: AnyObject] {get}
 }

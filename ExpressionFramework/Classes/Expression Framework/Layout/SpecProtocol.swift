@@ -11,7 +11,7 @@ import AsyncDisplayKit
 
 protocol SpecProtocol {
     
-    var object:AnyObject {get}
+    var object:[AnyHashable: AnyObject] {get}
     var spec:ASLayoutSpec? {get}
     var internalActionHandler: ((_ actionId: String) -> Void)? { get }
 }
@@ -63,8 +63,8 @@ extension SpecProtocol {
         guard let object = object as? [String:AnyObject] else {
             return nil
         }
-        if let overlay = object["overlay"] {
-            return Spec(object: overlay as AnyObject, internalActionHandler: internalActionHandler).spec
+        if let overlay = object["overlay"] as? [AnyHashable: AnyObject] {
+            return Spec(object: overlay, internalActionHandler: internalActionHandler).spec
         }
         return nil
     }
@@ -74,8 +74,8 @@ extension SpecProtocol {
         guard let object = object as? [String:AnyObject] else {
             return nil
         }
-        if let overlay = object["background"] {
-            return Spec(object: overlay as AnyObject, internalActionHandler: internalActionHandler).spec
+        if let overlay = object["background"] as? [AnyHashable: AnyObject] {
+            return Spec(object: overlay, internalActionHandler: internalActionHandler).spec
         }
         return nil
     }

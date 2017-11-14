@@ -9,14 +9,14 @@
 import Foundation
 import AsyncDisplayKit
 
-typealias ActionHandler = ((_ actionId: String, _ contextId: String, _ actionInfo: [AnyHashable: Any]) -> Void)?
+public typealias ActionHandler = ((_ actionId: String, _ contextId: String, _ actionInfo: [AnyHashable: Any]) -> Void)?
 
-struct Expression:BackgroundDecoratedProtocol {
-    var contextId: String
-    var object:AnyObject
-    var actionHandler: ActionHandler? = nil // This should only be set within the presentation layer
+public struct Expression:BackgroundDecoratedProtocol {
+    public let contextId: String
+    public let object:[AnyHashable: AnyObject]
+    public var actionHandler: ActionHandler? = nil // This should only be set within the presentation layer
     
-    init(contextId: String, object:AnyObject) {
+    public init(contextId: String, object:[AnyHashable: AnyObject]) {
         self.contextId = contextId
         self.object = object
     }
@@ -24,7 +24,7 @@ struct Expression:BackgroundDecoratedProtocol {
 
 extension Expression: SpecProtocol {
     
-    var internalActionHandler: ((String) -> Void)? { get {
+    internal var internalActionHandler: ((String) -> Void)? { get {
         let actionHandler = self.actionHandler
         let contextId = self.contextId
             return { actionId in
@@ -44,7 +44,7 @@ extension Expression: SpecProtocol {
         return object["width"] as? CGFloat
     }
     
-    var cellNode:ASCellNode {
+    public var cellNode:ASCellNode {
         let node = ASCellNode()
         
         if let height = height {

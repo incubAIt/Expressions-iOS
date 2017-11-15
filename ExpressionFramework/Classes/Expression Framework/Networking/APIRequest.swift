@@ -27,4 +27,23 @@ class APIRequest {
             }
         }.resume()
     }
+    
+    static func getAdverts(completion: @escaping (Result<[Advert], Void>) -> Void) {
+        URLSession.expression.dataTask(with: ExpressionConfig.url.url!) { data, response, error in
+            guard
+                let arrayOfListingDictionaries = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [[String: AnyObject]]
+                else {
+                    DispatchQueue.main.async {
+                        completion(.error(()))
+                    }
+                    return
+            }
+            let adverts: [Advert] = arrayOfListingDictionaries.flatMap{ Advert(jsonDictionary: $0) }
+            
+            DispatchQueue.main.async {
+                completion(.success(adverts))
+            }
+            }.resume()
+    }
 }
+

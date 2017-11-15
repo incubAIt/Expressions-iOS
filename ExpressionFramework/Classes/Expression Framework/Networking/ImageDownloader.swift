@@ -9,11 +9,6 @@
 import Foundation
 import AsyncDisplayKit
 
-enum Result<T, E> {
-    case success (T)
-    case error (E)
-}
-
 class ImageDownloader {
     
     let imageRetriever: ASImageCacheProtocol & ASImageDownloaderProtocol

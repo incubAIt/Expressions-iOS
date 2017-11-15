@@ -8,7 +8,7 @@
 
 import Foundation
 
-class APIRequest {
+class APIRequest { // TODO this class is NOT production ready. It is only for development use
     
     static func getListings(completion: @escaping (Result<[Listing], Void>) -> Void) {
         URLSession.expression.dataTask(with: ExpressionConfig.url.url!) { data, response, error in

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Advert {
+public struct Advert {
     
     var id:String = "unknown"
     var expression: Expression? = nil

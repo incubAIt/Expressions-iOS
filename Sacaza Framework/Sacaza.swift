@@ -7,27 +7,28 @@
 
 import Foundation
 
-protocol SacazaDelegate {
-    func sacazaDidFailToDownloadAdverts(_ sacaza: Sacaza)
+public protocol SacazaDelegate {
+    func sacazaDidFailToDownloadAdverts()
+    func sacazaDidDownloadAdverts(_ adverts: [Advert])
 }
 
-struct Sacaza {
+public struct Sacaza {
     
     var adverts: [Advert] = []
-    var delegate: SacazaDelegate?
+    public var delegate: SacazaDelegate?
     
-    func insertAdvertsIntoCollectionView() {
+    public init() {
         
     }
     
-    func start() {
+    public func start() {
         
         APIRequest.getAdverts() { result in
             switch result {
             case .success(let adverts):
-                self.delegate?.sacazaDidFailToDownloadAdverts(self)
+                self.delegate?.sacazaDidDownloadAdverts(adverts)
             case .error:
-                self.delegate?.sacazaDidFailToDownloadAdverts(self)
+                self.delegate?.sacazaDidFailToDownloadAdverts()
             }
         }
     }

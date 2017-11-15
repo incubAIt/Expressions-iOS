@@ -28,6 +28,9 @@
 		54A50A4F1FB3690A0076957D /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A4E1FB3690A0076957D /* Listing.swift */; };
 		54A50A511FB369C90076957D /* ExpressionRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A501FB369C90076957D /* ExpressionRepresentable.swift */; };
 		54A50A551FB475FC0076957D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A541FB475FC0076957D /* Date+Extensions.swift */; };
+		54C764F51FBC715300C34E50 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C764F01FBC715300C34E50 /* Result.swift */; };
+		54C764F61FBC715300C34E50 /* Advert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C764F21FBC715300C34E50 /* Advert.swift */; };
+		54C764F71FBC715300C34E50 /* Sacaza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C764F41FBC715300C34E50 /* Sacaza.swift */; };
 		CDD9409EEC3DA4CF00AD645A /* Pods_ExpressionFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438F86268210D8DA13C3EC86 /* Pods_ExpressionFramework.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,9 @@
 		54A50A4E1FB3690A0076957D /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		54A50A501FB369C90076957D /* ExpressionRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionRepresentable.swift; sourceTree = "<group>"; };
 		54A50A541FB475FC0076957D /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		54C764F01FBC715300C34E50 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		54C764F21FBC715300C34E50 /* Advert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Advert.swift; sourceTree = "<group>"; };
+		54C764F41FBC715300C34E50 /* Sacaza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sacaza.swift; sourceTree = "<group>"; };
 		573D0FEA24398A6383BAFEAE /* Pods-ExpressionFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpressionFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExpressionFramework/Pods-ExpressionFramework.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,8 +116,10 @@
 		54A50A231FB1D2AA0076957D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				54A50A461FB1E8710076957D /* Product Files */,
+				54C764EF1FBC715300C34E50 /* SharedResources */,
+				54C764F11FBC715300C34E50 /* Sacaza Framework */,
 				54A50A451FB1E8650076957D /* Expression Framework */,
+				54A50A461FB1E8710076957D /* Product Files */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -206,6 +214,31 @@
 				54A50A4E1FB3690A0076957D /* Listing.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		54C764EF1FBC715300C34E50 /* SharedResources */ = {
+			isa = PBXGroup;
+			children = (
+				54C764F01FBC715300C34E50 /* Result.swift */,
+			);
+			path = SharedResources;
+			sourceTree = SOURCE_ROOT;
+		};
+		54C764F11FBC715300C34E50 /* Sacaza Framework */ = {
+			isa = PBXGroup;
+			children = (
+				54C764F21FBC715300C34E50 /* Advert.swift */,
+				54C764F31FBC715300C34E50 /* Networking */,
+				54C764F41FBC715300C34E50 /* Sacaza.swift */,
+			);
+			path = "Sacaza Framework";
+			sourceTree = SOURCE_ROOT;
+		};
+		54C764F31FBC715300C34E50 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		CFED1515D794667C6111475B /* Frameworks */ = {
@@ -356,13 +389,16 @@
 				54A50A511FB369C90076957D /* ExpressionRepresentable.swift in Sources */,
 				54A50A311FB1D2AA0076957D /* Color+Extensions.swift in Sources */,
 				54A50A3C1FB1E7000076957D /* BackgroundDecoratedProtocol.swift in Sources */,
+				54C764F51FBC715300C34E50 /* Result.swift in Sources */,
 				54A50A3E1FB1E7740076957D /* URLSession+ExpressionConfig.swift in Sources */,
 				54A50A351FB1D2AA0076957D /* ViewController.swift in Sources */,
 				54A50A2F1FB1D2AA0076957D /* AppDelegate.swift in Sources */,
+				54C764F71FBC715300C34E50 /* Sacaza.swift in Sources */,
 				54A50A551FB475FC0076957D /* Date+Extensions.swift in Sources */,
 				54A50A341FB1D2AA0076957D /* UIEdgeInsets+Extensions.swift in Sources */,
 				54A50A3A1FB1E6AB0076957D /* SpecProtocol.swift in Sources */,
 				54A50A4F1FB3690A0076957D /* Listing.swift in Sources */,
+				54C764F61FBC715300C34E50 /* Advert.swift in Sources */,
 				54A50A441FB1E7FD0076957D /* ExpressionConfig.swift in Sources */,
 				54A50A301FB1D2AA0076957D /* ButtonNode.swift in Sources */,
 				54A50A2D1FB1D2AA0076957D /* ADK+Extensions.swift in Sources */,

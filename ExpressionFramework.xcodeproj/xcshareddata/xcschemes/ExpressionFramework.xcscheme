@@ -29,6 +29,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "542931901FBDBB1E005D7CC7"
+               BuildableName = "ExpressionFrameworkTests.xctest"
+               BlueprintName = "ExpressionFrameworkTests"
+               ReferencedContainer = "container:ExpressionFramework.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

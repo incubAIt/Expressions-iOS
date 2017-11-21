@@ -8,6 +8,7 @@
 
 import Foundation
 
+// TODO we may not need this extension any more and it probably could be deleted
 public extension Array {
     
     public mutating func insertItems(_ insertedItems: [(Element, Int)], deleteItemsAtIndexes deletedIndexes: [Int]) {

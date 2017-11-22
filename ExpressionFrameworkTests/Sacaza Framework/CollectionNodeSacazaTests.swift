@@ -10,26 +10,10 @@ import XCTest
 import AsyncDisplayKit
 @testable import ExpressionFramework
 
-private struct TestableAdvert: ExpressionRepresentable {
-    let text: String
-    var expression: Expression? = nil
-    
-    init(_ text: String) {
-        self.text = text
-    }
-}
-
-private class TestableCellNode: ASCellNode {
-    let text: String
-    
-    init(text: String) {
-        self.text = text
-        super.init()
-    }
-}
 
 class CollectionNodeSacazaTests: XCTestCase {
     
+    // TODO run the same sweet of tests but with different data and indexes
     var collectionNode: ASCollectionNode?
     var collectionNodeSacaza: CollectionNodeSacaza?
     var feedItems: [String] = []
@@ -53,9 +37,10 @@ class CollectionNodeSacazaTests: XCTestCase {
         collectionNodeSacaza = CollectionNodeSacaza(collectionNode: collectionNode, dataSource: self, sacaza: sacaza)
     }
     
-    func testThatAllPossiblePresenceItemsAreInserted() {
+    // MARK:- tests
+    
+    func testTheNumberOfItems() {
         
-        // TODO manipulate the adverts, test the rows, cells and selections etc
         // given - the adverts, the feed, and that its merged
         
         // where - the datasource is not large enough to insert the last advert
@@ -64,7 +49,52 @@ class CollectionNodeSacazaTests: XCTestCase {
         XCTAssertEqual(13, collectionNode?.numberOfItems(inSection: 0))
     }
     
+    func testThatAllCellsAreTheCorrectType() {
+        
+        // given - the adverts, the feed, that its merged and we have 3 adverts
+        
+        // where
+        
+        // then
+        XCTAssertTrue( collectionNode?.nodeForItem(at: IndexPath(row: 0, section: 0)) is TestableCellNode )
+        XCTAssertTrue( collectionNode?.nodeForItem(at: IndexPath(row: 1, section: 0)) is TestableCellNode )
+        XCTAssertTrue( collectionNode?.nodeForItem(at: IndexPath(row: 2, section: 0)) is TestableCellNode )
+        
+        XCTAssertFalse( collectionNode?.nodeForItem(at: IndexPath(row: 3, section: 0)) is TestableCellNode ) // Presence Item
+        
+        XCTAssertTrue( collectionNode?.nodeForItem(at: IndexPath(row: 4, section: 0)) is TestableCellNode )
+        XCTAssertTrue( collectionNode?.nodeForItem(at: IndexPath(row: 5, section: 0)) is TestableCellNode )
+        XCTAssertTrue( collectionNode?.nodeForItem(at: IndexPath(row: 6, section: 0)) is TestableCellNode )
+        
+        XCTAssertFalse( collectionNode?.nodeForItem(at: IndexPath(row: 7, section: 0)) is TestableCellNode ) // Presence Item
+        
+        XCTAssertTrue( collectionNode?.nodeForItem(at: IndexPath(row: 8, section: 0)) is TestableCellNode )
+        XCTAssertTrue( collectionNode?.nodeForItem(at: IndexPath(row: 9, section: 0)) is TestableCellNode )
+        XCTAssertTrue( collectionNode?.nodeForItem(at: IndexPath(row: 10, section: 0)) is TestableCellNode )
+        
+        XCTAssertFalse( collectionNode?.nodeForItem(at: IndexPath(row: 11, section: 0)) is TestableCellNode ) // Presence Item
+        
+        XCTAssertTrue( collectionNode?.nodeForItem(at: IndexPath(row: 12, section: 0)) is TestableCellNode )
+    }
+    
+    func testTheSelection() {
+        
+    }
+    
+    func testInsertions() {
+        
+    }
+    
+    func testDeletions() {
+        
+    }
+    
+    func testInsertionsAndDeletions() {
+        
+    }
 }
+
+// MARK:- Support for Tests
 
 extension CollectionNodeSacazaTests: SacazaCollectionNodeDataSource {
     
@@ -82,3 +112,22 @@ extension CollectionNodeSacazaTests: SacazaCollectionNodeDataSource {
         return cell
     }
 }
+
+private struct TestableAdvert: ExpressionRepresentable {
+    let text: String
+    var expression: Expression? = nil
+    
+    init(_ text: String) {
+        self.text = text
+    }
+}
+
+private class TestableCellNode: ASCellNode {
+    let text: String
+    
+    init(text: String) {
+        self.text = text
+        super.init()
+    }
+}
+

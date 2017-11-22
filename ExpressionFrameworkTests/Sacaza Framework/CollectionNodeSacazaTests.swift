@@ -42,10 +42,10 @@ class CollectionNodeSacazaTests: XCTestCase {
         
         feedItems = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
         let downloadedPresenceItems =  [
-            PresenceInfo(indexPath: IndexPath(row:3 , section: 1), expressionContainer: TestableAdvert("advertAtRow3")),
-            PresenceInfo(indexPath: IndexPath(row:7 , section: 1), expressionContainer: TestableAdvert("advertAtRow7")),
-            PresenceInfo(indexPath: IndexPath(row:11 , section: 1), expressionContainer: TestableAdvert("advertAtRow11")),
-            PresenceInfo(indexPath: IndexPath(row:15 , section: 1), expressionContainer: TestableAdvert("advertAtRow15"))
+            PresenceInfo(indexPath: IndexPath(row:3 , section: 0), expressionContainer: TestableAdvert("advertAtRow3")),
+            PresenceInfo(indexPath: IndexPath(row:7 , section: 0), expressionContainer: TestableAdvert("advertAtRow7")),
+            PresenceInfo(indexPath: IndexPath(row:11 , section: 0), expressionContainer: TestableAdvert("advertAtRow11")),
+            PresenceInfo(indexPath: IndexPath(row:15 , section: 0), expressionContainer: TestableAdvert("advertAtRow15"))
         ]
         
         let sacaza = Sacaza(presenceItems: downloadedPresenceItems, numberOfOriginalItems: feedItems.count)
@@ -53,11 +53,15 @@ class CollectionNodeSacazaTests: XCTestCase {
         collectionNodeSacaza = CollectionNodeSacaza(collectionNode: collectionNode, dataSource: self, sacaza: sacaza)
     }
     
-    func test() {
+    func testThatAllPossiblePresenceItemsAreInserted() {
         
         // TODO manipulate the adverts, test the rows, cells and selections etc
+        // given - the adverts, the feed, and that its merged
         
+        // where - the datasource is not large enough to insert the last advert
         
+        // then
+        XCTAssertEqual(13, collectionNode?.numberOfItems(inSection: 0))
     }
     
 }

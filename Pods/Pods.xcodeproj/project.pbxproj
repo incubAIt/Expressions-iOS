@@ -19,6 +19,7 @@
 		08AA9D679C9C63CD5243321D3F03FAE1 /* PINRemoteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD3F70DB0ABD21EBCE04472165F7AB7 /* PINRemoteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09125CDDE1B52C0B763E44F9A975ACF7 /* ASTwoDimensionalArrayUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 98BD998562D017B020AAE4A587B41B54 /* ASTwoDimensionalArrayUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0A566951F69A160D18DB16F85918AC5A /* PINRemoteImageCategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E29896B8A57AF5F605854DD4A0290D /* PINRemoteImageCategoryManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0B7AEACA75162D053332CD0868EF51CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E073BA24369A62111653A7EB2F75EB8 /* Foundation.framework */; };
 		0C31EE3B8201562CE5252A1AF388D313 /* Texture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7123DF4B561ECB0333086FA11C74B5 /* Texture-dummy.m */; };
 		0C7F8DB8D04FCFC9E14DF571980BA620 /* ASEventLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C28735D2E134F613E75ABCE41CA9386 /* ASEventLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D397A802ACBF0B297752E6702BAAA35 /* PINImageView+PINRemoteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 98AA220C16ECF0743892EDBFD6DCE47B /* PINImageView+PINRemoteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -168,6 +169,7 @@
 		5D7512CA9B47D46F85079E53E26C4986 /* PINRemoteImageManager+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F99DB96E108A374E97978CB2C601638 /* PINRemoteImageManager+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5DE27B4741DD5BC39A0D60A98A195A8C /* PINRemoteImageTask+Subclassing.h in Headers */ = {isa = PBXBuildFile; fileRef = F1E961A130FF32DF600853C07DC093E1 /* PINRemoteImageTask+Subclassing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E0F39D495D2F68DA56409B090AE48AE /* _ASCollectionGalleryLayoutInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 145EA24576A4BCC3BBC9BB4F2C5CF349 /* _ASCollectionGalleryLayoutInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5EC810E835A2A71F88C9D5A11F502DCE /* Pods-ExpressionFrameworkTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 368E1BB3A398F8E003E69C0900433098 /* Pods-ExpressionFrameworkTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F0B82EDAEB132305E9633E8F572E83D /* ASLayoutElement.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3883A9C9CB4AB9B6DDB4ED66D1B29222 /* ASLayoutElement.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5F2EF284890E9D6DA27A8C60CA010CD5 /* PINRemoteImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F27BD831CD7FA66CB941C3A83555ED45 /* PINRemoteImage-dummy.m */; };
 		5F31B0DF64E0ECD514DD20C2D93732C1 /* ASTextKitRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DC3AB8F31787D09E450A654907520F1 /* ASTextKitRenderer.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -198,7 +200,7 @@
 		6E0A8606568F0F49687B9CD261872C29 /* ASLayoutSpec+Subclasses.h in Headers */ = {isa = PBXBuildFile; fileRef = 657687A6C7F9F581C92EE59E2E9BBAF5 /* ASLayoutSpec+Subclasses.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E3C905C5D5A1F8B5D4ADB1519D39DCB /* NSURLSessionTask+Timing.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FC5004577B4A3FA2F015B6989767E8D /* NSURLSessionTask+Timing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EC76167DCF1D5E913CF1BBD37FADD45 /* ASTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = BBA2169F2999CB4ECC4E90504198599E /* ASTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6F0DE220CF2FF6C467FCB0F65D04D7FE /* Pods-ExpressionFramework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 027ED93C55FE15E272D00612BD3A6193 /* Pods-ExpressionFramework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F0DE220CF2FF6C467FCB0F65D04D7FE /* Pods-ExpressionFramework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 26488F0E5FA5335E574681913008C706 /* Pods-ExpressionFramework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F77103870C2F018D8BF99FF2D3676B3 /* ASStackLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 61EAA5434687D9E5C5A90B26BC7EB3FC /* ASStackLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F98FBBEB3EDC1076BC320392F2FD393 /* ASTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F4FB0E6E8CCDFE00FEC0B986FE5CF6 /* ASTabBarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FAD7246E28A57C0FF585BD25C889C4E /* _ASAsyncTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 25B607F6040EAA161A4E47B4BF1F5E34 /* _ASAsyncTransaction.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -248,7 +250,7 @@
 		87E5448EB99D2C5E67C7ABEAE0FD110D /* ASCollectionViewProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 5481248E0FC8CC73BFB134083E1D88FF /* ASCollectionViewProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		88C080541EDC97156BFC1ADE44CCC531 /* ASNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = FB745F98598E46A7C2642646AEA5C3CA /* ASNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89BF6A262EB701564179CC8F5CEC924D /* ASBasicImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B61C907F318AACE91CA2A8A7446EF8 /* ASBasicImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		89D8D05C9BDE8FDF69B2D77972E6CEDC /* Pods-ExpressionFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 860A736AC3E23982537E633F84885B3E /* Pods-ExpressionFramework-dummy.m */; };
+		89D8D05C9BDE8FDF69B2D77972E6CEDC /* Pods-ExpressionFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3AE68982185DAAF5E17C8DC06E8798 /* Pods-ExpressionFramework-dummy.m */; };
 		8AB4FBBCCD15FBC41F41034ED4BF44AE /* ASTwoDimensionalArrayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FC59647E0CADDA7210EF3A845D87AE28 /* ASTwoDimensionalArrayUtils.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8B264CE4956BDBE62E486906D483984A /* ASVisibilityProtocols.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A34D00DB0247C3F4BE939F49BD9ED5 /* ASVisibilityProtocols.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8B70B159E3E4911FFF736C3F31124BA9 /* ASTextKitEntityAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B54723F051EEC56024E5535520048CA /* ASTextKitEntityAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -390,6 +392,7 @@
 		D2F7EDC231898AE31075F7BDD7D0049A /* UIResponder+AsyncDisplayKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 196122D8E1535AEBBE41FFF9969B8EAB /* UIResponder+AsyncDisplayKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D33F83D1AB91DB85B51061836942F24F /* ASIntegerMap.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59A6AB21BE1EB01BD32440CA2108B841 /* ASIntegerMap.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D45D37118EA6F6FCB9BDCF9BB53825CA /* ASDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 61CDBA2D473303FC56BEFB1D365C8D41 /* ASDispatch.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D45FBF8C877E24BC2729B8D0202FF432 /* Pods-ExpressionFrameworkTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD55361687F914FE11E694A51A60C95 /* Pods-ExpressionFrameworkTests-dummy.m */; };
 		D47A712EC523EE2D82D03EA062BBEF23 /* ASTextRunDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA74687C1C1ACC5A8FB3A990D710F0A /* ASTextRunDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D4DDB422DAEB2882F1A2DDD3D2EF6F52 /* ASImageContainerProtocolCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 23714DCEADFD0A06F240AEAF3F7E4C6A /* ASImageContainerProtocolCategories.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D581187E80C73BF3318C3E70F5CF9BB4 /* _ASDisplayViewAccessiblity.h in Headers */ = {isa = PBXBuildFile; fileRef = 31AFAC7A82A04182AB73B4E60659E8DA /* _ASDisplayViewAccessiblity.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -516,6 +519,13 @@
 			remoteGlobalIDString = 7D670B32F7AF2F269DF9FEB3A1B0C427;
 			remoteInfo = PINOperation;
 		};
+		695C098A1364AB2E728077D7FD642212 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F722A3F384D08D9E61C15DA2D2AB317;
+			remoteInfo = Texture;
+		};
 		7CF6CF7F64523CABC0B2EAB0E5A52827 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -530,12 +540,33 @@
 			remoteGlobalIDString = 8F722A3F384D08D9E61C15DA2D2AB317;
 			remoteInfo = Texture;
 		};
+		BAAC8FFA3BD831BBD1FF71795287AF5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D670B32F7AF2F269DF9FEB3A1B0C427;
+			remoteInfo = PINOperation;
+		};
+		C04E294FCFC962655FD9974EBEA32387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 568185361EA6EEE89D2BC833905842FD;
+			remoteInfo = PINCache;
+		};
 		C3463D684501FA3C70EFFA0BE9654928 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7D670B32F7AF2F269DF9FEB3A1B0C427;
 			remoteInfo = PINOperation;
+		};
+		D3488C6B42A46D377422A005B715D1E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F88675A9A03C3FBC127EAE24A194AD9C;
+			remoteInfo = PINRemoteImage;
 		};
 		F114BE899C45F92D4732BD7030E16109 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -568,12 +599,12 @@
 		02463BAE1F0AA0DF218A2F9A25A8C1F7 /* ASIntegerMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIntegerMap.h; path = Source/Details/ASIntegerMap.h; sourceTree = "<group>"; };
 		02573E1CC297D167F49617DC77892AB4 /* ASRangeController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASRangeController.h; path = Source/Details/ASRangeController.h; sourceTree = "<group>"; };
 		02645AD1C46FC88A65A85821C93837A8 /* ASTextKitContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextKitContext.h; path = Source/TextKit/ASTextKitContext.h; sourceTree = "<group>"; };
-		027ED93C55FE15E272D00612BD3A6193 /* Pods-ExpressionFramework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExpressionFramework-umbrella.h"; sourceTree = "<group>"; };
 		0293A5CB0B802E5E6150A85F9164A706 /* ASTableNode+Beta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASTableNode+Beta.h"; path = "Source/ASTableNode+Beta.h"; sourceTree = "<group>"; };
 		029502A5B8E54CB79393BFD58B20A0F1 /* ASInsetLayoutSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASInsetLayoutSpec.h; path = Source/Layout/ASInsetLayoutSpec.h; sourceTree = "<group>"; };
 		02C508329F3AB3F5E9170D7FB095BF1F /* ASCollectionLayoutCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionLayoutCache.h; path = Source/Private/ASCollectionLayoutCache.h; sourceTree = "<group>"; };
 		02EA13560B90C1CB6EE5C33252155DC7 /* _ASCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _ASCollectionViewCell.h; path = Source/Details/_ASCollectionViewCell.h; sourceTree = "<group>"; };
 		02F497935DA36E932D21C2D1D4408E69 /* ASRelativeLayoutSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASRelativeLayoutSpec.h; path = Source/Layout/ASRelativeLayoutSpec.h; sourceTree = "<group>"; };
+		037181E064BB4C1A4C965C659C54F3C1 /* PINRemoteImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINRemoteImage.framework; path = PINRemoteImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03EEC30D500DD4D1A8506790709EAB24 /* ASLayoutManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASLayoutManager.m; path = Source/TextKit/ASLayoutManager.m; sourceTree = "<group>"; };
 		042B4626D68298051E584B246B8D5452 /* ASLayoutElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASLayoutElement.h; path = Source/Layout/ASLayoutElement.h; sourceTree = "<group>"; };
 		046D8446FD80D6A018687658B498D6F2 /* PINSpeedRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINSpeedRecorder.m; path = Source/Classes/PINSpeedRecorder.m; sourceTree = "<group>"; };
@@ -592,6 +623,7 @@
 		0B6BBC257E64AC44724CAF42415E7BF0 /* ASTipProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTipProvider.h; path = Source/Private/ASTipProvider.h; sourceTree = "<group>"; };
 		0B7D2B3400D90095FBEEE291CEA193D1 /* ASDimensionInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDimensionInternal.h; path = Source/Layout/ASDimensionInternal.h; sourceTree = "<group>"; };
 		0CEAC87E1236BA1059951EE878198267 /* PINRemoteImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PINRemoteImage.modulemap; sourceTree = "<group>"; };
+		0D6FF7AE1634A4D3B8EFC69879B07679 /* Pods_ExpressionFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ExpressionFramework.framework; path = "Pods-ExpressionFramework.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D92EA0AC7C533E3AAC4D391C918ACF4 /* ASCollectionInternal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASCollectionInternal.m; path = Source/Details/ASCollectionInternal.m; sourceTree = "<group>"; };
 		0DE4AE013A820831C97CAAFAF1274507 /* ASTraitCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTraitCollection.m; path = Source/Details/ASTraitCollection.m; sourceTree = "<group>"; };
 		0E1B1B8A4279879CCC7D5E9568EA0F84 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
@@ -599,7 +631,9 @@
 		0E75BA99695D7559A801FCAE58D8B749 /* PINOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PINOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E827B3D28E5B9F115BE57D780B3C792 /* PINOperationTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationTypes.h; path = Source/PINOperationTypes.h; sourceTree = "<group>"; };
 		0EF473249C8A3FC79DBB58D014019198 /* PINRemoteImageBasicCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageBasicCache.m; path = Source/Classes/PINRemoteImageBasicCache.m; sourceTree = "<group>"; };
+		0EFDD89AB226435ECB46CB05AF5D2E74 /* PINCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINCache.framework; path = PINCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F339A78436FAA7ADF95372B9F24D9A4 /* ASDisplayNode+Ancestry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ASDisplayNode+Ancestry.m"; path = "Source/Base/ASDisplayNode+Ancestry.m"; sourceTree = "<group>"; };
+		0F4AFEAAA4A0D52F3B8CF838913B3BEF /* Pods-ExpressionFrameworkTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExpressionFrameworkTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		0F55790A320E323A08678485E14EA75E /* ASStackLayoutSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASStackLayoutSpec.h; path = Source/Layout/ASStackLayoutSpec.h; sourceTree = "<group>"; };
 		0F99DB96E108A374E97978CB2C601638 /* PINRemoteImageManager+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINRemoteImageManager+Private.h"; path = "Source/Classes/PINRemoteImageManager+Private.h"; sourceTree = "<group>"; };
 		101A5234E77584E91613C0626DA354F5 /* ASDisplayNode+FrameworkSubclasses.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASDisplayNode+FrameworkSubclasses.h"; path = "Source/Private/ASDisplayNode+FrameworkSubclasses.h"; sourceTree = "<group>"; };
@@ -614,6 +648,7 @@
 		12F1A8559D61DBF43A39404B0BE5D917 /* ASElementMap.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASElementMap.m; path = Source/Details/ASElementMap.m; sourceTree = "<group>"; };
 		145EA24576A4BCC3BBC9BB4F2C5CF349 /* _ASCollectionGalleryLayoutInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _ASCollectionGalleryLayoutInfo.h; path = Source/Private/_ASCollectionGalleryLayoutInfo.h; sourceTree = "<group>"; };
 		154AF866BF3C18303D793E6D4B0F4E6C /* ASLayoutSpec+Subclasses.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "ASLayoutSpec+Subclasses.mm"; path = "Source/Layout/ASLayoutSpec+Subclasses.mm"; sourceTree = "<group>"; };
+		161E3F9DAB320CF6667A637193E747F9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1715A0B705502FB14EF8020386231E66 /* ASCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionView.h; path = Source/ASCollectionView.h; sourceTree = "<group>"; };
 		18C0DD6FB75C3D601C587C4C46E669A9 /* ASTableLayoutController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTableLayoutController.m; path = Source/Details/ASTableLayoutController.m; sourceTree = "<group>"; };
 		196122D8E1535AEBBE41FFF9969B8EAB /* UIResponder+AsyncDisplayKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIResponder+AsyncDisplayKit.h"; path = "Source/UIResponder+AsyncDisplayKit.h"; sourceTree = "<group>"; };
@@ -623,7 +658,6 @@
 		1AC964BE05C7ADFA9CFFDE50F06AA58C /* PINOperationGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationGroup.h; path = Source/PINOperationGroup.h; sourceTree = "<group>"; };
 		1ACD326A70A2D6AE84224E22DDB0F1FA /* ASCellNode+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASCellNode+Internal.h"; path = "Source/Private/ASCellNode+Internal.h"; sourceTree = "<group>"; };
 		1B335D5B1F308C5FD844989CF404A681 /* _ASCollectionGalleryLayoutItem.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = _ASCollectionGalleryLayoutItem.mm; path = Source/Private/_ASCollectionGalleryLayoutItem.mm; sourceTree = "<group>"; };
-		1B42F202F5D341F1DC30785E3A0353FC /* Pods-ExpressionFramework-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExpressionFramework-resources.sh"; sourceTree = "<group>"; };
 		1B436452ECD3E7217BEB61687690968E /* ASCollectionView+Undeprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASCollectionView+Undeprecated.h"; path = "Source/Private/ASCollectionView+Undeprecated.h"; sourceTree = "<group>"; };
 		1C1178EF64F0808369AE6E15C08E4F82 /* ASTextNodeWordKerner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextNodeWordKerner.h; path = Source/TextKit/ASTextNodeWordKerner.h; sourceTree = "<group>"; };
 		1C8A74AC3917A13DB9F6A1C41BD7B802 /* ASNetworkImageNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASNetworkImageNode.mm; path = Source/ASNetworkImageNode.mm; sourceTree = "<group>"; };
@@ -633,7 +667,6 @@
 		1D7801EE429AEEC8A053A910A87B8D00 /* _ASCollectionGalleryLayoutInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = _ASCollectionGalleryLayoutInfo.m; path = Source/Private/_ASCollectionGalleryLayoutInfo.m; sourceTree = "<group>"; };
 		1DC3AB8F31787D09E450A654907520F1 /* ASTextKitRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextKitRenderer.h; path = Source/TextKit/ASTextKitRenderer.h; sourceTree = "<group>"; };
 		1F2646D4410B606F6E990F8DC0D59464 /* _ASCoreAnimationExtras.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _ASCoreAnimationExtras.h; path = Source/Private/_ASCoreAnimationExtras.h; sourceTree = "<group>"; };
-		1F5DBFDDB0D18215FAB47DF01322660A /* Pods-ExpressionFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExpressionFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		2004352B8C173F999957DC2B59BB8789 /* ASLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASLog.h; path = Source/Base/ASLog.h; sourceTree = "<group>"; };
 		21E7D667DA4814AA33E08372F1583E0A /* ASStackLayoutSpecUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASStackLayoutSpecUtilities.h; path = Source/Private/Layout/ASStackLayoutSpecUtilities.h; sourceTree = "<group>"; };
 		22339202CB1B1E301F786DCFED210355 /* ASCollectionViewLayoutController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASCollectionViewLayoutController.m; path = Source/Details/ASCollectionViewLayoutController.m; sourceTree = "<group>"; };
@@ -649,6 +682,7 @@
 		2593C7C13B544EA78BA89A9F680D8DB6 /* NSArray+Diffing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+Diffing.h"; path = "Source/Details/NSArray+Diffing.h"; sourceTree = "<group>"; };
 		25B607F6040EAA161A4E47B4BF1F5E34 /* _ASAsyncTransaction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _ASAsyncTransaction.h; path = Source/Details/Transactions/_ASAsyncTransaction.h; sourceTree = "<group>"; };
 		25D481672318165D87F07BAC49FFC2DD /* ASBackgroundLayoutSpec.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASBackgroundLayoutSpec.mm; path = Source/Layout/ASBackgroundLayoutSpec.mm; sourceTree = "<group>"; };
+		26488F0E5FA5335E574681913008C706 /* Pods-ExpressionFramework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExpressionFramework-umbrella.h"; sourceTree = "<group>"; };
 		26BA266E9A66413693FB662691D0E784 /* AsyncDisplayKit+Debug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AsyncDisplayKit+Debug.h"; path = "Source/Debug/AsyncDisplayKit+Debug.h"; sourceTree = "<group>"; };
 		28C220DCD8E341B2D1A8BDCA45D92DAD /* ASAssert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASAssert.m; path = Source/Base/ASAssert.m; sourceTree = "<group>"; };
 		28D191DF10A2F3C7A052AC0A068F284B /* ASTextAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextAttribute.h; path = Source/Private/TextExperiment/String/ASTextAttribute.h; sourceTree = "<group>"; };
@@ -657,6 +691,7 @@
 		2AF481FF36259A59480523D5B184B22B /* ASTextKitRenderer+TextChecking.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "ASTextKitRenderer+TextChecking.mm"; path = "Source/TextKit/ASTextKitRenderer+TextChecking.mm"; sourceTree = "<group>"; };
 		2AF4FA3D53A41C6064F2C8E96A0EBCC6 /* ASDisplayNodeLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASDisplayNodeLayout.mm; path = Source/Private/ASDisplayNodeLayout.mm; sourceTree = "<group>"; };
 		2B0F9B84742BEA27ACE887A23D798292 /* ASControlNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASControlNode.mm; path = Source/ASControlNode.mm; sourceTree = "<group>"; };
+		2B2144D68970ECA917FECED408B6587D /* Pods-ExpressionFrameworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExpressionFrameworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2B37C0FD3DA4956FF753EC09514D87E7 /* ASVideoNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASVideoNode.mm; path = Source/ASVideoNode.mm; sourceTree = "<group>"; };
 		2BEFC737DE9D15E9390A09DACA15CBD0 /* PINRemoteImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINRemoteImage-prefix.pch"; sourceTree = "<group>"; };
 		2C0DACA0DE6C9BC40FA5ED6A79A6CD7C /* ASBatchFetchingDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASBatchFetchingDelegate.h; path = Source/Details/ASBatchFetchingDelegate.h; sourceTree = "<group>"; };
@@ -669,7 +704,6 @@
 		2DF473552A013C646803661DF7E9FAE8 /* ASDefaultPlayButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDefaultPlayButton.h; path = Source/Private/ASDefaultPlayButton.h; sourceTree = "<group>"; };
 		2E09B953814BCA238D97E65669A88430 /* IGListAdapter+AsyncDisplayKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IGListAdapter+AsyncDisplayKit.m"; path = "Source/IGListAdapter+AsyncDisplayKit.m"; sourceTree = "<group>"; };
 		2E1B3A42806C0D51A8A2A5A275C7A8E8 /* PINCacheMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCacheMacros.h; path = Source/PINCacheMacros.h; sourceTree = "<group>"; };
-		2E6FFC806C7F48FFC3687463A2D20E25 /* Pods-ExpressionFramework-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExpressionFramework-acknowledgements.plist"; sourceTree = "<group>"; };
 		2EF0DFDFCFAE8513FBB652ABB88C1827 /* ASDisplayNodeExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASDisplayNodeExtras.mm; path = Source/ASDisplayNodeExtras.mm; sourceTree = "<group>"; };
 		2F453FBD4E495BC8B3C4CBACC907869F /* ASDisplayNode+Layout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "ASDisplayNode+Layout.mm"; path = "Source/ASDisplayNode+Layout.mm"; sourceTree = "<group>"; };
 		3048991775B6EFADC03BDA9BB3FA7D41 /* NSParagraphStyle+ASText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSParagraphStyle+ASText.m"; path = "Source/Private/TextExperiment/Utility/NSParagraphStyle+ASText.m"; sourceTree = "<group>"; };
@@ -690,6 +724,7 @@
 		356E8E4293170453222CA5F1B884547E /* ASWeakMap.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASWeakMap.m; path = Source/Private/ASWeakMap.m; sourceTree = "<group>"; };
 		35F18DD500476A604F1682A7630CE988 /* ASCollectionLayoutState+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASCollectionLayoutState+Private.h"; path = "Source/Private/ASCollectionLayoutState+Private.h"; sourceTree = "<group>"; };
 		368897C62EE3E382CB3243F19FD525A2 /* ASTableViewInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTableViewInternal.h; path = Source/ASTableViewInternal.h; sourceTree = "<group>"; };
+		368E1BB3A398F8E003E69C0900433098 /* Pods-ExpressionFrameworkTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExpressionFrameworkTests-umbrella.h"; sourceTree = "<group>"; };
 		37D0BD2AAB3480650A9A926672171E85 /* ASTextNode+Beta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASTextNode+Beta.h"; path = "Source/ASTextNode+Beta.h"; sourceTree = "<group>"; };
 		38663FCF5CDD57BEAE09A2E6892D9D34 /* ASTextKitContext.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASTextKitContext.mm; path = Source/TextKit/ASTextKitContext.mm; sourceTree = "<group>"; };
 		3883A9C9CB4AB9B6DDB4ED66D1B29222 /* ASLayoutElement.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASLayoutElement.mm; path = Source/Layout/ASLayoutElement.mm; sourceTree = "<group>"; };
@@ -706,11 +741,11 @@
 		3FCEF6145F8906E4F811AB0DA4E1D5FC /* ASTip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTip.h; path = Source/Private/ASTip.h; sourceTree = "<group>"; };
 		406C8295DF54D337D66BF4946745B936 /* UIImage+ASConvenience.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ASConvenience.h"; path = "Source/UIImage+ASConvenience.h"; sourceTree = "<group>"; };
 		41C7320B802E9C8629AC79941463B176 /* ASCollectionElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionElement.h; path = Source/Details/ASCollectionElement.h; sourceTree = "<group>"; };
+		41DAA8C1D167BC54BDEE3C61F48CDC44 /* PINOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINOperation.framework; path = PINOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		420F11920B7452FD3E2B1D282CBA47A6 /* ASNodeController+Beta.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ASNodeController+Beta.m"; path = "Source/ASNodeController+Beta.m"; sourceTree = "<group>"; };
 		42C6C5B144BB31D45491C8182E4EDD4A /* ASTextKitTruncating.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextKitTruncating.h; path = Source/TextKit/ASTextKitTruncating.h; sourceTree = "<group>"; };
 		4335083DE23F3F80E88F575ED7980183 /* AsyncDisplayKit+Tips.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AsyncDisplayKit+Tips.m"; path = "Source/Debug/AsyncDisplayKit+Tips.m"; sourceTree = "<group>"; };
 		43683D45A96A1691CF8F9DBAEACF4253 /* ASTextKitRenderer.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASTextKitRenderer.mm; path = Source/TextKit/ASTextKitRenderer.mm; sourceTree = "<group>"; };
-		436DCC28BD6ECABBE13FE96B10069441 /* Pods-ExpressionFramework-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExpressionFramework-acknowledgements.markdown"; sourceTree = "<group>"; };
 		448484C4637B1D31210989FB8B1F10FB /* ASPendingStateController.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASPendingStateController.mm; path = Source/Private/ASPendingStateController.mm; sourceTree = "<group>"; };
 		44911EBD4B4687C4112E9A1B0F5841A3 /* ASTextNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASTextNode.mm; path = Source/ASTextNode.mm; sourceTree = "<group>"; };
 		4556561C057FB09DA27C16E5ACF75652 /* ASWeakProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASWeakProxy.h; path = Source/Details/ASWeakProxy.h; sourceTree = "<group>"; };
@@ -728,6 +763,7 @@
 		4E1F00F5095874485A97D87A36750975 /* PINCaching.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCaching.h; path = Source/PINCaching.h; sourceTree = "<group>"; };
 		4E3F0B58EF347549743686E00E3340F5 /* PINRemoteImageDownloadTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageDownloadTask.h; path = Source/Classes/PINRemoteImageDownloadTask.h; sourceTree = "<group>"; };
 		4E7C18218A9FE09DA3D29F6FD65907CA /* ASBasicImageDownloader.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASBasicImageDownloader.mm; path = Source/Details/ASBasicImageDownloader.mm; sourceTree = "<group>"; };
+		4E8721BFEAC0146A67E1C1112CE826DF /* Pods-ExpressionFrameworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExpressionFrameworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		4ED2B0AFADB515F5C9E935FA820B7A10 /* ASRectTable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASRectTable.h; path = Source/Private/ASRectTable.h; sourceTree = "<group>"; };
 		4F3C8B7186746468F296E42803DCD2A3 /* ASAsciiArtBoxCreator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASAsciiArtBoxCreator.h; path = Source/Layout/ASAsciiArtBoxCreator.h; sourceTree = "<group>"; };
 		4FC5004577B4A3FA2F015B6989767E8D /* NSURLSessionTask+Timing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLSessionTask+Timing.h"; path = "Source/Classes/Categories/NSURLSessionTask+Timing.h"; sourceTree = "<group>"; };
@@ -780,26 +816,27 @@
 		67A34D00DB0247C3F4BE939F49BD9ED5 /* ASVisibilityProtocols.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASVisibilityProtocols.m; path = Source/ASVisibilityProtocols.m; sourceTree = "<group>"; };
 		6880A7E08680D997A583D743670E8CE7 /* PINOperationMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationMacros.h; path = Source/PINOperationMacros.h; sourceTree = "<group>"; };
 		695ACF7D46D6C381F2BD2CD90454C51C /* PINButton+PINRemoteImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINButton+PINRemoteImage.h"; path = "Source/Classes/ImageCategories/PINButton+PINRemoteImage.h"; sourceTree = "<group>"; };
-		698641ACACFC796C740A3ADFC84A6890 /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AsyncDisplayKit.framework; path = Texture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0A7E2373333129C84FEF48B8CB579D /* ASAssert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASAssert.h; path = Source/Base/ASAssert.h; sourceTree = "<group>"; };
+		6B3097FE6D1ECD0703DFC56BFC54BC34 /* Pods-ExpressionFrameworkTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExpressionFrameworkTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6B3AE68982185DAAF5E17C8DC06E8798 /* Pods-ExpressionFramework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExpressionFramework-dummy.m"; sourceTree = "<group>"; };
 		6B4EF8A9A8A3E5231DFCDC7E30D5E740 /* ASRangeManagingNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASRangeManagingNode.h; path = Source/ASRangeManagingNode.h; sourceTree = "<group>"; };
+		6BD55361687F914FE11E694A51A60C95 /* Pods-ExpressionFrameworkTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExpressionFrameworkTests-dummy.m"; sourceTree = "<group>"; };
 		6C03C9859DA8A2E21F1F6B1CB0791A86 /* ASTipNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTipNode.m; path = Source/Private/ASTipNode.m; sourceTree = "<group>"; };
 		6C46EE54C23A29BC823E79B1CD2507EB /* ASDisplayNodeExtras.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDisplayNodeExtras.h; path = Source/ASDisplayNodeExtras.h; sourceTree = "<group>"; };
 		6CBD7FF70739038BA8DF74DC9C7BA9F1 /* PINOperation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PINOperation.modulemap; sourceTree = "<group>"; };
 		6D96DAF819BBE0C294E2D7F55520B957 /* ASCollectionElement.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASCollectionElement.mm; path = Source/Details/ASCollectionElement.mm; sourceTree = "<group>"; };
-		6DA7B06A5FA3C01CFBA06EC146F0CFA7 /* Pods-ExpressionFramework-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExpressionFramework-frameworks.sh"; sourceTree = "<group>"; };
 		6DDF2EBB1F1BD7E472B8FC1BB167E4E7 /* ASImageProtocols.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASImageProtocols.h; path = Source/Details/ASImageProtocols.h; sourceTree = "<group>"; };
 		6E0A603CA7488D334291587E0F4D5113 /* PINRemoteImageManagerResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageManagerResult.m; path = Source/Classes/PINRemoteImageManagerResult.m; sourceTree = "<group>"; };
 		6E0C3E22B9A71591F145FBD4533B4E12 /* ASTextUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextUtilities.h; path = Source/Private/TextExperiment/Utility/ASTextUtilities.h; sourceTree = "<group>"; };
 		6E22F07DCCB8AA16BE0B04CDC3523BBA /* ASCollectionLayoutContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASCollectionLayoutContext.m; path = Source/Details/ASCollectionLayoutContext.m; sourceTree = "<group>"; };
 		6EDCE865BEA3D9A1675E9B81665BA7D9 /* ASBackgroundLayoutSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASBackgroundLayoutSpec.h; path = Source/Layout/ASBackgroundLayoutSpec.h; sourceTree = "<group>"; };
 		6F5945981C87E678CCB0F8C7582D263A /* ASMainSerialQueue.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASMainSerialQueue.mm; path = Source/Details/ASMainSerialQueue.mm; sourceTree = "<group>"; };
+		702A782945101B0176CC05205CCD5F43 /* Pods-ExpressionFrameworkTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExpressionFrameworkTests-frameworks.sh"; sourceTree = "<group>"; };
 		70386D3024D048D9EEA9C3A00A7FB1AE /* NSData+ImageDetectors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageDetectors.h"; path = "Source/Classes/Categories/NSData+ImageDetectors.h"; sourceTree = "<group>"; };
 		721C39262FDFB60F57807AC409115AED /* ASStackLayoutSpec.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASStackLayoutSpec.mm; path = Source/Layout/ASStackLayoutSpec.mm; sourceTree = "<group>"; };
 		73CBB97169165E834BAD269187F847B1 /* PINRemoteImageTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageTask.h; path = Source/Classes/PINRemoteImageTask.h; sourceTree = "<group>"; };
 		73E5FE7E7157CD405B5D062B8D7EC093 /* _ASHierarchyChangeSet.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = _ASHierarchyChangeSet.mm; path = Source/Private/_ASHierarchyChangeSet.mm; sourceTree = "<group>"; };
 		73F7E42B0D21218295F242F2B2A2D2C8 /* ASMultiplexImageNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASMultiplexImageNode.h; path = Source/ASMultiplexImageNode.h; sourceTree = "<group>"; };
-		74D56BE79B53F1B69BDB422E4C70B85C /* Pods_ExpressionFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ExpressionFramework.framework; path = "Pods-ExpressionFramework.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7564AC0785C5D6050E37EE67A2FB0312 /* ASResponderChainEnumerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASResponderChainEnumerator.h; path = Source/Private/ASResponderChainEnumerator.h; sourceTree = "<group>"; };
 		761F846A4D4C7A757BB53FB84136C0D4 /* ASDimension.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASDimension.mm; path = Source/Layout/ASDimension.mm; sourceTree = "<group>"; };
 		764400190B7B267F5F7EAFA3E7ABE7F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -812,8 +849,8 @@
 		78BAC4F89021A0B0FC42C1E7E0504526 /* ASViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASViewController.h; path = Source/ASViewController.h; sourceTree = "<group>"; };
 		78D6239DA66695AB4646784B4C9A7FE0 /* PINRemoteImageProcessorTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageProcessorTask.m; path = Source/Classes/PINRemoteImageProcessorTask.m; sourceTree = "<group>"; };
 		7B85EC2365020D3A5E90C6AFD568DFBE /* ASWeakSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASWeakSet.h; path = Source/Details/ASWeakSet.h; sourceTree = "<group>"; };
+		7B87BF47F05AAFE98FF914784B7A9A74 /* Pods-ExpressionFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExpressionFramework.release.xcconfig"; sourceTree = "<group>"; };
 		7C28735D2E134F613E75ABCE41CA9386 /* ASEventLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASEventLog.h; path = Source/Details/ASEventLog.h; sourceTree = "<group>"; };
-		7D80044459C6BD97E814676FC45DE4BC /* Pods-ExpressionFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExpressionFramework.release.xcconfig"; sourceTree = "<group>"; };
 		7D8D9F6641C61B3D00F9C7F62F79D110 /* AsyncDisplayKit+Debug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AsyncDisplayKit+Debug.m"; path = "Source/Debug/AsyncDisplayKit+Debug.m"; sourceTree = "<group>"; };
 		7E041B043AE393D613B1CDD0AF2E4C5D /* PINRemoteImageCategoryManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageCategoryManager.h; path = Source/Classes/PINRemoteImageCategoryManager.h; sourceTree = "<group>"; };
 		7E347E8BDFFCD33E2B8DDFDF3AD59B9D /* NSIndexSet+ASHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSIndexSet+ASHelpers.h"; path = "Source/Details/NSIndexSet+ASHelpers.h"; sourceTree = "<group>"; };
@@ -828,8 +865,8 @@
 		826BEEA3E5A4122CF0BE20FB26E2D121 /* ASVideoPlayerNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASVideoPlayerNode.h; path = Source/ASVideoPlayerNode.h; sourceTree = "<group>"; };
 		8294B2C2D3655C9DF0618628768688AE /* NSAttributedString+ASText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+ASText.m"; path = "Source/Private/TextExperiment/Utility/NSAttributedString+ASText.m"; sourceTree = "<group>"; };
 		840098F554C29F867AB08E6796FFED42 /* ASTextKitCoreTextAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTextKitCoreTextAdditions.m; path = Source/TextKit/ASTextKitCoreTextAdditions.m; sourceTree = "<group>"; };
+		84D07D9941A84E1E8378F0092E2D8897 /* Pods-ExpressionFramework-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExpressionFramework-resources.sh"; sourceTree = "<group>"; };
 		8527C5BCEC9D2D73C38B1C105E2A6567 /* PINImage+DecodedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PINImage+DecodedImage.m"; path = "Source/Classes/Categories/PINImage+DecodedImage.m"; sourceTree = "<group>"; };
-		860A736AC3E23982537E633F84885B3E /* Pods-ExpressionFramework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExpressionFramework-dummy.m"; sourceTree = "<group>"; };
 		86C5B8218E6EE24708E53D8EA28D79B0 /* ASDefaultPlayButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASDefaultPlayButton.m; path = Source/Private/ASDefaultPlayButton.m; sourceTree = "<group>"; };
 		87186DACAE08D38B33B1CE01C7F6F180 /* ASSectionContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASSectionContext.h; path = Source/Details/ASSectionContext.h; sourceTree = "<group>"; };
 		8894FDC98226FC8CBAE06312F00FDE04 /* ASTabBarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTabBarController.m; path = Source/ASTabBarController.m; sourceTree = "<group>"; };
@@ -843,7 +880,6 @@
 		8FE76145A7498C1B752DCBDDA1A269FA /* PINAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINAnimatedImage.h; path = Source/Classes/PINAnimatedImage.h; sourceTree = "<group>"; };
 		911B914F622879374216FD4DCF866E19 /* PINOperationQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINOperationQueue.m; path = Source/PINOperationQueue.m; sourceTree = "<group>"; };
 		915A400DAB8DDA4A740EA70E296F2E61 /* PINAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINAnimatedImage.m; path = Source/Classes/PINAnimatedImage.m; sourceTree = "<group>"; };
-		93549C82EC6C1EEA99EB31D2F2ACC6FD /* PINOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINOperation.framework; path = PINOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		936C6170D92E8C07C2CB35606D56725C /* ASCollectionLayoutDefines.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASCollectionLayoutDefines.m; path = Source/Private/ASCollectionLayoutDefines.m; sourceTree = "<group>"; };
 		936FE63BDE9209497F63BC6072FA5958 /* PINButton+PINRemoteImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PINButton+PINRemoteImage.m"; path = "Source/Classes/ImageCategories/PINButton+PINRemoteImage.m"; sourceTree = "<group>"; };
 		939B7E32680B7E1C56C8A42AA8DEB9C7 /* ASNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASNavigationController.m; path = Source/ASNavigationController.m; sourceTree = "<group>"; };
@@ -860,7 +896,6 @@
 		966E85814EFE5D5CD9F16EDDE75ADA12 /* ASHashing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASHashing.h; path = Source/Details/ASHashing.h; sourceTree = "<group>"; };
 		969ED9C62592BD6E761612C7FFE09E1C /* _ASCoreAnimationExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = _ASCoreAnimationExtras.mm; path = Source/Private/_ASCoreAnimationExtras.mm; sourceTree = "<group>"; };
 		96DD7469305D93B5C3B9FD3EFE86BA6A /* ASWeakSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASWeakSet.m; path = Source/Details/ASWeakSet.m; sourceTree = "<group>"; };
-		970251A497E17D3EE4B74E96C090CA37 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9839CF4773817F125F36D8A59421918E /* ASTextKitFontSizeAdjuster.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextKitFontSizeAdjuster.h; path = Source/TextKit/ASTextKitFontSizeAdjuster.h; sourceTree = "<group>"; };
 		9867D2D4E018636DF16D2E62C4CB13BA /* ASLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASLayout.mm; path = Source/Layout/ASLayout.mm; sourceTree = "<group>"; };
 		9899523C3FEBE843693B37F5E8C1FC31 /* ASDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDelegateProxy.h; path = Source/Details/ASDelegateProxy.h; sourceTree = "<group>"; };
@@ -896,9 +931,9 @@
 		AACB2944E5204CE5FF6142365AD73821 /* _ASCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = _ASCollectionViewCell.m; path = Source/Details/_ASCollectionViewCell.m; sourceTree = "<group>"; };
 		AADF5DC2DF6167E3D89A4B3F20186B16 /* ASRangeControllerUpdateRangeProtocol+Beta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASRangeControllerUpdateRangeProtocol+Beta.h"; path = "Source/Details/ASRangeControllerUpdateRangeProtocol+Beta.h"; sourceTree = "<group>"; };
 		AB9DD25B08EF7C8FC2E09E01D3D23F8E /* ASPagerFlowLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASPagerFlowLayout.h; path = Source/ASPagerFlowLayout.h; sourceTree = "<group>"; };
+		AC842EEE515602565B06557EE26F8DE5 /* Pods_ExpressionFrameworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ExpressionFrameworkTests.framework; path = "Pods-ExpressionFrameworkTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2ED8B064C6D39ED621A0CD302B44D1 /* UICollectionViewLayout+ASConvenience.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionViewLayout+ASConvenience.h"; path = "Source/Details/UICollectionViewLayout+ASConvenience.h"; sourceTree = "<group>"; };
 		AD4117469671158F8806F3BDA31FEA76 /* ASScrollNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASScrollNode.mm; path = Source/ASScrollNode.mm; sourceTree = "<group>"; };
-		AD4E43FE7F21125B63DDDC92D472BF75 /* Pods-ExpressionFramework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ExpressionFramework.modulemap"; sourceTree = "<group>"; };
 		AD6C87B0FE8887C5D04EE2C0783B3BC7 /* ASDisplayNode+Beta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASDisplayNode+Beta.h"; path = "Source/ASDisplayNode+Beta.h"; sourceTree = "<group>"; };
 		AE31861E40EA99EFA522EF98920DF609 /* ASLayoutSpecUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASLayoutSpecUtilities.h; path = Source/Private/Layout/ASLayoutSpecUtilities.h; sourceTree = "<group>"; };
 		AE4ECBCAFC6173C75B8978A8CDF3F38D /* ASOverlayLayoutSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASOverlayLayoutSpec.h; path = Source/Layout/ASOverlayLayoutSpec.h; sourceTree = "<group>"; };
@@ -913,6 +948,7 @@
 		B2EB8931B2802CBBDB7D27932154CC3F /* ASCollectionGalleryLayoutDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionGalleryLayoutDelegate.h; path = Source/Details/ASCollectionGalleryLayoutDelegate.h; sourceTree = "<group>"; };
 		B325C321C5AA46F430A34652D54FE02C /* UIView+ASConvenience.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ASConvenience.h"; path = "Source/Details/UIView+ASConvenience.h"; sourceTree = "<group>"; };
 		B34A5DC75CAB9AA70826D914AB771B95 /* ASMutableAttributedStringBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASMutableAttributedStringBuilder.h; path = Source/Details/ASMutableAttributedStringBuilder.h; sourceTree = "<group>"; };
+		B388DA0A2A4710E457B1B063420A48B6 /* Pods-ExpressionFramework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ExpressionFramework.modulemap"; sourceTree = "<group>"; };
 		B40F9CBD712669B6184251D568CD1EB0 /* PINCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINCache.m; path = Source/PINCache.m; sourceTree = "<group>"; };
 		B476011260F9D9D1A13FCF045226766D /* ASRectTable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASRectTable.m; path = Source/Private/ASRectTable.m; sourceTree = "<group>"; };
 		B5959F3013986A12534ED0C2DB398A87 /* ASAbstractLayoutController.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASAbstractLayoutController.mm; path = Source/Details/ASAbstractLayoutController.mm; sourceTree = "<group>"; };
@@ -922,8 +958,8 @@
 		B72E29E3B121B47C9F2AAE9C1FAB2AD3 /* ASStackUnpositionedLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASStackUnpositionedLayout.mm; path = Source/Private/Layout/ASStackUnpositionedLayout.mm; sourceTree = "<group>"; };
 		B7B61C907F318AACE91CA2A8A7446EF8 /* ASBasicImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASBasicImageDownloader.h; path = Source/Details/ASBasicImageDownloader.h; sourceTree = "<group>"; };
 		B819D8806EB210700D4D1CE079F1235B /* PINRemoteImageDownloadQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageDownloadQueue.m; path = Source/Classes/PINRemoteImageDownloadQueue.m; sourceTree = "<group>"; };
-		B932BE88FA8E817551B2E4EFB13C8A47 /* PINCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINCache.framework; path = PINCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95A8A3888206F8BBE77633868DC9BAB /* Texture-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Texture-prefix.pch"; sourceTree = "<group>"; };
+		BA825ED07013134F9130F701C18B39FE /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AsyncDisplayKit.framework; path = Texture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA2169F2999CB4ECC4E90504198599E /* ASTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTableView.h; path = Source/ASTableView.h; sourceTree = "<group>"; };
 		BC29FEFB69833FBA0941BBA88E531F6B /* ASTextKitShadower.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASTextKitShadower.mm; path = Source/TextKit/ASTextKitShadower.mm; sourceTree = "<group>"; };
 		BCC095D2174848C61B85F92B1475ABF9 /* ASCollectionLayoutDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionLayoutDelegate.h; path = Source/Details/ASCollectionLayoutDelegate.h; sourceTree = "<group>"; };
@@ -947,6 +983,7 @@
 		C66E0F737EB81FEF99305BFD2C7757A5 /* ASImageNode+CGExtras.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ASImageNode+CGExtras.m"; path = "Source/Private/ASImageNode+CGExtras.m"; sourceTree = "<group>"; };
 		C6D9C00B38B9F8E8A80288E5DC77CEFF /* _ASAsyncTransactionContainer+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "_ASAsyncTransactionContainer+Private.h"; path = "Source/Details/Transactions/_ASAsyncTransactionContainer+Private.h"; sourceTree = "<group>"; };
 		C6F6E533BCC3FFE75975E7F19C587AAF /* ASTextKitShadower.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextKitShadower.h; path = Source/TextKit/ASTextKitShadower.h; sourceTree = "<group>"; };
+		C76235C1186B865ABD73BEA5702B15E5 /* Pods-ExpressionFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExpressionFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		C7C5428633AF09B00432F0DBEC5BA2DF /* ASControlTargetAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASControlTargetAction.m; path = Source/Private/ASControlTargetAction.m; sourceTree = "<group>"; };
 		C7DF79FE68A317CF58672273D6E2E45F /* ASTextNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextNode.h; path = Source/ASTextNode.h; sourceTree = "<group>"; };
 		C852F84A305C62EB1653E4F2385FCDBB /* ASPagerFlowLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASPagerFlowLayout.m; path = Source/ASPagerFlowLayout.m; sourceTree = "<group>"; };
@@ -954,6 +991,7 @@
 		C8AE4D02A5DA9348E18627E8027C4DCD /* ASTextKitTailTruncater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextKitTailTruncater.h; path = Source/TextKit/ASTextKitTailTruncater.h; sourceTree = "<group>"; };
 		C9B1D3C0EE3F08B3CD8AA3D76DFE1012 /* ASCollectionNode+Beta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASCollectionNode+Beta.h"; path = "Source/ASCollectionNode+Beta.h"; sourceTree = "<group>"; };
 		C9CC03BD190B3CB4A9239C53A4FA1248 /* PINRemoteImageBasicCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageBasicCache.h; path = Source/Classes/PINRemoteImageBasicCache.h; sourceTree = "<group>"; };
+		C9D0AF849A7F72CC8E56227E6C9A30E0 /* Pods-ExpressionFramework-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExpressionFramework-frameworks.sh"; sourceTree = "<group>"; };
 		CA0E689FCA73B0C0D339F8C66793CC9E /* ASStackPositionedLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASStackPositionedLayout.mm; path = Source/Private/Layout/ASStackPositionedLayout.mm; sourceTree = "<group>"; };
 		CAB3AE731769BF6E5FA8FBDAEC77AF68 /* ASTraceEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTraceEvent.h; path = Source/Details/ASTraceEvent.h; sourceTree = "<group>"; };
 		CB0BB71B5DF652E6F9F8B8524F91C084 /* ASDataController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDataController.h; path = Source/Details/ASDataController.h; sourceTree = "<group>"; };
@@ -981,11 +1019,13 @@
 		D8CE4CECEC38A9903BE6F6AB19350209 /* Texture.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Texture.modulemap; sourceTree = "<group>"; };
 		D908C5201E0E1EF61823F261AFFDBB82 /* ASDisplayNodeLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDisplayNodeLayout.h; path = Source/Private/ASDisplayNodeLayout.h; sourceTree = "<group>"; };
 		D96844CB0DD885227A765053B28EEB36 /* ASAbsoluteLayoutSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASAbsoluteLayoutSpec.h; path = Source/Layout/ASAbsoluteLayoutSpec.h; sourceTree = "<group>"; };
+		D968B9062BBCF15F5B4AACB8802578F7 /* Pods-ExpressionFrameworkTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ExpressionFrameworkTests.modulemap"; sourceTree = "<group>"; };
 		D9B4037E5109C808CD7FA25B0A41032A /* _ASPendingState.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = _ASPendingState.mm; path = Source/Private/_ASPendingState.mm; sourceTree = "<group>"; };
 		D9E3A98B1D80744C5C8D08509233C003 /* ASDisplayNodeInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDisplayNodeInternal.h; path = Source/Private/ASDisplayNodeInternal.h; sourceTree = "<group>"; };
 		DA02F5D42A42EC7F489729B9099E6426 /* PINRemoteImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageManager.h; path = Source/Classes/PINRemoteImageManager.h; sourceTree = "<group>"; };
 		DA8DDD52DADDFB53F1875EC634BB370F /* PINOperation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINOperation.xcconfig; sourceTree = "<group>"; };
 		DB9AC14D0A72F1F7A8065E39F7D35452 /* CoreGraphics+ASConvenience.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CoreGraphics+ASConvenience.h"; path = "Source/Details/CoreGraphics+ASConvenience.h"; sourceTree = "<group>"; };
+		DBD436A1400B4452E7BCB48ED4B1E150 /* Pods-ExpressionFramework-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExpressionFramework-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DD37CCE32FAD6DB70E4B1D4F4DBE7F99 /* ASDimensionInternal.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASDimensionInternal.mm; path = Source/Layout/ASDimensionInternal.mm; sourceTree = "<group>"; };
 		DD3EA2479320097A6701DBAEBBA7F917 /* ASTextUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTextUtilities.m; path = Source/Private/TextExperiment/Utility/ASTextUtilities.m; sourceTree = "<group>"; };
 		DD5C1662F75E3FDE6614D68B48C1A143 /* ASIGListAdapterBasedDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIGListAdapterBasedDataSource.h; path = Source/Private/ASIGListAdapterBasedDataSource.h; sourceTree = "<group>"; };
@@ -1005,6 +1045,7 @@
 		E4207EE9D5A9DD92859C35C35DAD627F /* ASTableView.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASTableView.mm; path = Source/ASTableView.mm; sourceTree = "<group>"; };
 		E5562ED9F7B3516DF1E2450B6F3C944E /* PINCache-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINCache-dummy.m"; sourceTree = "<group>"; };
 		E5821473143C768338C9E961790BD061 /* Texture.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Texture.xcconfig; sourceTree = "<group>"; };
+		E5C06DE05F59911D8701ACDBC2D6F634 /* Pods-ExpressionFramework-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExpressionFramework-acknowledgements.plist"; sourceTree = "<group>"; };
 		E6071FBB4F4DBDA5F3F309EFD5B26CC6 /* ASTraceEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTraceEvent.m; path = Source/Details/ASTraceEvent.m; sourceTree = "<group>"; };
 		E62E1C30E81143368173AF46B2119E76 /* ASImageNode+CGExtras.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASImageNode+CGExtras.h"; path = "Source/Private/ASImageNode+CGExtras.h"; sourceTree = "<group>"; };
 		E74C652694F09972475956255CC54413 /* ASCollectionInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionInternal.h; path = Source/Details/ASCollectionInternal.h; sourceTree = "<group>"; };
@@ -1020,7 +1061,7 @@
 		ED8AAEE311D1EA3029725B209A47DF25 /* ASVideoPlayerNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ASVideoPlayerNode.mm; path = Source/ASVideoPlayerNode.mm; sourceTree = "<group>"; };
 		EE6C9771E9D693B0223E698C172D1932 /* ASTableView+Undeprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASTableView+Undeprecated.h"; path = "Source/Private/ASTableView+Undeprecated.h"; sourceTree = "<group>"; };
 		EF0006D44F4535FD5F4A047A9FD32F12 /* ASDisplayNode+DebugTiming.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASDisplayNode+DebugTiming.h"; path = "Source/Private/ASDisplayNode+DebugTiming.h"; sourceTree = "<group>"; };
-		EF18C56E2B773E641455EF58706E6492 /* PINRemoteImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINRemoteImage.framework; path = PINRemoteImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF394262BED9E47C91076E8A73E3F4D3 /* Pods-ExpressionFrameworkTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExpressionFrameworkTests-resources.sh"; sourceTree = "<group>"; };
 		EF6193FA4B61D0913C9788613C4FAFC2 /* PINResume.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINResume.m; path = Source/Classes/PINResume.m; sourceTree = "<group>"; };
 		EFD3F70DB0ABD21EBCE04472165F7AB7 /* PINRemoteImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImage.h; path = Source/Classes/PINRemoteImage.h; sourceTree = "<group>"; };
 		EFF3554895E914DE50D63A51551F7FA8 /* PINRemoteImageMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageMacros.h; path = Source/Classes/PINRemoteImageMacros.h; sourceTree = "<group>"; };
@@ -1048,6 +1089,7 @@
 		F9DFD3E4351173094AAE167E92243EC9 /* ASCollectionFlowLayoutDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionFlowLayoutDelegate.h; path = Source/Details/ASCollectionFlowLayoutDelegate.h; sourceTree = "<group>"; };
 		F9FC1678D4173F4F0D91F66D67743A74 /* ASTipsWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTipsWindow.m; path = Source/Private/ASTipsWindow.m; sourceTree = "<group>"; };
 		FAC2436A0B072F40073A2736072DA301 /* ASPageTable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASPageTable.h; path = Source/Details/ASPageTable.h; sourceTree = "<group>"; };
+		FAC819529F15690670133B2CD551EB36 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB227BDFA96F1A43340867A728B9D5B5 /* PINDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINDiskCache.m; path = Source/PINDiskCache.m; sourceTree = "<group>"; };
 		FB745F98598E46A7C2642646AEA5C3CA /* ASNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASNavigationController.h; path = Source/ASNavigationController.h; sourceTree = "<group>"; };
 		FC0C3D9F69C6651317F76220DE96F0EB /* ASPagerNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASPagerNode.h; path = Source/ASPagerNode.h; sourceTree = "<group>"; };
@@ -1065,6 +1107,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		30A8C35B3A5032AD22B6D8D0706CDD07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B7AEACA75162D053332CD0868EF51CF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		30DD4CA4137D21457E01141DB5C07D39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1117,14 +1167,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		034671EA90FC256ABA5ECFE8DF16C8C0 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8D3BAD3E7718C218C6BAE7894E0CBD22 /* Pods-ExpressionFramework */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 		03595B9109D8C51E3D956ED5685ADA09 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -1140,16 +1182,22 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		0FD44FC9010F47AE4AE80678C674AF95 /* Products */ = {
+		1DC6D4770E5B36E5C56CA6218E8126FF /* Pods-ExpressionFramework */ = {
 			isa = PBXGroup;
 			children = (
-				698641ACACFC796C740A3ADFC84A6890 /* AsyncDisplayKit.framework */,
-				B932BE88FA8E817551B2E4EFB13C8A47 /* PINCache.framework */,
-				93549C82EC6C1EEA99EB31D2F2ACC6FD /* PINOperation.framework */,
-				EF18C56E2B773E641455EF58706E6492 /* PINRemoteImage.framework */,
-				74D56BE79B53F1B69BDB422E4C70B85C /* Pods_ExpressionFramework.framework */,
+				FAC819529F15690670133B2CD551EB36 /* Info.plist */,
+				B388DA0A2A4710E457B1B063420A48B6 /* Pods-ExpressionFramework.modulemap */,
+				DBD436A1400B4452E7BCB48ED4B1E150 /* Pods-ExpressionFramework-acknowledgements.markdown */,
+				E5C06DE05F59911D8701ACDBC2D6F634 /* Pods-ExpressionFramework-acknowledgements.plist */,
+				6B3AE68982185DAAF5E17C8DC06E8798 /* Pods-ExpressionFramework-dummy.m */,
+				C9D0AF849A7F72CC8E56227E6C9A30E0 /* Pods-ExpressionFramework-frameworks.sh */,
+				84D07D9941A84E1E8378F0092E2D8897 /* Pods-ExpressionFramework-resources.sh */,
+				26488F0E5FA5335E574681913008C706 /* Pods-ExpressionFramework-umbrella.h */,
+				C76235C1186B865ABD73BEA5702B15E5 /* Pods-ExpressionFramework.debug.xcconfig */,
+				7B87BF47F05AAFE98FF914784B7A9A74 /* Pods-ExpressionFramework.release.xcconfig */,
 			);
-			name = Products;
+			name = "Pods-ExpressionFramework";
+			path = "Target Support Files/Pods-ExpressionFramework";
 			sourceTree = "<group>";
 		};
 		1F4E607F8EAD16933820A61F34D40AA4 /* iOS */ = {
@@ -1569,8 +1617,8 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				D30590C469A50677F23B1C34A61ED73C /* Frameworks */,
 				A1D2D3A3774991A0B74ACC5389221BA4 /* Pods */,
-				0FD44FC9010F47AE4AE80678C674AF95 /* Products */,
-				034671EA90FC256ABA5ECFE8DF16C8C0 /* Targets Support Files */,
+				F503013EEB3985355F2D94D78D71F83B /* Products */,
+				9C9D88118EF7C9E1EB78B49B3295BD93 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1596,24 +1644,6 @@
 			name = "Arc-exception-safe";
 			sourceTree = "<group>";
 		};
-		8D3BAD3E7718C218C6BAE7894E0CBD22 /* Pods-ExpressionFramework */ = {
-			isa = PBXGroup;
-			children = (
-				970251A497E17D3EE4B74E96C090CA37 /* Info.plist */,
-				AD4E43FE7F21125B63DDDC92D472BF75 /* Pods-ExpressionFramework.modulemap */,
-				436DCC28BD6ECABBE13FE96B10069441 /* Pods-ExpressionFramework-acknowledgements.markdown */,
-				2E6FFC806C7F48FFC3687463A2D20E25 /* Pods-ExpressionFramework-acknowledgements.plist */,
-				860A736AC3E23982537E633F84885B3E /* Pods-ExpressionFramework-dummy.m */,
-				6DA7B06A5FA3C01CFBA06EC146F0CFA7 /* Pods-ExpressionFramework-frameworks.sh */,
-				1B42F202F5D341F1DC30785E3A0353FC /* Pods-ExpressionFramework-resources.sh */,
-				027ED93C55FE15E272D00612BD3A6193 /* Pods-ExpressionFramework-umbrella.h */,
-				1F5DBFDDB0D18215FAB47DF01322660A /* Pods-ExpressionFramework.debug.xcconfig */,
-				7D80044459C6BD97E814676FC45DE4BC /* Pods-ExpressionFramework.release.xcconfig */,
-			);
-			name = "Pods-ExpressionFramework";
-			path = "Target Support Files/Pods-ExpressionFramework";
-			sourceTree = "<group>";
-		};
 		90C2AAB54278E27309DF15F2A17AB879 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1626,6 +1656,15 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/PINRemoteImage";
+			sourceTree = "<group>";
+		};
+		9C9D88118EF7C9E1EB78B49B3295BD93 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DC6D4770E5B36E5C56CA6218E8126FF /* Pods-ExpressionFramework */,
+				EA07A71B135EC049F41CCCEA3356F36E /* Pods-ExpressionFrameworkTests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		A1D2D3A3774991A0B74ACC5389221BA4 /* Pods */ = {
@@ -1769,6 +1808,24 @@
 			path = PINRemoteImage;
 			sourceTree = "<group>";
 		};
+		EA07A71B135EC049F41CCCEA3356F36E /* Pods-ExpressionFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				161E3F9DAB320CF6667A637193E747F9 /* Info.plist */,
+				D968B9062BBCF15F5B4AACB8802578F7 /* Pods-ExpressionFrameworkTests.modulemap */,
+				6B3097FE6D1ECD0703DFC56BFC54BC34 /* Pods-ExpressionFrameworkTests-acknowledgements.markdown */,
+				0F4AFEAAA4A0D52F3B8CF838913B3BEF /* Pods-ExpressionFrameworkTests-acknowledgements.plist */,
+				6BD55361687F914FE11E694A51A60C95 /* Pods-ExpressionFrameworkTests-dummy.m */,
+				702A782945101B0176CC05205CCD5F43 /* Pods-ExpressionFrameworkTests-frameworks.sh */,
+				EF394262BED9E47C91076E8A73E3F4D3 /* Pods-ExpressionFrameworkTests-resources.sh */,
+				368E1BB3A398F8E003E69C0900433098 /* Pods-ExpressionFrameworkTests-umbrella.h */,
+				2B2144D68970ECA917FECED408B6587D /* Pods-ExpressionFrameworkTests.debug.xcconfig */,
+				4E8721BFEAC0146A67E1C1112CE826DF /* Pods-ExpressionFrameworkTests.release.xcconfig */,
+			);
+			name = "Pods-ExpressionFrameworkTests";
+			path = "Target Support Files/Pods-ExpressionFrameworkTests";
+			sourceTree = "<group>";
+		};
 		F006B12B705BE294EF2D6E88337F4B9E /* PINOperation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1783,6 +1840,19 @@
 			);
 			name = PINOperation;
 			path = PINOperation;
+			sourceTree = "<group>";
+		};
+		F503013EEB3985355F2D94D78D71F83B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA825ED07013134F9130F701C18B39FE /* AsyncDisplayKit.framework */,
+				0EFDD89AB226435ECB46CB05AF5D2E74 /* PINCache.framework */,
+				41DAA8C1D167BC54BDEE3C61F48CDC44 /* PINOperation.framework */,
+				037181E064BB4C1A4C965C659C54F3C1 /* PINRemoteImage.framework */,
+				0D6FF7AE1634A4D3B8EFC69879B07679 /* Pods_ExpressionFramework.framework */,
+				AC842EEE515602565B06557EE26F8DE5 /* Pods_ExpressionFrameworkTests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2063,6 +2133,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B51701808EC6606085F06D852AD0F536 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EC810E835A2A71F88C9D5A11F502DCE /* Pods-ExpressionFrameworkTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CFAB81C1AFC2D81B55C902A2F4AD9B01 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2106,7 +2184,7 @@
 			);
 			name = "Pods-ExpressionFramework";
 			productName = "Pods-ExpressionFramework";
-			productReference = 74D56BE79B53F1B69BDB422E4C70B85C /* Pods_ExpressionFramework.framework */;
+			productReference = 0D6FF7AE1634A4D3B8EFC69879B07679 /* Pods_ExpressionFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		568185361EA6EEE89D2BC833905842FD /* PINCache */ = {
@@ -2124,7 +2202,7 @@
 			);
 			name = PINCache;
 			productName = PINCache;
-			productReference = B932BE88FA8E817551B2E4EFB13C8A47 /* PINCache.framework */;
+			productReference = 0EFDD89AB226435ECB46CB05AF5D2E74 /* PINCache.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7D670B32F7AF2F269DF9FEB3A1B0C427 /* PINOperation */ = {
@@ -2141,7 +2219,7 @@
 			);
 			name = PINOperation;
 			productName = PINOperation;
-			productReference = 93549C82EC6C1EEA99EB31D2F2ACC6FD /* PINOperation.framework */;
+			productReference = 41DAA8C1D167BC54BDEE3C61F48CDC44 /* PINOperation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8F722A3F384D08D9E61C15DA2D2AB317 /* Texture */ = {
@@ -2161,7 +2239,28 @@
 			);
 			name = Texture;
 			productName = Texture;
-			productReference = 698641ACACFC796C740A3ADFC84A6890 /* AsyncDisplayKit.framework */;
+			productReference = BA825ED07013134F9130F701C18B39FE /* AsyncDisplayKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AE5F5109EF6C0308845E9F1F899A0A8D /* Pods-ExpressionFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 729E277A0A33F17FF5271CAFB73AD454 /* Build configuration list for PBXNativeTarget "Pods-ExpressionFrameworkTests" */;
+			buildPhases = (
+				232B660CC393633433CAFE398AB75C24 /* Sources */,
+				30A8C35B3A5032AD22B6D8D0706CDD07 /* Frameworks */,
+				B51701808EC6606085F06D852AD0F536 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0E6918E3B56645D226D8ADF84135516 /* PBXTargetDependency */,
+				42B6F5DE24CFBCB585875A192618A2E2 /* PBXTargetDependency */,
+				CF281281FAAF17856BFC2201A54DDA07 /* PBXTargetDependency */,
+				8855EF9D036CDC885F87F20402BA843D /* PBXTargetDependency */,
+			);
+			name = "Pods-ExpressionFrameworkTests";
+			productName = "Pods-ExpressionFrameworkTests";
+			productReference = AC842EEE515602565B06557EE26F8DE5 /* Pods_ExpressionFrameworkTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F88675A9A03C3FBC127EAE24A194AD9C /* PINRemoteImage */ = {
@@ -2180,7 +2279,7 @@
 			);
 			name = PINRemoteImage;
 			productName = PINRemoteImage;
-			productReference = EF18C56E2B773E641455EF58706E6492 /* PINRemoteImage.framework */;
+			productReference = 037181E064BB4C1A4C965C659C54F3C1 /* PINRemoteImage.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -2200,7 +2299,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 0FD44FC9010F47AE4AE80678C674AF95 /* Products */;
+			productRefGroup = F503013EEB3985355F2D94D78D71F83B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -2208,12 +2307,21 @@
 				7D670B32F7AF2F269DF9FEB3A1B0C427 /* PINOperation */,
 				F88675A9A03C3FBC127EAE24A194AD9C /* PINRemoteImage */,
 				404E927AC49809AC1152364186124EB4 /* Pods-ExpressionFramework */,
+				AE5F5109EF6C0308845E9F1F899A0A8D /* Pods-ExpressionFrameworkTests */,
 				8F722A3F384D08D9E61C15DA2D2AB317 /* Texture */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		232B660CC393633433CAFE398AB75C24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D45FBF8C877E24BC2729B8D0202FF432 /* Pods-ExpressionFrameworkTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45623153DEF1BA1EDAFAED4261920D2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2502,11 +2610,35 @@
 			target = 7D670B32F7AF2F269DF9FEB3A1B0C427 /* PINOperation */;
 			targetProxy = 4B821F78E1F899501B195E126B5F4234 /* PBXContainerItemProxy */;
 		};
+		42B6F5DE24CFBCB585875A192618A2E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINOperation;
+			target = 7D670B32F7AF2F269DF9FEB3A1B0C427 /* PINOperation */;
+			targetProxy = BAAC8FFA3BD831BBD1FF71795287AF5A /* PBXContainerItemProxy */;
+		};
 		5C955AA3A94D44C0998508349BCC83E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PINCache;
 			target = 568185361EA6EEE89D2BC833905842FD /* PINCache */;
 			targetProxy = F40D845DF672BD38DAE37C81B2FFEAD7 /* PBXContainerItemProxy */;
+		};
+		8855EF9D036CDC885F87F20402BA843D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Texture;
+			target = 8F722A3F384D08D9E61C15DA2D2AB317 /* Texture */;
+			targetProxy = 695C098A1364AB2E728077D7FD642212 /* PBXContainerItemProxy */;
+		};
+		CF281281FAAF17856BFC2201A54DDA07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINRemoteImage;
+			target = F88675A9A03C3FBC127EAE24A194AD9C /* PINRemoteImage */;
+			targetProxy = D3488C6B42A46D377422A005B715D1E8 /* PBXContainerItemProxy */;
+		};
+		D0E6918E3B56645D226D8ADF84135516 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINCache;
+			target = 568185361EA6EEE89D2BC833905842FD /* PINCache */;
+			targetProxy = C04E294FCFC962655FD9974EBEA32387 /* PBXContainerItemProxy */;
 		};
 		D6D486927785443D90F03950EE01825A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2517,6 +2649,42 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1A55B691CB68979F160AD4CB357AD1C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E8721BFEAC0146A67E1C1112CE826DF /* Pods-ExpressionFrameworkTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ExpressionFrameworkTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ExpressionFrameworkTests/Pods-ExpressionFrameworkTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ExpressionFrameworkTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		21FABABC127FE49034C20AE71AF05D95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E5821473143C768338C9E961790BD061 /* Texture.xcconfig */;
@@ -2772,7 +2940,7 @@
 		};
 		B2484DB132E5B67665FD315A343ECC36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D80044459C6BD97E814676FC45DE4BC /* Pods-ExpressionFramework.release.xcconfig */;
+			baseConfigurationReference = 7B87BF47F05AAFE98FF914784B7A9A74 /* Pods-ExpressionFramework.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2808,7 +2976,7 @@
 		};
 		B551D77F9CA33D0353CD879755CCBE79 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F5DBFDDB0D18215FAB47DF01322660A /* Pods-ExpressionFramework.debug.xcconfig */;
+			baseConfigurationReference = C76235C1186B865ABD73BEA5702B15E5 /* Pods-ExpressionFramework.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2834,6 +3002,42 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_ExpressionFramework;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B913E9462A0F768F9957F7C46E8AB8C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B2144D68970ECA917FECED408B6587D /* Pods-ExpressionFrameworkTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ExpressionFrameworkTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ExpressionFrameworkTests/Pods-ExpressionFrameworkTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ExpressionFrameworkTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2989,6 +3193,15 @@
 			buildConfigurations = (
 				21FABABC127FE49034C20AE71AF05D95 /* Debug */,
 				358DC6981D76D4CE30D71E675D2FEAC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		729E277A0A33F17FF5271CAFB73AD454 /* Build configuration list for PBXNativeTarget "Pods-ExpressionFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B913E9462A0F768F9957F7C46E8AB8C0 /* Debug */,
+				1A55B691CB68979F160AD4CB357AD1C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

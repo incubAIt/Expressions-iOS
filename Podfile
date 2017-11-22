@@ -8,3 +8,11 @@ target 'ExpressionFramework' do
   pod 'Texture'
 
 end
+
+target 'ExpressionFrameworkTests' do
+    
+    use_frameworks!
+    inhibit_all_warnings!
+    pod 'Texture'
+    
+end

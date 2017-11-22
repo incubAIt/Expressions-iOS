@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+import AsyncDisplayKit
 
 //public protocol SacazaDelegate {
 //    func sacazaDidFailToDownloadAdverts()
@@ -40,88 +42,121 @@ import Foundation
 //    }
 //}
 
-
-
-
-struct TestableAdvert: ExpressionRepresentable {
-    let text: String
-    var expression: Expression? = nil
+public struct PresenceInfo {
+    let indexPath: IndexPath
+    let expressionContainer: ExpressionRepresentable
 }
-
-typealias PresenceInfo = (IndexPath, ExpressionRepresentable)
 
 // MARK:- Testability
 
 extension Sacaza {
     
-    convenience init(presenceItems: [PresenceInfo], numberOfOiginalItems: Int) {
+    convenience init(presenceItems: [PresenceInfo], numberOfOriginalItems: Int) {
         self.init()
         self.insertedPresenceItems = presenceItems
-        self.numberOfOiginalItems = numberOfOiginalItems
+        self.numberOfOriginalItems = numberOfOriginalItems
     }
 }
 
-class Sacaza {
+// MARK:- Class Declaration
+
+public final class Sacaza {
     
-    var pendingPresenceItems: [ExpressionRepresentable] = []
-    var insertedPresenceItems: [PresenceInfo] = []
-    var numberOfOiginalItems: Int = 0
+    private var downloadedPresenceItems: [ExpressionRepresentable] = []
+    private var insertedPresenceItems: [PresenceInfo] = []
+    private var numberOfOriginalItems: Int = 0
     
-    func start() {
+    private var isRefreshing = false
+    
+    func reloadData(withNumberOfOriginalItems numberOfOriginalItems: Int) {
+        self.numberOfOriginalItems = numberOfOriginalItems
+        insertedPresenceItems = []
+        mergePendingItems()
+    }
+    
+    func refresh() {
+        guard isRefreshing == false else {
+            return
+        }
+        isRefreshing = true
         APIRequest.getPresenceItems() { result in
-        switch result {
-            case .success(let presenceItems):
-                self.pendingPresenceItems = presenceItems
-            
-            case .error:
-            break
+            self.isRefreshing = false
+            switch result {
+                case .success(let presenceItems):
+                    self.downloadedPresenceItems = presenceItems
+                    self.insertedPresenceItems = []
+                    // TODO finish
+                case .error:
+                    // TODO finish
+                break
             }
         }
     }
     
-    func mergePendingItems() {
+    fileprivate func mergePendingItems() {
+        
+        insertedPresenceItems = []
         
         var indexToInsert = 0
-        let advertsWithIndexPaths: [PresenceInfo] = pendingPresenceItems.map({
+        let advertsWithIndexPaths: [PresenceInfo] = downloadedPresenceItems.map({
             indexToInsert += 4  // TODO these indexes should be coming from the server
-            return (IndexPath(row: indexToInsert, section: 0), $0)
+            return PresenceInfo(indexPath: IndexPath(row: indexToInsert, section: 0), expressionContainer: $0)
         })
         
         advertsWithIndexPaths.forEach { info in
-            let numberOfTotalItems = numberOfOiginalItems + insertedPresenceItems.count
-            if info.0.row <= numberOfTotalItems {
+            let numberOfTotalItems = numberOfOriginalItems + insertedPresenceItems.count
+            if info.indexPath.row <= numberOfTotalItems {
                 insertedPresenceItems.append(info)
             } else {
                 return
             }
         }
     }
+}
+
+// MARK:- Querying The Datasource
+
+extension Sacaza {
     
-    func isItemAnAdvert(at indexPath: IndexPath) -> Bool {
+    fileprivate func indexOfPresenceItem(at indexPath: IndexPath) -> Int? {
         
-        // find the indexpath in the feed
-        let index = insertedPresenceItems.index(where: { info in // TODO enhance with Binary Search
-            if info.0.row == indexPath.row && info.0.section == indexPath.section {
+        return insertedPresenceItems.index(where: { info in // TODO enhance with Binary Search
+            if info.indexPath.row == indexPath.row && info.indexPath.section == indexPath.section {
                 return true
             }
             return false
         })
+    }
+    
+    fileprivate func isPresenceItem(at indexPath: IndexPath) -> Bool {
         
-        guard let _ = index else {
+        guard let _ = indexOfPresenceItem(at: indexPath) else {
             return false
         }
         return true
     }
     
-    enum OffsetType {
-        case original
-        case adjusted
+    fileprivate func presenceItem(at indexPath: IndexPath) -> ExpressionRepresentable? {
+        
+        guard let foundIndex = indexOfPresenceItem(at: indexPath) else {
+            return nil
+        }
+        return insertedPresenceItems[safe: foundIndex]?.expressionContainer
+    }
+    
+    var totalNumberOfItems: Int {
+        return numberOfOriginalItems + insertedPresenceItems.count
     }
 }
 
 // MARK:- IndexPath Offsets
 
 extension Sacaza {
+    
+    enum OffsetType {
+        case original
+        case adjusted
+    }
     
     fileprivate func indexPathGenerator(for indexPath: IndexPath, previousPresenceItems: Int, offsetType: OffsetType) -> IndexPath {
         return IndexPath(row: indexPath.row + (offsetType == .original ? -previousPresenceItems : previousPresenceItems), section: indexPath.section)
@@ -130,11 +165,11 @@ extension Sacaza {
     fileprivate func calculateOriginalIndexPath(forItemAt indexPath: IndexPath) -> IndexPath? {
         
         for (index, info) in insertedPresenceItems.enumerated() {
-            if info.0 == indexPath {
+            if info.indexPath == indexPath {
                 return nil // it is an advert
             }
             
-            if info.0.row > indexPath.row {
+            if info.indexPath.row > indexPath.row {
                 return indexPathGenerator(for: indexPath, previousPresenceItems: index, offsetType: .original)
             }
         }
@@ -146,7 +181,7 @@ extension Sacaza {
         
         for (index, info) in insertedPresenceItems.enumerated() {
             
-            if info.0.row >= indexPath.row {
+            if info.indexPath.row >= indexPath.row {
                 return indexPathGenerator(for: indexPath, previousPresenceItems: index, offsetType: .adjusted)
             }
         }
@@ -182,19 +217,19 @@ extension Sacaza {
             for info in self.insertedPresenceItems {
                 
                 if let indexPath = adjustments[safe: index] {
-                    if info.0.row >= indexPath.row {
+                    if info.indexPath.row >= indexPath.row {
                         amountToIncrement += 1
                         index += 1
                     }
                 }
-                
-                newArray.append((IndexPath(row: info.0.row + (adjustmentType == .insertion ? amountToIncrement : -amountToIncrement), section: info.0.section), info.1))
+                let presenceInfo = PresenceInfo(indexPath: IndexPath(row: info.indexPath.row + (adjustmentType == .insertion ? amountToIncrement : -amountToIncrement), section: info.indexPath.section), expressionContainer: info.expressionContainer)
+                newArray.append(presenceInfo)
             }
             return newArray
         }
         
-        var amendmentsForInsertions: [PresenceInfo] = generateArray(.insertion, adjustedInsertions)
-        var amendmentsForDeletions: [PresenceInfo] = generateArray(.deletion, adjustedDeletions)
+        let amendmentsForInsertions: [PresenceInfo] = generateArray(.insertion, adjustedInsertions)
+        let amendmentsForDeletions: [PresenceInfo] = generateArray(.deletion, adjustedDeletions)
         var updatedInsertedPresenceItems: [PresenceInfo] = []
         
         // compare arrays to remain in sync!
@@ -206,10 +241,11 @@ extension Sacaza {
                     fatalError()    // TODO shall we think of an alternative for production? If we are out of sync the UITableView will most likely throw an exception anyway
             }
             
-            let differenceForInsertions = infoAfterInsertions.0.row - infoBeforeAmendments.0.row
-            let differenceForDeletions = infoAfterDeletions.0.row - infoBeforeAmendments.0.row
-            let newRow = infoBeforeAmendments.0.row + differenceForInsertions + differenceForDeletions
-            updatedInsertedPresenceItems.append((IndexPath(row: newRow, section: infoBeforeAmendments.0.section), infoBeforeAmendments.1))
+            let differenceForInsertions = infoAfterInsertions.indexPath.row - infoBeforeAmendments.indexPath.row
+            let differenceForDeletions = infoAfterDeletions.indexPath.row - infoBeforeAmendments.indexPath.row
+            let newRow = infoBeforeAmendments.indexPath.row + differenceForInsertions + differenceForDeletions
+            let presenceInfo = PresenceInfo(indexPath: IndexPath(row: newRow, section: infoBeforeAmendments.indexPath.section), expressionContainer:infoBeforeAmendments.expressionContainer)
+            updatedInsertedPresenceItems.append(presenceInfo)
         }
         
         insertedPresenceItems = updatedInsertedPresenceItems
@@ -227,5 +263,56 @@ extension Sacaza { // TODO finish this off as it is just a simple test at the mo
         }
         
         // TODO inform delegate
+    }
+}
+
+// MARK:- ASCollectionNode Support
+
+@objc public protocol SacazaCollectionNodeDataSource : NSObjectProtocol {
+    
+    func numberOfSections(in collectionNode: ASCollectionNode) -> Int
+    func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int
+    func collectionNode(_ collectionNode: ASCollectionNode, nodeForItemAt indexPath: IndexPath) -> ASCellNode
+}
+
+public final class CollectionNodeSacaza: NSObject {
+    
+    private let dataSource: SacazaCollectionNodeDataSource
+    private let collectionNode: ASCollectionNode
+    private let sacaza: Sacaza
+    
+    public init(collectionNode: ASCollectionNode, dataSource: SacazaCollectionNodeDataSource, sacaza: Sacaza? = nil) {
+        
+        self.collectionNode = collectionNode
+        self.dataSource = dataSource
+        self.sacaza = sacaza ?? Sacaza()
+        super.init()
+        collectionNode.dataSource = self
+    }
+    
+    public func reloadData() {
+        let sections = dataSource.numberOfSections(in: collectionNode)
+        let items = dataSource.collectionNode(collectionNode, numberOfItemsInSection: 1)
+        
+        sacaza.reloadData(withNumberOfOriginalItems: items)  // TODO handle multiple sections
+        collectionNode.reloadData()
+    }
+}
+
+extension CollectionNodeSacaza: ASCollectionDataSource {
+    
+    public func numberOfSections(in collectionNode: ASCollectionNode) -> Int {
+        return 1
+    }
+    
+    public func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int {
+        return sacaza.totalNumberOfItems
+    }
+    
+    public func collectionNode(_ collectionNode: ASCollectionNode, nodeForItemAt indexPath: IndexPath) -> ASCellNode {
+        guard let presenceItem = sacaza.presenceItem(at: indexPath) else {
+            return dataSource.collectionNode(collectionNode, nodeForItemAt: indexPath)
+        }
+        return presenceItem.expression?.cellNode ?? ASCellNode()
     }
 }

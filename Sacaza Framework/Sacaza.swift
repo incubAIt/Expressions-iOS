@@ -269,16 +269,23 @@ extension Sacaza { // TODO finish this off as it is just a simple test at the mo
     func collectionNode(_ collectionNode: ASCollectionNode, nodeForItemAt indexPath: IndexPath) -> ASCellNode
 }
 
+@objc public protocol SacazaCollectionNodeDelegate : NSObjectProtocol {
+    
+    func collectionNode(_ collectionNode: ASCollectionNode, didSelectItemAt indexPath: IndexPath)
+}
+
 public final class CollectionNodeSacaza: NSObject {
     
     private let dataSource: SacazaCollectionNodeDataSource
+    private let delegate: SacazaCollectionNodeDelegate
     private let collectionNode: ASCollectionNode
     private let sacaza: Sacaza
     
-    public init(collectionNode: ASCollectionNode, dataSource: SacazaCollectionNodeDataSource, sacaza: Sacaza? = nil) {
+    public init(collectionNode: ASCollectionNode, dataSource: SacazaCollectionNodeDataSource, delegate: SacazaCollectionNodeDelegate, sacaza: Sacaza? = nil) {
         
         self.collectionNode = collectionNode
         self.dataSource = dataSource
+        self.delegate = delegate
         self.sacaza = sacaza ?? Sacaza()
         super.init()
         collectionNode.dataSource = self
@@ -314,3 +321,15 @@ extension CollectionNodeSacaza: ASCollectionDataSource {
         return presenceItem.expression?.cellNode ?? ASCellNode()
     }
 }
+
+extension CollectionNodeSacaza: ASCollectionDelegate {
+
+    public func collectionNode(_ collectionNode: ASCollectionNode, didSelectItemAt indexPath: IndexPath) {
+        guard let originalIndexPath = sacaza.calculateOriginalIndexPath(forItemAt: indexPath) else {
+            return
+        }
+        
+        delegate.collectionNode(collectionNode, didSelectItemAt: originalIndexPath)
+    }
+}
+

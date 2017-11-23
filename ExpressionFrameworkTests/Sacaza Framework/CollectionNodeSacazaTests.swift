@@ -10,13 +10,13 @@ import XCTest
 import AsyncDisplayKit
 @testable import ExpressionFramework
 
-
 class CollectionNodeSacazaTests: XCTestCase {
     
     // TODO run the same sweet of tests but with different data and indexes
     var collectionNode: ASCollectionNode?
     var collectionNodeSacaza: CollectionNodeSacaza?
     var feedItems: [String] = []
+    var expectedIndexPathWhenCellIsSelected: IndexPath?
     
     override func setUp() {
         super.setUp()
@@ -34,7 +34,7 @@ class CollectionNodeSacazaTests: XCTestCase {
         
         let sacaza = Sacaza(presenceItems: downloadedPresenceItems, numberOfOriginalItems: feedItems.count)
         
-        collectionNodeSacaza = CollectionNodeSacaza(collectionNode: collectionNode, dataSource: self, sacaza: sacaza)
+        collectionNodeSacaza = CollectionNodeSacaza(collectionNode: collectionNode, dataSource: self, delegate: self, sacaza: sacaza)
     }
     
     // MARK:- tests
@@ -79,6 +79,17 @@ class CollectionNodeSacazaTests: XCTestCase {
     
     func testTheSelection() {
         
+        // given
+        let originalIndexPaths = [IndexPath(row: 3, section: 0), IndexPath(row: 6, section: 0), IndexPath(row: 9, section: 0)]
+        let adjustedIndexPaths = [IndexPath(row: 4, section: 0), IndexPath(row: 8, section: 0), IndexPath(row: 12, section: 0)]
+        
+        // when
+        for index in 0..<originalIndexPaths.count {
+            expectedIndexPathWhenCellIsSelected = originalIndexPaths[index]
+            collectionNodeSacaza!.collectionNode(collectionNode!, didSelectItemAt: adjustedIndexPaths[index])
+        }
+        
+        // then - the delegate methods handle the response
     }
     
     func testInsertions() {
@@ -113,6 +124,18 @@ extension CollectionNodeSacazaTests: SacazaCollectionNodeDataSource {
     }
 }
 
+extension CollectionNodeSacazaTests: SacazaCollectionNodeDelegate {
+    
+    func collectionNode(_ collectionNode: ASCollectionNode, didSelectItemAt indexPath: IndexPath) {
+        guard let expectedIndexPath = expectedIndexPathWhenCellIsSelected else {
+            XCTFail("No indexpath was set before executing this test")
+            return
+        }
+        
+        XCTAssertEqual(expectedIndexPath, indexPath)
+    }
+}
+
 private struct TestableAdvert: ExpressionRepresentable {
     let text: String
     var expression: Expression? = nil
@@ -130,4 +153,3 @@ private class TestableCellNode: ASCellNode {
         super.init()
     }
 }
-

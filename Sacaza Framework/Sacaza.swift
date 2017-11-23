@@ -246,20 +246,6 @@ extension Sacaza {
     }
 }
 
-// MARK:- Collection Node Delegate
-
-extension Sacaza { // TODO finish this off as it is just a simple test at the moment
-    
-    fileprivate func cellSelectedAtIndexPath(_ indexPath: IndexPath) {
-        guard let originalIndexPath = calculateOriginalIndexPath(forItemAt: indexPath) else {
-            // tapped an advert
-            return
-        }
-        
-        // TODO inform delegate
-    }
-}
-
 // MARK:- ASCollectionNode Support
 
 @objc public protocol SacazaCollectionNodeDataSource : NSObjectProtocol {

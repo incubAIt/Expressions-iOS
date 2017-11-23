@@ -62,8 +62,8 @@ extension Sacaza {
 
 public final class Sacaza {
     
-    private var downloadedPresenceItems: [PresenceInfo] = []
-    private var insertedPresenceItems: [PresenceInfo] = []
+    private var downloadedPresenceItems: [PresenceInfo] = [] // contains the adjusted index paths
+    private var insertedPresenceItems: [PresenceInfo] = []   // contains the adjusted index paths
     private var numberOfOriginalItems: Int = 0
     
     private var isRefreshing = false
@@ -171,12 +171,15 @@ extension Sacaza {
         return indexPathGenerator(for: indexPath, previousPresenceItems: insertedPresenceItems.count, offsetType: .original)
     }
     
-    fileprivate func calculateAdjustedIndexPath(forItemAtOriginalIndexPath indexPath: IndexPath) -> IndexPath {
+    func calculateAdjustedIndexPath(forItemAtOriginalIndexPath indexPath: IndexPath) -> IndexPath {
         
         for (index, info) in insertedPresenceItems.enumerated() {
+            let adjustedIndex = indexPath.row + index
             
-            if info.indexPath.row >= indexPath.row {
+            if adjustedIndex < info.indexPath.row {
                 return indexPathGenerator(for: indexPath, previousPresenceItems: index, offsetType: .adjusted)
+            } else if adjustedIndex == info.indexPath.row {
+                return indexPathGenerator(for: indexPath, previousPresenceItems: index + 1, offsetType: .adjusted)
             }
         }
         
@@ -188,12 +191,10 @@ extension Sacaza {
 
 extension Sacaza {
     
-    func insertItems(insertions: [IndexPath], deletions: [IndexPath]) {
+    func insertItems(insertions: [IndexPath], deletions: [IndexPath]) -> (adjustedInsertions: [IndexPath], adjustedDeletions: [IndexPath]) {
         
         let adjustedInsertions = insertions.map({return calculateAdjustedIndexPath(forItemAtOriginalIndexPath: $0)})
         let adjustedDeletions = deletions.map({return calculateAdjustedIndexPath(forItemAtOriginalIndexPath: $0)})
-        
-        // TODO we can inform the collection view of these changes
         
         enum AdjustmentType {
             case deletion
@@ -205,21 +206,40 @@ extension Sacaza {
             guard let adjustments = adjustments else {
                 return []
             }
-            var newArray: [PresenceInfo] = []
+            
+            // loop through adjustments until we find the values we need
+            var updatedPresenceItems: [PresenceInfo] = []
+            var startingIndex = 0
             var amountToIncrement = 0
-            var index = 0
-            for info in self.insertedPresenceItems {
+            for indexPath in adjustments {
                 
-                if let indexPath = adjustments[safe: index] {
+                // loop through each value
+                for index in startingIndex..<self.insertedPresenceItems.count {
+                    
+                    let info = self.insertedPresenceItems[index]
                     if info.indexPath.row >= indexPath.row {
                         amountToIncrement += 1
-                        index += 1
+                        break
                     }
+                    
+                    if amountToIncrement > 0 {
+                        let updatedPresenceInfo =  PresenceInfo(indexPath: IndexPath(row: info.indexPath.row + (adjustmentType == .insertion ? amountToIncrement : -amountToIncrement), section: info.indexPath.section), expressionContainer: info.expressionContainer)
+                        updatedPresenceItems.append(updatedPresenceInfo)
+                    }
+                    
+                    startingIndex += 1
                 }
-                let presenceInfo = PresenceInfo(indexPath: IndexPath(row: info.indexPath.row + (adjustmentType == .insertion ? amountToIncrement : -amountToIncrement), section: info.indexPath.section), expressionContainer: info.expressionContainer)
-                newArray.append(presenceInfo)
             }
-            return newArray
+            
+            // finalise any uncommitted changes
+            for index in startingIndex..<self.insertedPresenceItems.count {
+                
+                let info = self.insertedPresenceItems[index]
+                let updatedPresenceInfo =  PresenceInfo(indexPath: IndexPath(row: info.indexPath.row + (adjustmentType == .insertion ? amountToIncrement : -amountToIncrement), section: info.indexPath.section), expressionContainer: info.expressionContainer)
+                updatedPresenceItems.append(updatedPresenceInfo)
+            }
+            
+            return updatedPresenceItems
         }
         
         let amendmentsForInsertions: [PresenceInfo] = generateArray(.insertion, adjustedInsertions)
@@ -241,8 +261,9 @@ extension Sacaza {
             let presenceInfo = PresenceInfo(indexPath: IndexPath(row: newRow, section: infoBeforeAmendments.indexPath.section), expressionContainer:infoBeforeAmendments.expressionContainer)
             updatedInsertedPresenceItems.append(presenceInfo)
         }
-        
+        numberOfOriginalItems += adjustedInsertions.count - adjustedDeletions.count
         insertedPresenceItems = updatedInsertedPresenceItems
+        return (adjustedInsertions, adjustedDeletions)
     }
 }
 
@@ -283,6 +304,16 @@ public final class CollectionNodeSacaza: NSObject {
         
         sacaza.reloadData(withNumberOfOriginalItems: items)  // TODO handle multiple sections
         collectionNode.reloadData()
+    }
+    
+    public func insertItems(insertions: [IndexPath], deletions: [IndexPath]) {
+        
+        let adjustedValues = sacaza.insertItems(insertions: insertions, deletions: deletions)
+        
+        collectionNode.performBatchUpdates({
+            collectionNode.insertItems(at: adjustedValues.adjustedInsertions)
+            collectionNode.deleteItems(at: adjustedValues.adjustedDeletions)
+        }, completion: nil)
     }
 }
 

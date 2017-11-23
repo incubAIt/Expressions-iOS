@@ -37,7 +37,26 @@ class CollectionNodeSacazaTests: XCTestCase {
         collectionNodeSacaza = CollectionNodeSacaza(collectionNode: collectionNode, dataSource: self, delegate: self, sacaza: sacaza)
     }
     
-    // MARK:- tests
+    
+    // MARK:- Sacaza tests
+    
+    func testTheAdjustedIndexPaths() {
+        let downloadedPresenceItems =  [
+            PresenceInfo(indexPath: IndexPath(row:3 , section: 0), expressionContainer: TestableAdvert("advertAtRow3")),
+            PresenceInfo(indexPath: IndexPath(row:7 , section: 0), expressionContainer: TestableAdvert("advertAtRow7")),
+            PresenceInfo(indexPath: IndexPath(row:11 , section: 0), expressionContainer: TestableAdvert("advertAtRow11")),
+            PresenceInfo(indexPath: IndexPath(row:15 , section: 0), expressionContainer: TestableAdvert("advertAtRow15"))
+        ]
+        
+        let sacaza = Sacaza(presenceItems: downloadedPresenceItems, numberOfOriginalItems: feedItems.count)
+        
+        XCTAssertEqual(0, sacaza.calculateAdjustedIndexPath(forItemAtOriginalIndexPath: IndexPath(row: 0, section: 0)).row)
+        XCTAssertEqual(4, sacaza.calculateAdjustedIndexPath(forItemAtOriginalIndexPath: IndexPath(row: 3, section: 0)).row)
+        XCTAssertEqual(8, sacaza.calculateAdjustedIndexPath(forItemAtOriginalIndexPath: IndexPath(row: 6, section: 0)).row)
+        XCTAssertEqual(12, sacaza.calculateAdjustedIndexPath(forItemAtOriginalIndexPath: IndexPath(row: 9, section: 0)).row)
+    }
+    
+    // MARK:- Collection Node Tests
     
     func testTheNumberOfItems() {
         
@@ -94,6 +113,32 @@ class CollectionNodeSacazaTests: XCTestCase {
     
     func testInsertions() {
         
+        // given
+        let newFeedItems = [("oneA", 0),("twoA", 1),("threeA", 2),("fourA", 3),("fiveA", 4),("sixA", 5),("sevenA", 6),("eightA", 7),("nineA", 8),("tenA", 9),("elevenA", 10)]
+        
+        // when
+        feedItems.insertItems(newFeedItems, deleteItemsAtIndexes: [])
+        let indexPaths = newFeedItems.map({ IndexPath(row: $0.1, section: 0)})
+        collectionNodeSacaza!.insertItems(insertions: indexPaths, deletions: [])
+        let expectedFeedItems: [Any] =  ["oneA", "one", "twoA", "two", "threeA", "three", TestableAdvert("advertAtRow3"), "fourA", "four", "fiveA", "five", "sixA", "six",  TestableAdvert("advertAtRow7"), "sevenA", "seven", "eightA", "eight", "nineA", "nine", TestableAdvert("advertAtRow11"), "tenA", "ten", "elevenA"]
+        
+        // then
+        for (index, finalFeedItem) in expectedFeedItems.enumerated() {
+            switch finalFeedItem {
+            case let item as String:
+                guard let cell = collectionNode!.nodeForItem(at: IndexPath(row: index, section: 0)) as? TestableCellNode else {
+                    XCTFail("Expected TestableCellNode type")
+                    return
+                }
+                XCTAssertEqual(cell.text, item)
+            case _ as TestableAdvert:
+                if let _ = collectionNode!.nodeForItem(at: IndexPath(row: index, section: 0)) as? TestableCellNode {
+                    XCTFail("Expected ASCellNode for Advert")
+                }
+            default:
+                XCTFail("Unexpected scenario")
+            }
+        }
     }
     
     func testDeletions() {

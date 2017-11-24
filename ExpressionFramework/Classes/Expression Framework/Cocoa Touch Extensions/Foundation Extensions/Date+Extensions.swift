@@ -10,24 +10,12 @@ import Foundation
 
 extension Date {
 
-    private static let dateStampFormatter:DateFormatter = {
+    var timeStamp: String {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: Bundle.main.preferredLocalizations[0])
         dateFormatter.dateStyle = .medium
         dateFormatter.doesRelativeDateFormatting = true
-        return dateFormatter
-    }()
-    
-    private static let dateCompononentsFormatter:DateComponentsFormatter = {
-        let formatter = DateComponentsFormatter()
-        formatter.unitsStyle = .full
-        formatter.maximumUnitCount = 1
-        formatter.calendar = Calendar.current
-        return formatter
-    }()
-    
-    var timeStamp: String {
-        return Date.dateStampFormatter.string(from: self)
+        return dateFormatter.string(from: self)
     }
     
     var timeAgoDescription:String? {
@@ -35,7 +23,10 @@ extension Date {
         let dateNow = Date()
         let interval = Calendar.current.dateComponents([.year, .month, .weekOfYear, .day, .hour, .minute, .second], from: self, to: dateNow)
 
-        let formatter = Date.dateCompononentsFormatter
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .full
+        formatter.maximumUnitCount = 1
+        formatter.calendar = Calendar.current
         
         if let year = interval.year, year > 0 {
             formatter.allowedUnits = [.year]
@@ -58,6 +49,8 @@ extension Date {
         return formatter.string(from: self, to: dateNow)
     }
 }
+
+
 
 extension Int {
 

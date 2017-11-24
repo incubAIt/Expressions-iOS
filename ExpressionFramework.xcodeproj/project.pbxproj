@@ -12,6 +12,7 @@
 		5429318C1FBDBACB005D7CC7 /* Array+Insertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5429318B1FBDBACB005D7CC7 /* Array+Insertions.swift */; };
 		542931941FBDBB1E005D7CC7 /* ExpressionFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542931931FBDBB1E005D7CC7 /* ExpressionFrameworkTests.swift */; };
 		5429319C1FBDBB59005D7CC7 /* Array+InsertionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5429319B1FBDBB59005D7CC7 /* Array+InsertionsTests.swift */; };
+		547C31BC1FC82D0D002F028D /* SacazaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547C31BB1FC82D0D002F028D /* SacazaTests.swift */; };
 		54A50A2D1FB1D2AA0076957D /* ADK+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A241FB1D2AA0076957D /* ADK+Extensions.swift */; };
 		54A50A2F1FB1D2AA0076957D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A261FB1D2AA0076957D /* AppDelegate.swift */; };
 		54A50A301FB1D2AA0076957D /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A271FB1D2AA0076957D /* ButtonNode.swift */; };
@@ -63,6 +64,7 @@
 		542931931FBDBB1E005D7CC7 /* ExpressionFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionFrameworkTests.swift; sourceTree = "<group>"; };
 		542931951FBDBB1E005D7CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5429319B1FBDBB59005D7CC7 /* Array+InsertionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+InsertionsTests.swift"; sourceTree = "<group>"; };
+		547C31BB1FC82D0D002F028D /* SacazaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacazaTests.swift; sourceTree = "<group>"; };
 		54A50A241FB1D2AA0076957D /* ADK+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ADK+Extensions.swift"; sourceTree = "<group>"; };
 		54A50A261FB1D2AA0076957D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54A50A271FB1D2AA0076957D /* ButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				54EF3A981FC48F9500177331 /* CollectionNodeSacazaTests.swift */,
+				547C31BB1FC82D0D002F028D /* SacazaTests.swift */,
 			);
 			path = "Sacaza Framework";
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 			files = (
 				542931941FBDBB1E005D7CC7 /* ExpressionFrameworkTests.swift in Sources */,
 				5429319C1FBDBB59005D7CC7 /* Array+InsertionsTests.swift in Sources */,
+				547C31BC1FC82D0D002F028D /* SacazaTests.swift in Sources */,
 				54EF3A991FC48F9500177331 /* CollectionNodeSacazaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

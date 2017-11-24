@@ -104,6 +104,8 @@ class CollectionNodeSacazaTests: XCTestCase {
         let expectedFeedItems: [Any] =  ["oneA", "one", "twoA", "two", "threeA", "three", TestableAdvert("advertAtRow3"), "fourA", "four", "fiveA", "five", "sixA", "six",  TestableAdvert("advertAtRow7"), "sevenA", "seven", "eightA", "eight", "nineA", "nine", TestableAdvert("advertAtRow11"), "tenA", "ten", "elevenA"]
         
         // then
+        XCTAssertEqual(expectedFeedItems.count, collectionNode!.numberOfItems(inSection: 0))
+        
         for (index, finalFeedItem) in expectedFeedItems.enumerated() {
             switch finalFeedItem {
             case let item as String:
@@ -134,6 +136,8 @@ class CollectionNodeSacazaTests: XCTestCase {
         let expectedFeedItems: [Any] = ["two", TestableAdvert("advertAtRow3"), "four", "six", TestableAdvert("advertAtRow7"), "eight", TestableAdvert("advertAtRow11"), "ten"]
         
         // then
+        XCTAssertEqual(expectedFeedItems.count, collectionNode!.numberOfItems(inSection: 0))
+        
         for (index, finalFeedItem) in expectedFeedItems.enumerated() {
             switch finalFeedItem {
             case let item as String:
@@ -154,6 +158,49 @@ class CollectionNodeSacazaTests: XCTestCase {
     
     func testInsertionsAndDeletions() {
         
+        // given
+        let newFeedItems = [("oneA", 0),("twoA", 1),("threeA", 2),("fourA", 3),("fiveA", 4),("sixA", 5),("sevenA", 6),("eightA", 7),("nineA", 8),("tenA", 9),("elevenA", 10)]
+        let insertionIndexPaths = newFeedItems.map({ IndexPath(row: $0.1, section: 0)})
+        
+        let deletions = [0,2,4,6,8]
+        let deletionIndexPaths = deletions.map({IndexPath(row: $0, section: 0)})
+        
+        // when
+        feedItems.insertItems(newFeedItems, deleteItemsAtIndexes: deletions)
+        collectionNodeSacaza!.insertItems(insertions: insertionIndexPaths, deletions: deletionIndexPaths)
+        
+        let expectedFeedItems: [Any] =  ["oneA", "twoA", "two", "threeA", TestableAdvert("advertAtRow3"), "fourA", "four", "fiveA", "sixA", "six",  TestableAdvert("advertAtRow7"), "sevenA", "eightA", "eight", "nineA", TestableAdvert("advertAtRow11"), "tenA", "ten", "elevenA"]
+        
+        // then
+        XCTAssertEqual(expectedFeedItems.count, collectionNode!.numberOfItems(inSection: 0))
+        
+        for (index, finalFeedItem) in expectedFeedItems.enumerated() {
+            switch finalFeedItem {
+            case let item as String:
+                guard let cell = collectionNode!.nodeForItem(at: IndexPath(row: index, section: 0)) as? TestableCellNode else {
+                    XCTFail("Expected TestableCellNode type")
+                    return
+                }
+                XCTAssertEqual(cell.text, item)
+            case _ as TestableAdvert:
+                if let _ = collectionNode!.nodeForItem(at: IndexPath(row: index, section: 0)) as? TestableCellNode {
+                    XCTFail("Expected ASCellNode for Advert")
+                }
+            default:
+                XCTFail("Unexpected scenario")
+            }
+        }
+    }
+    
+    func testReloadingTheFeed() {
+        // given
+        feedItems.removeLast()
+        
+        // when
+        collectionNodeSacaza?.reloadData()
+        
+        // then
+        XCTAssertEqual(12, collectionNode?.numberOfItems(inSection: 0))
     }
 }
 

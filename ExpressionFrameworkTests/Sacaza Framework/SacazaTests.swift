@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import AsyncDisplayKit
+@testable import ExpressionFramework
 
 class SacazaTests: XCTestCase {
     
@@ -29,5 +31,16 @@ class SacazaTests: XCTestCase {
         XCTAssertEqual(4, sacaza.calculateAdjustedIndexPath(forItemAtOriginalIndexPath: IndexPath(row: 3, section: 0)).row)
         XCTAssertEqual(8, sacaza.calculateAdjustedIndexPath(forItemAtOriginalIndexPath: IndexPath(row: 6, section: 0)).row)
         XCTAssertEqual(12, sacaza.calculateAdjustedIndexPath(forItemAtOriginalIndexPath: IndexPath(row: 9, section: 0)).row)
+    }
+}
+
+// MARK:- Support for Tests
+
+private struct TestableAdvert: ExpressionRepresentable {
+    let text: String
+    var expression: Expression? = nil
+    
+    init(_ text: String) {
+        self.text = text
     }
 }

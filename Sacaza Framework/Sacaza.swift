@@ -285,20 +285,23 @@ public final class CollectionNodeSacaza: NSObject {
     
     private let dataSource: SacazaCollectionNodeDataSource
     private let delegate: SacazaCollectionNodeDelegate
-    private let collectionNode: ASCollectionNode
+    private weak var collectionNode: ASCollectionNode?
     private let sacaza: Sacaza
     
-    public init(collectionNode: ASCollectionNode, dataSource: SacazaCollectionNodeDataSource, delegate: SacazaCollectionNodeDelegate, sacaza: Sacaza? = nil) {
+    public init(collectionNode: ASCollectionNode?, dataSource: SacazaCollectionNodeDataSource, delegate: SacazaCollectionNodeDelegate, sacaza: Sacaza? = nil) {
         
         self.collectionNode = collectionNode
         self.dataSource = dataSource
         self.delegate = delegate
         self.sacaza = sacaza ?? Sacaza()
         super.init()
-        collectionNode.dataSource = self
+        self.collectionNode?.dataSource = self
     }
     
     public func reloadData() {
+        guard let collectionNode = self.collectionNode else {
+            return
+        }
         let sections = dataSource.numberOfSections(in: collectionNode)
         let items = dataSource.collectionNode(collectionNode, numberOfItemsInSection: 0)
         
@@ -310,9 +313,9 @@ public final class CollectionNodeSacaza: NSObject {
         
         let adjustedValues = sacaza.insertItems(insertions: insertions, deletions: deletions)
         
-        collectionNode.performBatchUpdates({
-            collectionNode.insertItems(at: adjustedValues.adjustedInsertions)
-            collectionNode.deleteItems(at: adjustedValues.adjustedDeletions)
+        collectionNode?.performBatchUpdates({
+            collectionNode?.insertItems(at: adjustedValues.adjustedInsertions)
+            collectionNode?.deleteItems(at: adjustedValues.adjustedDeletions)
         }, completion: nil)
     }
 }

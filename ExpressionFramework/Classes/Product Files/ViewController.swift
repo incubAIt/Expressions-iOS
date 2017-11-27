@@ -11,6 +11,7 @@ import AsyncDisplayKit
 
 class ViewController: ASViewController<ASCollectionNode> {
     
+    let expressionAPI = ExpressionAPI()
     var listings:[Listing] = []
     
     override func viewDidLoad() {
@@ -25,7 +26,7 @@ class ViewController: ASViewController<ASCollectionNode> {
     
     @objc func refresh() {
 
-        APIRequest.getListings() { [weak self] result in
+        expressionAPI.getListings() { [weak self] result in
             switch result {
             case .success(let listings):
                 self?.listings = listings

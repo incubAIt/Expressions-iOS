@@ -6,53 +6,14 @@
 //
 
 import Foundation
-import UIKit
-import AsyncDisplayKit
 
-//public protocol SacazaDelegate {
-//    func sacazaDidFailToDownloadAdverts()
-//    func sacazaDidDownloadAdverts(_ adverts: [Advert])
-//}
-//
-//public class Sacaza {
-//
-//    public var adverts: [Advert] = []
-//    public var hasDownloadedPresenceItems: Bool {
-//        return adverts.count > 0
-//    }
-//
-//    public var delegate: SacazaDelegate?
-////    public var collectionNodeDataSource: SacazaCollectionNodeDataSource?
-//    public init() {
-//
-//    }
-//
-//    public func start() {
-//
-//        APIRequest.getAdverts() { result in
-//            switch result {
-//            case .success(let adverts):
-//                self.adverts = adverts
-//                // TODO cache the adverts that have been downloaded then decide when to distribute them
-//                self.delegate?.sacazaDidDownloadAdverts(adverts)
-//            case .error:
-//                self.delegate?.sacazaDidFailToDownloadAdverts()
-//            }
-//        }
-//    }
-//}
-
-public struct PresenceInfo {
-    let indexPath: IndexPath
-    let expressionContainer: ExpressionRepresentable
-}
-
-// MARK:- Testability
+// MARK:- Support for Tests
 
 extension Sacaza {
     
-    convenience init(presenceItems: [PresenceInfo], numberOfOriginalItems: Int) {
-        self.init()
+    convenience init(sacazaAPI: SacazaAPI, presenceItems: [PresenceInfo], numberOfOriginalItems: Int) {
+        self.init(sacazaAPI: sacazaAPI)
+        
         self.downloadedPresenceItems = presenceItems
         self.reloadData(withNumberOfOriginalItems: numberOfOriginalItems)
     }
@@ -62,11 +23,16 @@ extension Sacaza {
 
 public final class Sacaza {
     
+    let sacazaAPI: SacazaAPI
     private var downloadedPresenceItems: [PresenceInfo] = [] // contains the adjusted index paths
     private var insertedPresenceItems: [PresenceInfo] = []   // contains the adjusted index paths
     private var numberOfOriginalItems: Int = 0
     
     private var isRefreshing = false
+    
+    init(sacazaAPI: SacazaAPI) {
+        self.sacazaAPI = sacazaAPI
+    }
     
     func reloadData(withNumberOfOriginalItems numberOfOriginalItems: Int) {
         self.numberOfOriginalItems = numberOfOriginalItems
@@ -79,7 +45,7 @@ public final class Sacaza {
             return
         }
         isRefreshing = true
-        APIRequest.getPresenceItems() { result in
+        sacazaAPI.getPresenceItems() { result in
             self.isRefreshing = false
             switch result {
                 case .success(let presenceItems):
@@ -130,7 +96,7 @@ extension Sacaza {
         return true
     }
     
-    fileprivate func presenceItem(at indexPath: IndexPath) -> ExpressionRepresentable? {
+    func presenceItem(at indexPath: IndexPath) -> ExpressionRepresentable? {
         
         guard let foundIndex = indexOfPresenceItem(at: indexPath) else {
             return nil
@@ -156,7 +122,7 @@ extension Sacaza {
         return IndexPath(row: indexPath.row + (offsetType == .original ? -previousPresenceItems : previousPresenceItems), section: indexPath.section)
     }
     
-    fileprivate func calculateOriginalIndexPath(forItemAt indexPath: IndexPath) -> IndexPath? {
+    func calculateOriginalIndexPath(forItemAt indexPath: IndexPath) -> IndexPath? {
         
         for (index, info) in insertedPresenceItems.enumerated() {
             if info.indexPath == indexPath {
@@ -266,90 +232,3 @@ extension Sacaza {
         return (adjustedInsertions, adjustedDeletions)
     }
 }
-
-// MARK:- ASCollectionNode Support
-
-@objc public protocol SacazaCollectionNodeDataSource : NSObjectProtocol {
-    
-    func numberOfSections(in collectionNode: ASCollectionNode) -> Int
-    func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int
-    func collectionNode(_ collectionNode: ASCollectionNode, nodeForItemAt indexPath: IndexPath) -> ASCellNode
-}
-
-@objc public protocol SacazaCollectionNodeDelegate : NSObjectProtocol {
-    
-    func collectionNode(_ collectionNode: ASCollectionNode, didSelectItemAt indexPath: IndexPath)
-}
-
-public final class CollectionNodeSacaza: NSObject {
-    
-    private let dataSource: SacazaCollectionNodeDataSource
-    private let delegate: SacazaCollectionNodeDelegate
-    private weak var collectionNode: ASCollectionNode?
-    private let sacaza: Sacaza
-    
-    public init(collectionNode: ASCollectionNode?, dataSource: SacazaCollectionNodeDataSource, delegate: SacazaCollectionNodeDelegate, sacaza: Sacaza? = nil) {
-        
-        self.collectionNode = collectionNode
-        self.dataSource = dataSource
-        self.delegate = delegate
-        self.sacaza = sacaza ?? Sacaza()
-        super.init()
-        self.collectionNode?.dataSource = self
-    }
-    
-    public func reloadData() {
-        guard let collectionNode = self.collectionNode else {
-            return
-        }
-        let sections = dataSource.numberOfSections(in: collectionNode)
-        let items = dataSource.collectionNode(collectionNode, numberOfItemsInSection: 0)
-        
-        sacaza.reloadData(withNumberOfOriginalItems: items)  // TODO handle multiple sections
-        collectionNode.reloadData()
-    }
-    
-    public func insertItems(insertions: [IndexPath], deletions: [IndexPath]) {
-        
-        let adjustedValues = sacaza.insertItems(insertions: insertions, deletions: deletions)
-        
-        collectionNode?.performBatchUpdates({
-            collectionNode?.insertItems(at: adjustedValues.adjustedInsertions)
-            collectionNode?.deleteItems(at: adjustedValues.adjustedDeletions)
-        }, completion: nil)
-    }
-}
-
-extension CollectionNodeSacaza: ASCollectionDataSource {
-    
-    public func numberOfSections(in collectionNode: ASCollectionNode) -> Int {
-        return 1
-    }
-    
-    public func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int {
-        return sacaza.totalNumberOfItems
-    }
-    
-    public func collectionNode(_ collectionNode: ASCollectionNode, nodeForItemAt indexPath: IndexPath) -> ASCellNode {
-        guard let presenceItem = sacaza.presenceItem(at: indexPath) else {
-            if let originalItemIndexPath = sacaza.calculateOriginalIndexPath(forItemAt: indexPath) {
-                return dataSource.collectionNode(collectionNode, nodeForItemAt: originalItemIndexPath)
-            } else {
-                fatalError()
-            }
-        }
-        return presenceItem.expression?.cellNode ?? ASCellNode()
-    }
-}
-
-extension CollectionNodeSacaza: ASCollectionDelegate {
-
-    public func collectionNode(_ collectionNode: ASCollectionNode, didSelectItemAt indexPath: IndexPath) {
-        guard let originalIndexPath = sacaza.calculateOriginalIndexPath(forItemAt: indexPath) else {
-            return
-        }
-        
-        delegate.collectionNode(collectionNode, didSelectItemAt: originalIndexPath)
-    }
-}
-

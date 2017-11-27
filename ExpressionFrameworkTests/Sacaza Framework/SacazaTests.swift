@@ -24,7 +24,9 @@ class SacazaTests: XCTestCase {
             PresenceInfo(indexPath: IndexPath(row:11 , section: 0), expressionContainer: TestableAdvert("advertAtRow11")),
             PresenceInfo(indexPath: IndexPath(row:15 , section: 0), expressionContainer: TestableAdvert("advertAtRow15"))
         ]
-        let sacaza = Sacaza(presenceItems: downloadedPresenceItems, numberOfOriginalItems: feedItems.count)
+        
+        let sacazaAPI = SacazaAPI()
+        let sacaza = Sacaza(sacazaAPI: sacazaAPI, presenceItems: downloadedPresenceItems, numberOfOriginalItems: feedItems.count)
         
         // then
         XCTAssertEqual(0, sacaza.calculateAdjustedIndexPath(forItemAtOriginalIndexPath: IndexPath(row: 0, section: 0)).row)

@@ -32,9 +32,12 @@ class CollectionNodeSacazaTests: XCTestCase {
             PresenceInfo(indexPath: IndexPath(row:15 , section: 0), expressionContainer: TestableAdvert("advertAtRow15"))
         ]
         
-        let sacaza = Sacaza(presenceItems: downloadedPresenceItems, numberOfOriginalItems: feedItems.count)
+        let sacazaAPI = SacazaAPI()
+        let sacaza = Sacaza(sacazaAPI: sacazaAPI, presenceItems: downloadedPresenceItems, numberOfOriginalItems: feedItems.count)
         
-        collectionNodeSacaza = CollectionNodeSacaza(collectionNode: collectionNode, dataSource: self, delegate: self, sacaza: sacaza)
+        collectionNodeSacaza = CollectionNodeSacaza(collectionNode: collectionNode, sacaza: sacaza)
+        collectionNodeSacaza?.delegate = self
+        collectionNodeSacaza?.dataSource = self
     }
     
     // MARK:- Collection Node Tests
@@ -234,6 +237,8 @@ extension CollectionNodeSacazaTests: SacazaCollectionNodeDelegate {
         XCTAssertEqual(expectedIndexPath, indexPath)
     }
 }
+
+// MARK:- Support for Tests
 
 private struct TestableAdvert: ExpressionRepresentable {
     let text: String

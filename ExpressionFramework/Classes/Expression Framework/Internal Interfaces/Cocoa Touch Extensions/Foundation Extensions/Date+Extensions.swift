@@ -50,8 +50,6 @@ extension Date {
     }
 }
 
-
-
 extension Int {
 
     var timeAgoString:String? {

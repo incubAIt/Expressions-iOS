@@ -14,6 +14,7 @@ class SacazaAPI {
     
     func getPresenceItems(completion: @escaping (Result<[PresenceInfo], Void>) -> Void) {
         
+        // TODO find out what the end point is
         let request = APIRequest(endPoint: "1.json", environmentUrl: environmentUrl, httpMethod: "GET")
         request.fire() { jsonObject, error in
             

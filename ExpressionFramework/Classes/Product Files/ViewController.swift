@@ -26,6 +26,7 @@ class ViewController: ASViewController<ASCollectionNode> {
     
     @objc func refresh() {
 
+        // NOTE: This api shouldn't be exposed beyound this framework and is only used here for testing
         expressionAPI.getListings() { [weak self] result in
             switch result {
             case .success(let listings):

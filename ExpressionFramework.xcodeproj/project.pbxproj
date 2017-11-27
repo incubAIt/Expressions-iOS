@@ -27,14 +27,13 @@
 		547C31F21FC87FBD002F028D /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547C31E31FC87FBD002F028D /* Spec.swift */; };
 		547C31F31FC87FBD002F028D /* SpecProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547C31E41FC87FBD002F028D /* SpecProtocol.swift */; };
 		547C31F41FC87FBD002F028D /* ExpressionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547C31E61FC87FBD002F028D /* ExpressionAPI.swift */; };
-		547C31F51FC87FBD002F028D /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547C31E71FC87FBD002F028D /* ImageDownloader.swift */; };
-		547C31F61FC87FBD002F028D /* URLSession+ExpressionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547C31E81FC87FBD002F028D /* URLSession+ExpressionConfig.swift */; };
 		547C31FD1FC8807F002F028D /* PresenceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547C31F81FC8807F002F028D /* PresenceInfo.swift */; };
 		547C31FE1FC8807F002F028D /* PresenceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547C31F91FC8807F002F028D /* PresenceItem.swift */; };
 		547C31FF1FC8807F002F028D /* Sacaza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547C31FA1FC8807F002F028D /* Sacaza.swift */; };
 		547C32001FC8807F002F028D /* CollectionNodeSacaza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547C31FC1FC8807F002F028D /* CollectionNodeSacaza.swift */; };
 		547C32051FC88AF2002F028D /* SacazaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547C32041FC88AF2002F028D /* SacazaAPI.swift */; };
 		547C32071FCC32FE002F028D /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547C32061FCC32FE002F028D /* APIRequest.swift */; };
+		547C32091FCC3B1E002F028D /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547C32081FCC3B1E002F028D /* ImageDownloader.swift */; };
 		54A50A2F1FB1D2AA0076957D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A261FB1D2AA0076957D /* AppDelegate.swift */; };
 		54A50A351FB1D2AA0076957D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A2C1FB1D2AA0076957D /* ViewController.swift */; };
 		54A50A441FB1E7FD0076957D /* ExpressionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A50A431FB1E7FD0076957D /* ExpressionConfig.swift */; };
@@ -85,14 +84,13 @@
 		547C31E31FC87FBD002F028D /* Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
 		547C31E41FC87FBD002F028D /* SpecProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecProtocol.swift; sourceTree = "<group>"; };
 		547C31E61FC87FBD002F028D /* ExpressionAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionAPI.swift; sourceTree = "<group>"; };
-		547C31E71FC87FBD002F028D /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
-		547C31E81FC87FBD002F028D /* URLSession+ExpressionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+ExpressionConfig.swift"; sourceTree = "<group>"; };
 		547C31F81FC8807F002F028D /* PresenceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenceInfo.swift; sourceTree = "<group>"; };
 		547C31F91FC8807F002F028D /* PresenceItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenceItem.swift; sourceTree = "<group>"; };
 		547C31FA1FC8807F002F028D /* Sacaza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sacaza.swift; sourceTree = "<group>"; };
 		547C31FC1FC8807F002F028D /* CollectionNodeSacaza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNodeSacaza.swift; sourceTree = "<group>"; };
 		547C32041FC88AF2002F028D /* SacazaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SacazaAPI.swift; sourceTree = "<group>"; };
 		547C32061FCC32FE002F028D /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		547C32081FCC3B1E002F028D /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		54A50A261FB1D2AA0076957D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54A50A2C1FB1D2AA0076957D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		54A50A431FB1E7FD0076957D /* ExpressionConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionConfig.swift; sourceTree = "<group>"; };
@@ -250,8 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				547C31E61FC87FBD002F028D /* ExpressionAPI.swift */,
-				547C31E71FC87FBD002F028D /* ImageDownloader.swift */,
-				547C31E81FC87FBD002F028D /* URLSession+ExpressionConfig.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -338,6 +334,7 @@
 				54C764F01FBC715300C34E50 /* Result.swift */,
 				54EF3A961FC474CE00177331 /* Array+SafeIndex.swift */,
 				547C32061FCC32FE002F028D /* APIRequest.swift */,
+				547C32081FCC3B1E002F028D /* ImageDownloader.swift */,
 			);
 			path = SharedResources;
 			sourceTree = SOURCE_ROOT;
@@ -597,13 +594,13 @@
 			files = (
 				547C31F01FC87FBD002F028D /* Expression.swift in Sources */,
 				547C31FE1FC8807F002F028D /* PresenceItem.swift in Sources */,
+				547C32091FCC3B1E002F028D /* ImageDownloader.swift in Sources */,
 				547C31EF1FC87FBD002F028D /* ButtonNode.swift in Sources */,
 				54EF3A971FC474CE00177331 /* Array+SafeIndex.swift in Sources */,
 				547C31F41FC87FBD002F028D /* ExpressionAPI.swift in Sources */,
 				54A50A511FB369C90076957D /* ExpressionRepresentable.swift in Sources */,
 				547C32001FC8807F002F028D /* CollectionNodeSacaza.swift in Sources */,
 				547C31EA1FC87FBD002F028D /* String+Extensions.swift in Sources */,
-				547C31F61FC87FBD002F028D /* URLSession+ExpressionConfig.swift in Sources */,
 				54C764F51FBC715300C34E50 /* Result.swift in Sources */,
 				547C31EE1FC87FBD002F028D /* BackgroundDecoratedProtocol.swift in Sources */,
 				547C31E91FC87FBD002F028D /* Date+Extensions.swift in Sources */,
@@ -613,7 +610,6 @@
 				547C31D01FC87F9F002F028D /* ASCollectionNode+Sacaza.swift in Sources */,
 				54A50A4F1FB3690A0076957D /* Listing.swift in Sources */,
 				54A50A441FB1E7FD0076957D /* ExpressionConfig.swift in Sources */,
-				547C31F51FC87FBD002F028D /* ImageDownloader.swift in Sources */,
 				547C32051FC88AF2002F028D /* SacazaAPI.swift in Sources */,
 				547C31F11FC87FBD002F028D /* HighlightableProtocol.swift in Sources */,
 				547C31EC1FC87FBD002F028D /* UIEdgeInsets+Extensions.swift in Sources */,
